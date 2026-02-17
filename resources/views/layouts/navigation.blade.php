@@ -28,6 +28,7 @@
                 <nav>
                     <ul>
                         <li><a href="#">quem somos</a></li>
+                        {{-- <li><a href="{{ route('quemsomos') }}">quem somos</a></li> --}}
                         <li><a href="#">catálogo</a></li>
                         <li><a href="#">novidades</a></li>
                         <li><a href="#">concursos</a></li>

@@ -65,7 +65,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
             list-style-type: none;
         }
 
@@ -128,6 +127,15 @@
             width: 400px;
             height: 400px;
         }
+
+        /* Configurações de tabelas */
+
+        .tablePosition {
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+
     </style>
 
     <title>@yield('title')</title>

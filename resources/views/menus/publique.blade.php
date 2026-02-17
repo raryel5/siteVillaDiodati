@@ -1,14 +1,14 @@
 <!-- as configurações de página estão layouts/app -->
 @extends('layouts.app')
 
-@section('title', 'Início')
+@section('title', 'Publique')
 
 <!-- corpo da página -->
 @section('main')
     <!-- tudo aqui será renderizado com base no template -->
     
     <div class="recuo">
-        <h1>Um título</h1>
+        <h1>Publique conosco</h1>
         <h2>Um subtítulo</h2>
         <br>
         <p>
