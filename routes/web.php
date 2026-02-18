@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuemsomosController;
+use App\Http\Controllers\CatalogoController;
 use App\Http\Controllers\NovidadesController;
 use App\Http\Controllers\ConcursosController;
 use App\Http\Controllers\ProdutosController;
@@ -13,21 +14,41 @@ use App\Http\Controllers\DiagramacaoController;
 //     return view('welcome');
 // });
 
-Route::get('/', [HomeController::class, 'index']);
+Route::prefix('/home')->group(function(){
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+});
 
-Route::get('/quemsomos', [QuemsomosController::class, 'index']);
+Route::prefix('/quemsomos')->group(function(){
+    Route::get('/', [QuemsomosController::class, 'index'])->name('quemsomos');
+});
 
-Route::get('/novidades', [NovidadesController::class, 'index']);
+Route::prefix('/catalogo')->group(function(){
+    Route::get('/', [CatalogoController::class, 'index'])->name('catalogo');
+});
 
-Route::get('/concursos', [ConcursosController::class, 'index']);
+Route::prefix('/novidades')->group(function(){
+    Route::get('/', [NovidadesController::class, 'index'])->name('novidades');
+});
 
-Route::get('/produtos', [ProdutosController::class, 'index']);
+Route::prefix('/concursos')->group(function(){
+    Route::get('/', [ConcursosController::class, 'index'])->name('concursos');
+});
 
-Route::get('/publique', [PubliqueController::class, 'index']);
+Route::prefix('/produtos')->group(function(){
+    Route::get('/', [ProdutosController::class, 'index'])->name('produtos');
+});
 
-Route::get('/servicos/diagramacao', [DiagramacaoController::class, 'index']);
+Route::prefix('/publique')->group(function(){
+    Route::get('/', [PubliqueController::class, 'index'])->name('publique');
+});
 
+Route::prefix('/diagramacao')->group(function(){
+    Route::get('/', [DiagramacaoController::class, 'index'])->name('diagramacao');
+});
 
+Route::fallback(function(){
+    return "Erro!";
+});
 
 // Route::view('/index', 'home');
 
