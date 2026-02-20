@@ -33,10 +33,64 @@
             margin: 0 auto;
         }
 
-        header{
-            width: 100%;
-            background-color: #424147;
+        header, div {
+            box-sizing: border-box;
         }
+
+        header{
+            /* width: 100%; */
+            background-color: #424147;
+            position: relative;
+            width: 1220px;
+            max-width: 90%;
+            height: 120px;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            margin: 0px auto;
+        }
+
+        /*  */
+        #logo {
+        position: absolute;
+        width: 120px;
+        top: 0px;  
+        bottom: 0px;
+        left: 0px;
+        
+        /* border: 1px solid red; */
+        /* background-color: rgba(255, 0, 0, 0.1); */
+        }
+
+        #superior {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 60px;
+        left: 120px;
+        
+        /* border: 1px solid green; */
+        /* background-color: rgba(0, 255, 0, 0.1); */
+        }
+
+        #inferior {
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        bottom: 0px;
+        left: 300px;   
+        
+        /* border: 1px solid blue; */
+        /* background-color: rgba(0, 0, 255, 0.1); */
+        }
+
+
+        #superior, #inferior {
+        text-align: right;
+        line-height: 40px;
+        padding: 10px;
+        }
+        /*  */
 
         .top-header > .interface{
             display: flex;
@@ -148,7 +202,7 @@
 
     <div>
         <!-- header é o cabeçalho do projeto e está em layouts/navigation -->
-        @include('layouts.navigation')
+        @include('layouts.navigation2')
 
         <!-- Page Content -->
         @yield('main')

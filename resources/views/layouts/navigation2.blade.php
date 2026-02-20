@@ -1,6 +1,19 @@
 <!-- header é o cabeçalho do projeto -->
     <header>
-        
+
+
+        <div id="logo">
+            <img src="{{ Storage::url('images/logo-02.png') }}" alt="Logo" style="height: 200px;">
+        </div>
+            
+        <div id="superior">
+            Superior
+        </div>
+
+        <div id="inferior">
+            Inferior
+        </div>
+
         
         {{-- <nav>Menu...</nav> --}}
 
@@ -12,9 +25,9 @@
                     <a href="{{ route('home') }}">
                         <img src="{{ Storage::url('images/logo-02.png') }}" alt="imagem">
                     </a>
-                </div> --}}
+                </div>
                 
-                <img src="{{ Storage::url('images/logo-02.png') }}" alt="Logo" style="height: 200px;">
+                <img src="{{ Storage::url('images/logo-02.png') }}" alt="Logo" style="height: 200px;"> --}}
 
                 <div class="btn-social">
                     <a href="https://www.instagram.com/_coletivovilla_/"><button><i class="bi bi-instagram"></i></button></a>
@@ -29,7 +42,7 @@
 
         <!-- Parte debaixo do cabeçalho -->
         <section class="botton-header">
-            <div class="interface">
+            <div id="inferior" class="interface">
                 <nav>
                     <ul>
                         <li><a href="{{ route('quemsomos') }}">quem somos</a></li>
