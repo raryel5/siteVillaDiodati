@@ -16,7 +16,7 @@
 
     <div class="card">
         <a href="#">
-            <img src="{{ Storage::url('produtos/capaNSA.jpg') }}" alt="imagem" style="height: 150px">
+            <img src="{{ Storage::url('produtos/capaNSA-.jpg') }}" alt="imagem" style="height: 150px">
         </a>
 
         <div>
