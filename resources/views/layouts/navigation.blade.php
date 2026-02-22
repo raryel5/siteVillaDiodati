@@ -7,15 +7,15 @@
         <section class="top-header">
             <div class="interface">
 
-                {{-- <div class="logotipo">
+                <div class="logotipo">
                     <!-- clicar na logo leva para o página inicial -->
                     <a href="{{ route('home') }}">
-                        <img src="{{ Storage::url('images/logo-02.png') }}" alt="imagem">
+                        <img src="{{ Storage::url('images/logo-02.png') }}" alt="imagem" style="height: 100px">
                     </a>
-                </div> --}}
+                </div>
                 
-                <img src="{{ Storage::url('images/logo-02.png') }}" alt="Logo" style="height: 200px;">
-
+{{--                 <img src="{{ Storage::url('images/logo-02.png') }}" alt="Logo" style="height: 200px;">
+ --}}
                 <div class="btn-social">
                     <a href="https://www.instagram.com/_coletivovilla_/"><button><i class="bi bi-instagram"></i></button></a>
 

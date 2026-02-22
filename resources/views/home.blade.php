@@ -10,8 +10,7 @@
     <div class="recuo">
         <br>
         <h1 style="font-family: 'Aesthetic'; font-size: 85px">VILLA DIODATI</h1>
-
-        <h2 style="font-size: 70px; font-weight: lighter">Coletivo de Autores</h2>
+        <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Coletivo de Autores</h1>
         <br>
 
         <p>

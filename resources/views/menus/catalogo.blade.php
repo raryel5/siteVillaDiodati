@@ -8,12 +8,38 @@
     <!-- tudo aqui será renderizado com base no template -->
     
     <div class="recuo">
-        <h1>Publicações</h1>
-        <h2>Confira nossos títulos publicados</h2>
         <br>
-        <p>
-            <?php echo fake()->paragraphs(3, true); ?>
-        </p>
+        <h1 style="font-family: 'Aesthetic'; font-size: 85px">VILLA DIODATI</h1>
+        <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Coletivo de Autores</h1>
+        <br>
+    </div>
+
+    <div class="card">
+        <a href="#">
+            <img src="{{ Storage::url('produtos/capaNSA.jpg') }}" alt="imagem" style="height: 150px">
+        </a>
+
+        <div>
+            <h1>Noites Sem Alma</h1>
+            <h2>Descrição do livro</h2>
+            <span>R$ XX,XX</span>
+            <br>
+            <button>Saiba mais</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <a href="#">
+            <img src="{{ Storage::url('produtos/capaOQFE.jpg') }}" alt="imagem" style="height: 150px">
+        </a>
+
+        <div>
+            <h1>O Que Ficou no Escuro</h1>
+            <h2>Descrição do livro</h2>
+            <span>R$ XX,XX</span>
+            <br>
+            <button>Saiba mais</button>
+        </div>
     </div>
 
 

@@ -19,6 +19,7 @@
         body{
             /* font-family: Georgia, 'Times New Roman', Times, serif; */
             font-family: 'Quicksand', sans-serif;
+            margin: 0;
         }
 
         /* configurações de cabeçalho */
@@ -109,6 +110,11 @@
 
         /* caixas de texto */
 
+        /* remove as margens do h1*/
+        h1 {
+            margin: 0;
+        }
+
         .recuo {
             margin-left: 50px;
             width: 620px;
@@ -130,12 +136,35 @@
             height: 400px;
         }
 
+        .textWidePage {
+            margin-left: 50px;
+            width: 1280px;
+            line-height: 55px;
+            align-items: center;
+        }
+
         /* Configurações de tabelas */
 
         .tablePosition {
             justify-content: center;
             margin-top: 50px;
             margin-left: 50px;
+        }
+
+        /* Cards de produtos */
+
+        .card {
+            display: flex;
+            justify-content: flex;
+            align-items: center;
+            height: 100vh;
+            gap: 16px;
+
+            background-color: #fff;
+            width: 180px;
+            height: 260px;
+            border-radius: 12px;
+            box-shadow: 4px 4px 12px #aaaa;
         }
 
     </style>

@@ -8,8 +8,9 @@
     <!-- tudo aqui será renderizado com base no template -->
     
     <div class="recuo">
-        <h1>Concursos em aberto</h1>
-        <h2>Um subtítulo</h2>
+        <br>
+        <h1 style="font-family: 'Aesthetic'; font-size: 85px">VILLA DIODATI</h1>
+        <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Coletivo de Autores</h1>
         <br>
         <p>
             <?php echo fake()->paragraphs(3, true); ?>
