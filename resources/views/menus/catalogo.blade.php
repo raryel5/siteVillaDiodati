@@ -7,40 +7,156 @@
 @section('main')
     <!-- tudo aqui será renderizado com base no template -->
     
-    <div class="recuo">
-        <br>
-        <h1 style="font-family: 'Aesthetic'; font-size: 85px">VILLA DIODATI</h1>
-        <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Coletivo de Autores</h1>
-        <br>
-    </div>
+<div class="recuo">
+    <br>
+    <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Nossas Coletâneas</h1>
+    <br>
+</div>
 
-    <div class="card">
-        <a href="#">
-            <img src="{{ Storage::url('produtos/capaNSA-.jpg') }}" alt="imagem" style="height: 150px">
-        </a>
+<div class="container">
+    <div class="items1">
 
-        <div>
+        <div class="item">
+            <div class="produto">
+                <a href="#">
+                    <img src="{{ Storage::url('produtos/capaNSA.jpeg') }}">
+                </a>
+            </div>
+
             <h1>Noites Sem Alma</h1>
             <h2>Descrição do livro</h2>
             <span>R$ XX,XX</span>
             <br>
             <button>Saiba mais</button>
+            
         </div>
-    </div>
+    
+        <div class="item">
+            <div class="produto">
+                <a href="#">
+                    <img src="{{ Storage::url('produtos/capaOQFE.jpeg') }}">
+                </a>
+            </div>
 
-    <div class="card">
-        <a href="#">
-            <img src="{{ Storage::url('produtos/capaOQFE.jpg') }}" alt="imagem" style="height: 150px">
-        </a>
-
-        <div>
             <h1>O Que Ficou no Escuro</h1>
             <h2>Descrição do livro</h2>
             <span>R$ XX,XX</span>
             <br>
             <button>Saiba mais</button>
+            
         </div>
     </div>
+
+</div>
+
+<!-- 
+
+LIVROS DOS MEMBROS DO COLETIVO
+
+-->
+
+<div class="recuo">
+    <br>
+    <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Publicações dos autores</h1>
+    <br>
+</div>
+
+<div class="container">
+    <div class="items2">
+
+        <div class="item">
+            <div class="produto">
+                <a href="#">
+                    <img src="{{ Storage::url('produtos/capaCajado.jpeg') }}">
+                </a>
+            </div>
+
+            <h1>Cajado</h1>
+            <h2>Descrição do livro</h2>
+            <span>R$ XX,XX</span>
+            <br>
+            <button>Saiba mais</button>
+            
+        </div>
+    
+        <div class="item">
+            <div class="produto">
+                <a href="#">
+                    <img src="{{ Storage::url('produtos/capaDRVP.jpeg') }}">
+                </a>
+            </div>
+
+            <h1>Dedo em Riste, Verso em Prosa</h1>
+            <h2>Descrição do livro</h2>
+            <span>R$ XX,XX</span>
+            <br>
+            <button>Saiba mais</button>
+            
+        </div>
+
+        <div class="item">
+            <div class="produto">
+                <a href="#">
+                    <img src="{{ Storage::url('produtos/capaEPQSG.jpeg') }}">
+                </a>
+            </div>
+
+            <h1>Eles Pensam Que Somos Gatos</h1>
+            <h2>Descrição do livro</h2>
+            <span>R$ XX,XX</span>
+            <br>
+            <button>Saiba mais</button>
+            
+        </div>
+
+        <div class="item">
+            <div class="produto">
+                <a href="#">
+                    <img src="{{ Storage::url('produtos/capaNoturnos.jpeg') }}">
+                </a>
+            </div>
+
+            <h1>Noturnos</h1>
+            <h2>Descrição do livro</h2>
+            <span>R$ XX,XX</span>
+            <br>
+            <button>Saiba mais</button>
+            
+        </div>
+
+        <div class="item">
+            <div class="produto">
+                <a href="#">
+                    <img src="{{ Storage::url('produtos/capaOSM.jpeg') }}">
+                </a>
+            </div>
+
+            <h1>Os Segredos da Mata</h1>
+            <h2>Descrição do livro</h2>
+            <span>R$ XX,XX</span>
+            <br>
+            <button>Saiba mais</button>
+            
+        </div>
+
+        <div class="item">
+            <div class="produto">
+                <a href="#">
+                    <img src="{{ Storage::url('produtos/capaSSM.jpeg') }}">
+                </a>
+            </div>
+
+            <h1>SS Misery</h1>
+            <h2>Descrição do livro</h2>
+            <span>R$ XX,XX</span>
+            <br>
+            <button>Saiba mais</button>
+            
+        </div>
+
+    </div>
+</div>
+    
 
 
 

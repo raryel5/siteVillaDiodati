@@ -34,7 +34,10 @@
             margin: 0 auto;
         }
 
+        /* Cabeçalho da logo e redes sociais */
+
         header{
+            /* margin-top: 200px; */
             width: 100%;
             background-color: #424147;
         }
@@ -63,6 +66,8 @@
             border: 2px solid #000;
             cursor: pointer;
         }
+
+        /* cabeçalho dos menus */
 
         .botton-header nav ul{
             display: flex;
@@ -153,18 +158,92 @@
 
         /* Cards de produtos */
 
-        .card {
-            display: flex;
-            justify-content: flex;
+        .container {
+            display: flex; /* Coloca as filhas lado a lado */
+            gap: 30px;      /* Espaço entre as divs */
             align-items: center;
-            height: 100vh;
-            gap: 16px;
+            justify-content: center;
 
-            background-color: #fff;
-            width: 180px;
-            height: 260px;
+        }
+
+        .items1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+
+        .items2 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+        }
+
+        .item {
+            text-align: center;
+            background-color: #e6dede;
+            /* padding: 10px; */
+            /* width: 190px; */
+            /* height: 390px; */
+            /* margin-top: 50px; */
+            display: flex;
+            flex-direction: column;
+            position: relative;
             border-radius: 12px;
             box-shadow: 4px 4px 12px #aaaa;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* capa */
+        .produto {
+            text-align: center;
+            height: 220px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .item img {
+            margin-top: 20px;
+            /* width: 90%; */
+            height: 90%;
+        }
+
+        /* .card div {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+            height: 50%;
+        } */
+
+        .item h1 {
+            font-size: 1.2rem;
+        }
+
+        .item h2 {
+            font-size: .9rem;
+            color:#aaaa;
+        }
+
+        .item button {
+            background-color: #424247;
+            height: 30px;
+            border: none;
+            padding: 3px;
+            width: 80%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .item button:hover {
+            background-color: #ED6b86;
+            cursor: pointer;
         }
 
     </style>
