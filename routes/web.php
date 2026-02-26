@@ -10,9 +10,9 @@ use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\PubliqueController;
 use App\Http\Controllers\DiagramacaoController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('home');
+});
 
 Route::prefix('/home')->group(function(){
     Route::get('/', [HomeController::class, 'index'])->name('home');
