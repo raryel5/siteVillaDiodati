@@ -9,6 +9,8 @@
 
 ## Sobre o Coletivo Villa Diodati
 
+<a href="{{ route('quemsomos') }}">quem somos</a>
+
 O Coletivo de Autores Villa Diodati é um grupo de escritores que reuniu-se, inicialmente, com o intuito de estabelecer uma rede de colaboração entre escritores independentes na divulgação de seus trabalhos. O projeto deu muito certo e gerou uma excelente interação entre os componentes, fazendo com que ideias afluíssem em cada um dos participantes, dia após dia.
 
 Em dado momento percebeu-se que precisavam de um nome para essa junção de afinidades e de sonhos em comum. Foi aí que criaram o selo editorial que os definiria a partir de então: Coletivo de Autores Villa Diodati. O nome foi escolhido em homenagem à histórica reunião dos escritores Lord Byron, Mary Shelley, John Polidori e Percy Shelley, ocorrida no verão de 1816, à beira do Lago Léman, em Genebra.
