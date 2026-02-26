@@ -168,7 +168,7 @@
 
         .items1 {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 30px;
         }
 
@@ -181,15 +181,14 @@
         .item {
             text-align: center;
             background-color: #e6dede;
-            /* padding: 10px; */
+            padding: 10px;
             /* width: 190px; */
             /* height: 390px; */
-            /* margin-top: 50px; */
             display: flex;
             flex-direction: column;
             position: relative;
             border-radius: 12px;
-            box-shadow: 4px 4px 12px #aaaa;
+            box-shadow: 4px 4px 16px #aaaa;
             justify-content: center;
             align-items: center;
 
@@ -204,20 +203,9 @@
         }
 
         .item img {
-            margin-top: 20px;
             /* width: 90%; */
             height: 90%;
         }
-
-        /* .card div {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2px;
-            height: 50%;
-        } */
 
         .item h1 {
             font-size: 1.2rem;
@@ -225,7 +213,7 @@
 
         .item h2 {
             font-size: .9rem;
-            color:#aaaa;
+            color: #3a3636aa;
         }
 
         .item button {
@@ -238,13 +226,14 @@
             font-size: 1rem;
             font-weight: bold;
             border-radius: 12px;
-            margin-bottom: 20px;
         }
 
         .item button:hover {
             background-color: #ED6b86;
             cursor: pointer;
         }
+
+
 
     </style>
 
