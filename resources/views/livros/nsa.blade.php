@@ -1,7 +1,7 @@
 <!-- as configurações de página estão layouts/app -->
 @extends('layouts.app')
 
-@section('title', 'Catálogo')
+@section('title', 'NSA')
 
 <!-- corpo da página -->
 @section('main')
@@ -9,7 +9,8 @@
 
 <div class="recuo">
     <br>
-    <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Nossas Coletâneas</h1>
+    <h1 style="font-family: 'Aesthetic'; font-size: 85px">VILLA DIODATI</h1>
+    <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Coletivo de Autores</h1>
     <br>
 </div>
 

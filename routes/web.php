@@ -52,3 +52,8 @@ Route::fallback(function(){
 
 // Route::view('/index', 'home');
 
+Route::get('/nsa', function () {
+    return view('livros.nsa');
+});
+
+// Route::view('/nsa', 'livros/nsa');
