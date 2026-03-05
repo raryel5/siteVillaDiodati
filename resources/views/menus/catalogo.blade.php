@@ -26,7 +26,7 @@
 
         <div class="item">
             <div class="produto">
-                <a href="#">
+                <a href="{{ route('nsa') }}">
                     <img src="{{ Storage::url('capas/capaNSA.jpeg') }}">
                 </a>
             </div>
@@ -80,7 +80,7 @@ LIVROS DOS MEMBROS DO COLETIVO
 
 <div class="recuo">
     <br>
-    <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Publicações dos autores</h1>
+    <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Outras publicações de nossos autores</h1>
     <br>
 </div>
 

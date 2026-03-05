@@ -10,6 +10,9 @@ use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\PubliqueController;
 use App\Http\Controllers\DiagramacaoController;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+
 // Route::get('/', function () {
 //     return view('home');
 // });
@@ -50,10 +53,14 @@ Route::fallback(function(){
     return "Erro!";
 });
 
+# ROTAS PARA LIVROS
+
+// Route::get('/catalogo/{item}', [CatalogoController::class, 'show']);
+
 // Route::view('/index', 'home');
 
-Route::get('/nsa', function () {
-    return view('livros.nsa');
-});
+// Route::get('/nsa', function () {
+//     return view('livros.nsa');
+// });
 
-// Route::view('/nsa', 'livros/nsa');
+Route::view('/nsa', 'livros/nsa');
