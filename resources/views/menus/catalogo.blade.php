@@ -20,14 +20,15 @@
 -->
 <div class="container">
     <div class="items1">
+        {{-- @foreach ($catalogos as $catalogo) --}}
 
         <!-- variaveis PHP -->
         <?php $botao = "Compre agora" ?>
 
         <div class="item">
             <div class="produto">
-                <a href="{{ route('nsa') }}">
-                    <img src="{{ Storage::url('capas/capaNSA.jpeg') }}">
+                <a href="#">
+                    <img src="{{ Storage::url('livros/capaNSA.jpeg') }}">
                 </a>
             </div>
 
@@ -42,7 +43,7 @@
         <div class="item">
             <div class="produto">
                 <a href="#">
-                    <img src="{{ Storage::url('capas/capaOQFE.jpeg') }}">
+                    <img src="{{ Storage::url('livros/capaOQFE.jpeg') }}">
                 </a>
             </div>
 
@@ -57,7 +58,7 @@
         <div class="item">
             <div class="produto">
                 <a href="#">
-                    <img src="{{ Storage::url('capas/capaVazia.jpeg') }}">
+                    <img src="{{ Storage::url('livros/capaVazia.jpeg') }}">
                 </a>
             </div>
 
@@ -90,7 +91,7 @@ LIVROS DOS MEMBROS DO COLETIVO
         <div class="item">
             <div class="produto">
                 <a href="#">
-                    <img src="{{ Storage::url('capas/capaCajado.jpeg') }}">
+                    <img src="{{ Storage::url('livros/capaCajado.jpeg') }}">
                 </a>
             </div>
 
@@ -105,7 +106,7 @@ LIVROS DOS MEMBROS DO COLETIVO
         <div class="item">
             <div class="produto">
                 <a href="#">
-                    <img src="{{ Storage::url('capas/capaDRVP.jpeg') }}">
+                    <img src="{{ Storage::url('livros/capaDRVP.jpeg') }}">
                 </a>
             </div>
 
@@ -120,7 +121,7 @@ LIVROS DOS MEMBROS DO COLETIVO
         <div class="item">
             <div class="produto">
                 <a href="#">
-                    <img src="{{ Storage::url('capas/capaEPQSG.jpeg') }}">
+                    <img src="{{ Storage::url('livros/capaEPQSG.jpeg') }}">
                 </a>
             </div>
 
@@ -135,7 +136,7 @@ LIVROS DOS MEMBROS DO COLETIVO
         <div class="item">
             <div class="produto">
                 <a href="#">
-                    <img src="{{ Storage::url('capas/capaNoturnos.jpeg') }}">
+                    <img src="{{ Storage::url('livros/capaNoturnos.jpeg') }}">
                 </a>
             </div>
 
@@ -150,7 +151,7 @@ LIVROS DOS MEMBROS DO COLETIVO
         <div class="item">
             <div class="produto">
                 <a href="#">
-                    <img src="{{ Storage::url('capas/capaOSM.jpeg') }}">
+                    <img src="{{ Storage::url('livros/capaOSM.jpeg') }}">
                 </a>
             </div>
 
@@ -165,7 +166,7 @@ LIVROS DOS MEMBROS DO COLETIVO
         <div class="item">
             <div class="produto">
                 <a href="#">
-                    <img src="{{ Storage::url('capas/capaSSM.jpeg') }}">
+                    <img src="{{ Storage::url('livros/capaSSM.jpeg') }}">
                 </a>
             </div>
 
