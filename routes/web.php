@@ -63,4 +63,9 @@ Route::fallback(function(){
 //     return view('livros.nsa');
 // });
 
-Route::view('/nsa', 'livros/nsa');
+// Route::view('/nsa', 'livros/nsa');
+// Route::get('/nsa', [CatalogoController::class, 'show'])->name('catalogos');
+
+Route::prefix('/nsa')->group(function(){
+    Route::get('/', [CatalogoController::class, 'show'])->name('catalogos');
+});

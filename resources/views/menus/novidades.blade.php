@@ -18,7 +18,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Título</th>
                 <th scope="col">Link</th>
-                <th scope="col">Data</th>
+                <!-- <th scope="col">Data</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -27,7 +27,7 @@
                     <th>{{ $novidade->id }}</th>
                     <th>{{ $novidade->title }}</th>
                     <th>{{ $novidade->slug }}</th>
-                    <th>{{ $novidade->is_published }}</th>
+                    <!-- <th>{{ $novidade->is_published }}</th> -->
                 </tr>
 
             @endforeach                

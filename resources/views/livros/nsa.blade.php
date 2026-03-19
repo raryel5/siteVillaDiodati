@@ -7,44 +7,34 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
-<div class="recuo">
-    <br>
-    <h1 style="font-family: 'Aesthetic'; font-size: 85px">VILLA DIODATI</h1>
-    <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Coletivo de Autores</h1>
-    <br>
-</div>
 
-<!-- 
+    <div class="tablePosition">
+        <p>
+            <h1>Livros publicados</h1>
+        </p>               
 
-    PUBLICAÇÕES DO COLETIVO
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Título</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach ($catalogos as $livro)
+                <tr>
+                    <th>{{ $livro->id }}</th>
+                    <th>{{ $livro->titulo }}</th>
+                    <th>{{ $livro->autor }}</th>
+                    <th>{{ $livro->preco }}</th>
+                </tr>
 
--->
-<div class="container">
-    <div class="items1">
-
-        <!-- variaveis PHP -->
-        <?php $botao = "Compre agora" ?>
-
-        <div class="item">
-            <div class="produto">
-                <a href="#">
-                    <img src="{{ Storage::url('capas/capaNSA.jpeg') }}">
-                </a>
-            </div>
-
-            <h1>Noites Sem Alma</h1>
-            <h2>vários autores, 2024</h2>
-            <span>R$ 45,00</span>
-            <br>
-            <button><?php echo $botao ?></button>
-
-        </div>
-
+            @endforeach      
+            </tbody>
+        </table>
     </div>
-</div>
-
-
-
 
 <!-- <div class="container-caixa">
 

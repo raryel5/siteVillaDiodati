@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Catalogo;
 
 class CatalogoController extends Controller
 {
@@ -35,13 +36,19 @@ class CatalogoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $item)
+    // public function show(string $id)
+    public function show()
     {
-        if ($item == 'nsa'){
-            return view('livros.nsa');
-        }
-            
+        $catalogos = Catalogo::all();
+        return view('livros.nsa',  ['catalogos'=>$catalogos]);            
     }
+    // public function show(string $item)
+    // {
+    //     if ($item == 'nsa'){
+    //         return view('livros.nsa');
+    //     }
+            
+    // }
 
     /**
      * Show the form for editing the specified resource.

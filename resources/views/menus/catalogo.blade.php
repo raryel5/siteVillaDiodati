@@ -20,8 +20,6 @@
 -->
 <div class="container">
     <div class="items1">
-        {{-- @foreach ($catalogos as $catalogo) --}}
-
         <!-- variaveis PHP -->
         <?php $botao = "Compre agora" ?>
 
@@ -37,8 +35,8 @@
             <span>R$ 45,00</span>
             <br>
             <button><?php echo $botao ?></button>
-
         </div>
+        
 
         <div class="item">
             <div class="produto">

@@ -17,10 +17,10 @@ return new class extends Migration
             $table->string('autor');
             $table->text('descricao');
             $table->decimal('preco', 4, 2);
-            $table->unsignedInteger('isbn');
-            $table->unsignedInteger('numberPages');
-            $table->unsignedInteger('origem'); // 1 para o Coletivo e 0 para publicacao externa.
-            $table->unsignedInteger('tipo'); // 1 para o físico e 0 para ebook.
+            $table->bigInteger('isbn');
+            $table->Integer('numberPages');
+            $table->Integer('origem'); // 1 para o Coletivo e 0 para publicacao externa.
+            $table->Integer('tipo'); // 1 para o físico e 0 para ebook.
             $table->timestamps();
         });
     }
