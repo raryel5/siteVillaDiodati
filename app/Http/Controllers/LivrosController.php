@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Catalogo;
 
-class CatalogoController extends Controller
+class LivrosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,25 @@ class CatalogoController extends Controller
     public function index()
     {
 
-        return view('menus/catalogo');
+        $catalogos = Catalogo::all();
+        return view('livros.lista',['catalogos'=>$catalogos]);
+    }
 
+    public function exibir(Catalogo $id)
+    {
+        // $idLivro = $id;
+        $catalogos = Catalogo::find($id->id)->get();
+        // $catalogos = Catalogo::find(1)->get();
+        // $catalogos = Catalogo::find(1);
+        // $catalogos = Catalogo::find($id->id);
+
+        // dd($catalogos);
+        // dd($id);
+        return view('livros.padrao', ['catalogos'=>$catalogos, 'id'=>$id]);        
+    
+        // return view('livros.padrao', ['id'=>$id]);
+        // return view('livros.padrao',compact('id'));
+        // return view('livros.padrao')->with('id', $id);
     }
 
     /**
@@ -40,7 +57,7 @@ class CatalogoController extends Controller
     {
         //
     }
-            
+
     /**
      * Show the form for editing the specified resource.
      */

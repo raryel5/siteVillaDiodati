@@ -9,6 +9,7 @@ use App\Http\Controllers\ConcursosController;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\PubliqueController;
 use App\Http\Controllers\DiagramacaoController;
+use App\Http\Controllers\LivrosController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -55,6 +56,14 @@ Route::fallback(function(){
 
 # ROTAS PARA LIVROS
 
+Route::prefix('/lista')->group(function(){
+Route::get('/', [LivrosController::class, 'index'])->name('lista');
+});
+
+Route::prefix('/livros/{id}')->group(function(){
+Route::get('/', [LivrosController::class, 'exibir'])->name('livros');
+});
+
 // Route::get('/catalogo/{item}', [CatalogoController::class, 'show']);
 
 // Route::view('/index', 'home');
@@ -66,6 +75,8 @@ Route::fallback(function(){
 // Route::view('/nsa', 'livros/nsa');
 // Route::get('/nsa', [CatalogoController::class, 'show'])->name('catalogos');
 
-Route::prefix('/nsa')->group(function(){
-    Route::get('/', [CatalogoController::class, 'show'])->name('catalogos');
-});
+// Route::prefix('/padrao{id}')->group(function($id){
+//     Route::get('/livros/{id}', [CatalogoController::class, 'show'])->name('catalogos');
+// });
+
+// Route::get('/padrao{id}', [CatalogoController::class, 'show'])->name('livros.padrao');

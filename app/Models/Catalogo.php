@@ -13,5 +13,4 @@ class Catalogo extends Model
         'id', 'titulo', 'autor', 'descricao', 'preco', 'isbn', 'numberPages', 'origem', 'tipo', 'created_at', 'updated_at'
     ];
 
-
 }

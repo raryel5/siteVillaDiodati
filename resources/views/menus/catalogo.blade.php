@@ -25,7 +25,7 @@
 
         <div class="item">
             <div class="produto">
-                <a href="#">
+                <a href="{{ route('livros', $id=2) }}">
                     <img src="{{ Storage::url('capas/capaNSA.jpeg') }}">
                 </a>
             </div>
@@ -40,7 +40,7 @@
 
         <div class="item">
             <div class="produto">
-                <a href="#">
+                <a href="{{ route('livros', $id=3) }}">
                     <img src="{{ Storage::url('capas/capaOQFE.jpeg') }}">
                 </a>
             </div>
@@ -55,7 +55,7 @@
 
         <div class="item">
             <div class="produto">
-                <a href="#">
+                <a href="{{ route('livros', $id=4) }}">
                     <img src="{{ Storage::url('capas/capaVazia.jpeg') }}">
                 </a>
             </div>
@@ -88,7 +88,7 @@ capas DOS MEMBROS DO COLETIVO
 
         <div class="item">
             <div class="produto">
-                <a href="#">
+                <a href="{{ route('livros', $id=5) }}">
                     <img src="{{ Storage::url('capas/capaCajado.jpeg') }}">
                 </a>
             </div>
