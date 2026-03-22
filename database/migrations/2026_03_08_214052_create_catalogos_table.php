@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('titulo');
             $table->string('autor');
             $table->text('descricao');
+            $table->bigInteger('ano');
             $table->decimal('preco', 4, 2);
             $table->bigInteger('isbn');
             $table->Integer('numberPages');

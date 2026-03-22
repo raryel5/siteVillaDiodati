@@ -148,7 +148,7 @@ CAPAS DOS OUTROS LIVROS
 
         <div class="item">
             <div class="produto">
-                <a href="#">
+                <a href="{{ route('livros', $id=1) }}">
                     <img src="{{ Storage::url('capas/capaOSM.jpeg') }}">
                 </a>
             </div>

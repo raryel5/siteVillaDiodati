@@ -10,7 +10,7 @@ class Catalogo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'titulo', 'autor', 'descricao', 'preco', 'isbn', 'numberPages', 'origem', 'tipo', 'created_at', 'updated_at'
+        'id', 'titulo', 'autor', 'descricao', 'ano', 'preco', 'isbn', 'numberPages', 'origem', 'tipo', 'created_at', 'updated_at'
     ];
 
 }

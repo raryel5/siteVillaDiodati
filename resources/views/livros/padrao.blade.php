@@ -10,12 +10,29 @@
 <div class="livro-container">
     <!-- variaveis PHP -->
     <?php $botao = "Compre agora" ?>
+    
+    <?php
+        //$id = echo $livro['id'];
+
+        // if ( $livro['id'] == 1){
+        //     $capa = 'capas/capaOSM.jpeg';
+        // }
+        // elseif ( $livro['id'] == 2){
+        //     $capa = 'capas/capaNSA.jpeg';
+        // }
+        // else{
+        //     $capa = 'capas/capaVazia.jpeg';
+        // }
+        // $capa = "{{ Storage::url('capas/capaNSA.jpeg') }}"
+        $capa = "capas/capaNSA.jpeg"
+    ?>
 
     <div class="elemento-container-capa">
 
         <div class="elemento-capa">
-            <img src="{{ Storage::url('capas/capaNSA.jpeg') }}">
+            <img src="{{ Storage::url('<? echo $capa ?>') }}" >
         </div>
+    
 
         <div class="elemento-capa-desc">
             <h1>{{ $livro->autor }}</h1>
