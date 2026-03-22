@@ -73,7 +73,7 @@
 
 <!-- 
 
-capas DOS MEMBROS DO COLETIVO
+CAPAS DOS OUTROS LIVROS
 
 -->
 

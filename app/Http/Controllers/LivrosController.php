@@ -19,19 +19,10 @@ class LivrosController extends Controller
 
     public function exibir(Catalogo $id)
     {
-        // $idLivro = $id;
-        $catalogos = Catalogo::find($id->id)->get();
-        // $catalogos = Catalogo::find(1)->get();
-        // $catalogos = Catalogo::find(1);
-        // $catalogos = Catalogo::find($id->id);
-
-        // dd($catalogos);
+        // $catalogos = Catalogo::find($id->id)->get();
         // dd($id);
-        return view('livros.padrao', ['catalogos'=>$catalogos, 'id'=>$id]);        
-    
-        // return view('livros.padrao', ['id'=>$id]);
-        // return view('livros.padrao',compact('id'));
-        // return view('livros.padrao')->with('id', $id);
+        // return view('livros.padrao', ['catalogos'=>$catalogos, 'livro'=>$id]);
+        return view('livros.padrao', ['livro'=>$id]);
     }
 
     /**

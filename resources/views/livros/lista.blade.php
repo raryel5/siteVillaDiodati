@@ -1,7 +1,7 @@
 <!-- as configurações de página estão layouts/app -->
 @extends('layouts.app')
 
-@section('title', 'NSA')
+@section('title', 'Lista de livros')
 
 <!-- corpo da página -->
 @section('main')
@@ -10,7 +10,7 @@
 
     <div class="tablePosition">
         <p>
-            <h1>Livros publicados</h1>
+            <h1>Livros Cadastrados</h1>
         </p>               
 
         <table class="table">

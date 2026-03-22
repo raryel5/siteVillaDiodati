@@ -233,6 +233,85 @@
             cursor: pointer;
         }
 
+        /* CONTAINER PARA PAGINA DOS LIVROS */
+
+        .livro-container{
+            display: flex; /* disposicao flexível de divs */
+            gap: 30px; /* espaço entre divs */
+            padding: 10px; /* distancia da borda da pagina */
+            flex-direction: row; /* alinhar divs em linha*/
+            
+        }
+
+        .elemento-container-capa{
+            width: 350px; /* Largura */
+            height: 100%; /* Altura */
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            background-color: white; /* Cor de fundo */
+            border: 1px solid white; /* cor da borda */
+            border-radius: 12px;
+            flex-direction: column; /* alinhar divs em linha*/
+        }
+
+        .elemento-capa {
+            text-align: center;
+            margin-top: 5px;            
+        }
+
+        .elemento-capa-desc {
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 5px; 
+        }
+
+        .elemento-capa img{
+            width: 90%; /* Largura */
+            box-shadow: 4px 4px 16px #aaaa;
+        }
+
+        .elemento-capa-desc h1 {
+            font-size: 1.4rem;
+            margin-top: 5px; 
+        }
+
+        .elemento-capa-desc h2 {
+            font-size:1rem;
+            color: #242121aa;
+            margin-top: 5px;
+        }
+
+        .elemento-capa-desc button {
+            background-color: #424247;
+            height: 30px;
+            border: none;
+            padding: 3px;
+            width: 80%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        .elemento-capa-desc button:hover {
+            background-color: #ED6b86;
+            cursor: pointer;
+        }
+
+        .elemento-container-descricao{
+            width: 500px; /* Largura */
+            height: 50%; /* Altura */
+            margin-top: 50px;
+            background-color: white; /* Cor de fundo */
+            border: 1px solid white; /* cor da borda */
+            border-radius: 12px;
+            text-align: justify;
+        }
+
+
+
 
 
     </style>
