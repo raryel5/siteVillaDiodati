@@ -10,27 +10,46 @@
 <div class="livro-container">
     <!-- variaveis PHP -->
     <?php $botao = "Compre agora" ?>
-    
-    <?php
-        //$id = echo $livro['id'];
-
-        // if ( $livro['id'] == 1){
-        //     $capa = 'capas/capaOSM.jpeg';
-        // }
-        // elseif ( $livro['id'] == 2){
-        //     $capa = 'capas/capaNSA.jpeg';
-        // }
-        // else{
-        //     $capa = 'capas/capaVazia.jpeg';
-        // }
-        // $capa = "{{ Storage::url('capas/capaNSA.jpeg') }}"
-        $capa = "capas/capaNSA.jpeg"
-    ?>
 
     <div class="elemento-container-capa">
 
         <div class="elemento-capa">
-            <img src="{{ Storage::url('<? echo $capa ?>') }}" >
+
+            @if ( $livro['titulo'] == "Noites Sem Alma")
+                <img src="{{ Storage::url('capas/capaNSA.jpeg') }}" >
+            @endif
+
+            @if ( $livro['titulo'] == "O Que Ficou no Escuro")
+                <img src="{{ Storage::url('capas/capaOQFE.jpeg') }}" >
+            @endif
+
+            @if ( $livro['titulo'] == "O Diário da Coletora")
+                <img src="{{ Storage::url('capas/capaODDC.jpeg') }}" >
+            @endif
+
+            @if ( $livro['titulo'] == "Os Segredos da Mata")
+                <img src="{{ Storage::url('capas/capaOSM.jpeg') }}" >
+            @endif
+
+            @if ( $livro['titulo'] == "Cajado")
+                <img src="{{ Storage::url('capas/capaCajado.jpeg') }}" >
+            @endif
+
+            @if ( $livro['titulo'] == "Dedo em Riste, Verso em Prosa")
+                <img src="{{ Storage::url('capas/capaDRVP.jpeg') }}" >
+            @endif
+
+            @if ( $livro['titulo'] == "Eles Pensam Que Somos Gatos")
+                <img src="{{ Storage::url('capas/capaEPQSG.jpeg') }}" >
+            @endif
+
+            @if ( $livro['titulo'] == "Noturnos")
+                <img src="{{ Storage::url('capas/capaNoturnos.jpeg') }}" >
+            @endif
+
+            @if ( $livro['titulo'] == "SS Misery")
+                <img src="{{ Storage::url('capas/capaSSM.jpeg') }}" >
+            @endif
         </div>
     
 

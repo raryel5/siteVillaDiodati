@@ -60,7 +60,7 @@ Route::prefix('/lista')->group(function(){
 Route::get('/', [LivrosController::class, 'index'])->name('lista');
 });
 
-Route::prefix('/livros/{id}')->group(function(){
+Route::prefix('/livros/{titulo}')->group(function(){
 Route::get('/', [LivrosController::class, 'exibir'])->name('livros');
 });
 

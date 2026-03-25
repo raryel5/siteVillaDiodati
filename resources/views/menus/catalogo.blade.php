@@ -56,7 +56,7 @@
         <div class="item">
             <div class="produto">
                 <a href="{{ route('livros', $id=4) }}">
-                    <img src="{{ Storage::url('capas/capaVazia.jpeg') }}">
+                    <img src="{{ Storage::url('capas/capaODDC.jpeg') }}">
                 </a>
             </div>
 
@@ -95,7 +95,7 @@ CAPAS DOS OUTROS LIVROS
 
             <h1>Cajado</h1>
             <h2>Assores, AAAA</h2>
-            <span>R$ XX,XX</span>
+            <span>R$ 45,00</span>
             <br>
             <button><?php echo $botao ?></button>
 
@@ -133,14 +133,14 @@ CAPAS DOS OUTROS LIVROS
 
         <div class="item">
             <div class="produto">
-                <a href="#">
+                <a href="{{ route('livros', $id=7) }}">
                     <img src="{{ Storage::url('capas/capaNoturnos.jpeg') }}">
                 </a>
             </div>
 
             <h1>Noturnos</h1>
             <h2>Renan Santana, 2023</h2>
-            <span>R$ XX,XX</span>
+            <span>R$ 50,00</span>
             <br>
             <button><?php echo $botao ?></button>
 
@@ -155,7 +155,7 @@ CAPAS DOS OUTROS LIVROS
 
             <h1>Os Segredos da Mata</h1>
             <h2>Taís Turaça Arantes & Renan Aryel, 2022</h2>
-            <span>R$ XX,XX</span>
+            <span>R$ 32,50</span>
             <br>
             <button><?php echo $botao ?></button>
 
@@ -163,14 +163,14 @@ CAPAS DOS OUTROS LIVROS
 
         <div class="item">
             <div class="produto">
-                <a href="#">
+                <a href="{{ route('livros', $id=6) }}">
                     <img src="{{ Storage::url('capas/capaSSM.jpeg') }}">
                 </a>
             </div>
 
             <h1>SS Misery</h1>
             <h2>Assores, AAAA</h2>
-            <span>R$ XX,XX</span>
+            <span>R$ 45,00</span>
             <br>
             <button><?php echo $botao ?></button>
 

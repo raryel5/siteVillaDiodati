@@ -17,12 +17,12 @@ class LivrosController extends Controller
         return view('livros.lista',['catalogos'=>$catalogos]);
     }
 
-    public function exibir(Catalogo $id)
+    public function exibir(Catalogo $titulo)
     {
         // $catalogos = Catalogo::find($id->id)->get();
         // dd($id);
         // return view('livros.padrao', ['catalogos'=>$catalogos, 'livro'=>$id]);
-        return view('livros.padrao', ['livro'=>$id]);
+        return view('livros.padrao', ['livro'=>$titulo]);
     }
 
     /**
