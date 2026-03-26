@@ -127,6 +127,45 @@
             align-items: center;
         }
 
+        .text-centralizado {
+            font-size: 20px;
+            padding: 10px 15%;
+            line-height: 35px;
+            text-align: justify;
+        }
+
+        .text-centralizado h1 {
+            font-family:'Aesthetic';
+            font-size: 95px;
+            text-align:center;
+        }
+
+        .text-centralizado h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 60px;
+            font-weight: lighter;
+            letter-spacing: 9.3px; 
+            text-align:center;
+        }
+
+        .text-centralizado button {
+            background-color: #424247;
+            height: 35px;
+            border: none;
+            width: 20%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 12px;
+            position: relative;
+            text-align: center;
+        }
+
+        .text-centralizado button:hover {
+            background-color: #ED6b86;
+            cursor: pointer;
+        }
+
         .container-caixa {
             display: flex;
             justify-content: left;

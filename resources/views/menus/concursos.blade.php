@@ -7,15 +7,25 @@
 @section('main')
     <!-- tudo aqui será renderizado com base no template -->
     
-    <div class="recuo">
-        <br>
-        <h1 style="font-family: 'Aesthetic'; font-size: 85px">VILLA DIODATI</h1>
-        <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Coletivo de Autores</h1>
-        <br>
-        <p>
-            <?php echo fake()->paragraphs(3, true); ?>
-        </p>
+<div class="text-centralizado">
+    <br>
+    <h1>Prêmio Villa Diodati</h1>
+    <h2>Prometeu Moderno</h2>
+    <br>
+    <p>
+    <?php echo fake()->paragraphs(4, true); ?>
+    <br><br>
+
+
+    <div class="container">
+        <button onclick="window.location.href='{{ Storage::url('arquivos/A-Internacional.pdf') }}'">
+        Baixar Edital
+        </button>  
     </div>
+
+        
+    </p>
+</div>
 
 
 
