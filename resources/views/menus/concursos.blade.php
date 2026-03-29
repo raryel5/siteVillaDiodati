@@ -16,12 +16,24 @@
     <?php echo fake()->paragraphs(4, true); ?>
     <br><br>
 
+    {{-- <div class="container">
+        <a href="{{ route('formPVDPM') }}">
+            <button> Se Inscreva Aqui </button>  
+        </a>
+    </div> --}}
 
     <div class="container">
+        <button onclick="window.location.href='{{ route('formPVDPM') }}'"> Se Inscreva Aqui </button>  
+    </div>
+
+    
+
+
+    {{-- <div class="container">
         <button onclick="window.location.href='{{ Storage::url('arquivos/A-Internacional.pdf') }}'">
         Baixar Edital
         </button>  
-    </div>
+    </div> --}}
 
         
     </p>

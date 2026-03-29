@@ -64,19 +64,6 @@ Route::prefix('/livros/{titulo}')->group(function(){
 Route::get('/', [LivrosController::class, 'exibir'])->name('livros');
 });
 
-// Route::get('/catalogo/{item}', [CatalogoController::class, 'show']);
-
-// Route::view('/index', 'home');
-
-// Route::get('/nsa', function () {
-//     return view('livros.nsa');
-// });
-
-// Route::view('/nsa', 'livros/nsa');
-// Route::get('/nsa', [CatalogoController::class, 'show'])->name('catalogos');
-
-// Route::prefix('/padrao{id}')->group(function($id){
-//     Route::get('/livros/{id}', [CatalogoController::class, 'show'])->name('catalogos');
-// });
-
-// Route::get('/padrao{id}', [CatalogoController::class, 'show'])->name('livros.padrao');
+Route::prefix('/formPVDPM')->group(function(){
+    Route::get('/', [ConcursosController::class, 'formulario'])->name('formPVDPM');
+});

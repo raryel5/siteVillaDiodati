@@ -15,6 +15,14 @@ class ConcursosController extends Controller
     }
 
     /**
+     * Exibir página com google form embutido
+     */
+    public function formulario()
+    {
+        return view('formularios/formPVDPM');
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()
