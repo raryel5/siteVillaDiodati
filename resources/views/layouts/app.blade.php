@@ -131,12 +131,13 @@
             font-size: 20px;
             padding: 10px 15%;
             line-height: 35px;
-            text-align: justify;
+            /* align-items: center; Centers vertically */
+            justify-content: center; /* Centers horizontally */
         }
 
         .text-centralizado h1 {
             font-family:'Aesthetic';
-            font-size: 95px;
+            font-size: 110px;
             text-align:center;
         }
 
@@ -148,22 +149,12 @@
             text-align:center;
         }
 
-        .text-centralizado button {
-            background-color: #424247;
-            height: 35px;
-            border: none;
-            width: 20%;
-            color: #fff;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 12px;
-            position: relative;
+        .text-centralizado h3 {
             text-align: center;
         }
 
-        .text-centralizado button:hover {
-            background-color: #ED6b86;
-            cursor: pointer;
+        .text-centralizado p {
+            text-align: justify;
         }
 
         .container-caixa {
@@ -172,6 +163,26 @@
             margin-top: 50px;
             margin-left: 50px;
         }
+
+        .container-form {
+            padding: 20px;
+            /* width: 100%; */
+            /* Coloca as filhas lado a lado */
+            display: flex;
+            /* Espaço entre as divs */
+            gap: 30px;
+            /* Centers vertically */
+            align-items: center; 
+            /* Centers horizontally */
+            justify-content: center;
+        }
+
+        iframe {
+            border: 2px solid #ccc; /* Adiciona uma borda */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
+        }
+
         .minha-caixa {
             padding: 10px 10px;
             border: 2px #fff;
@@ -202,7 +213,23 @@
             gap: 30px;      /* Espaço entre as divs */
             align-items: center;
             justify-content: center;
+        }
 
+        .container button {
+            font-size: 30px;
+            background-color: #424247;
+            height: 55px;
+            width: 130%;
+            border: none;
+            color: #fff;
+            /* font-size: 1rem; */
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        .container button:hover {
+            background-color: #ED6b86;
+            cursor: pointer;
         }
 
         .items1 {
