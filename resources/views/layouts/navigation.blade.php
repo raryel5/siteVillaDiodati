@@ -34,10 +34,10 @@
                     <ul>
                         <li><a href="{{ route('quemsomos') }}">quem somos</a></li>
                         <li><a href="{{ route('catalogo') }}">catálogo</a></li>
-                        <li><a href="{{ route('novidades') }}">novidades</a></li>
+                        <!-- <li><a href="{{ route('novidades') }}">novidades</a></li> -->
                         <li><a href="{{ route('concursos') }}">concursos</a></li>
-                        <li><a href="{{ route('publique') }}">publique</a></li>
-                        <li><a href="{{ route('produtos') }}">produtos</a></li>
+                        <!-- <li><a href="{{ route('publique') }}">publique</a></li> -->
+                        <!-- <li><a href="{{ route('produtos') }}">produtos</a></li> -->
                         <li class="drop-hover"><a href="#">serviços <i class="bi bi-caret-down-fill"></i></a>
                             <div class="drop">
                                 <a href="{{ route('diagramacao') }}">diagramação</a>
