@@ -376,11 +376,10 @@
             text-align: justify;
         }
 
-
-
-
-
     </style>
+
+    <!-- O defer faz o script carregar depois do html -->
+    <script defer src="app.js"></script>
 
     <title>@yield('title')</title>
 
@@ -390,7 +389,7 @@
 
     <div>
         <!-- header é o cabeçalho do projeto e está em layouts/navigation -->
-        @include('layouts.navigation')
+        @include('layouts.navigationR')
 
         <!-- Page Content -->
         @yield('main')

@@ -139,11 +139,6 @@
             box-shadow: inset 0 0 8px #000;
         }
 
-        .nav-list {
-            display: flex;
-            gap: 32px;
-        }
-
         /* configurações de menu abaixo do cabeçalho */
         .drop-hover{
             position: relative;
@@ -198,10 +193,6 @@
         }
 
     </style>
-
-     <!-- O defer faz o script carregar depois do html -->
-    <script defer src="app.js"></script>
-
 
     <title>@yield('title')</title>
 

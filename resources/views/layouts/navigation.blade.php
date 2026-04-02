@@ -1,8 +1,5 @@
 <!-- header é o cabeçalho do projeto -->
     <header>
-        
-        
-        {{-- <nav>Menu...</nav> --}}
 
         <section class="top-header">
             <div class="interface">
@@ -14,8 +11,7 @@
                     </a>
                 </div>
                 
-{{--                 <img src="{{ Storage::url('images/logo-02.png') }}" alt="Logo" style="height: 200px;">
- --}}
+
                 <div class="btn-social">
                     <a href="https://www.instagram.com/_coletivovilla_/"><button><i class="bi bi-instagram"></i></button></a>
 

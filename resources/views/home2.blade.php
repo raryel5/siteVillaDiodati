@@ -1,5 +1,5 @@
 <!-- as configurações de página estão layouts/app -->
-@extends('layouts.app2')
+@extends('layouts.appR')
 
 @section('title', 'Início')
 
