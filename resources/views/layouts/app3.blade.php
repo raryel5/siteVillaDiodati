@@ -202,7 +202,7 @@
 
     <div>
         <!-- header é o cabeçalho do projeto e está em layouts/navigation -->
-        @include('layouts.navigationR')
+        @include('layouts.navigation')
 
         <!-- Page Content -->
         @yield('main')

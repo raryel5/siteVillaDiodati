@@ -2,22 +2,24 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="{{ Storage::url('images/favicon.ico') }}" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
         body{
-
             /* font-family: Georgia, 'Times New Roman', Times, serif; */
             font-family: 'Quicksand', sans-serif;
+            margin: 0;
         }
 
         /* configurações de cabeçalho */
@@ -32,65 +34,13 @@
             margin: 0 auto;
         }
 
-        header, div {
-            box-sizing: border-box;
-        }
+        /* Cabeçalho da logo e redes sociais */
 
         header{
+            /* margin-top: 200px; */
             width: 100%;
             background-color: #424147;
-            /* background-color: #fff; */
-            /* position: relative; */
-            /* width: 1220px; */
-            /* max-width: 90%; */
-            /* height: 120px; */
-            top: 0px;
-            right: 0px;
-            left: 0px;
-            margin: 0px auto;
         }
-
-        /*  */
-        #logo {
-        position: absolute;
-        width: 120px;
-        top: 0px;  
-        bottom: 0px;
-        left: 0px;
-        
-        /* border: 1px solid red; */
-        /* background-color: rgba(255, 0, 0, 0.1); */
-        }
-
-        #superior {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 60px;
-        left: 120px;
-        
-        /* border: 1px solid green; */
-        /* background-color: rgba(0, 255, 0, 0.1); */
-        }
-
-        #inferior {
-        position: absolute;
-        top: 60px;
-        right: 0px;
-        bottom: 0px;
-        left: 300px;   
-        
-        /* border: 1px solid blue; */
-        /* background-color: rgba(0, 0, 255, 0.1); */
-        }
-
-
-        #superior, #inferior {
-        text-align: right;
-        line-height: 40px;
-        padding: 10px;
-        }
-        /*  */
 
         .top-header > .interface{
             display: flex;
@@ -99,7 +49,7 @@
         }
 
         .top-header{
-            /* background-color: #fff; */
+            background-color: #fff;
             padding: 20px 4%;
         }
 
@@ -117,12 +67,14 @@
             cursor: pointer;
         }
 
-        /* .botton-header nav ul{
+        /* cabeçalho dos menus */
+
+        .botton-header nav ul{
             display: flex;
             align-items: center;
             justify-content: center;
             list-style-type: none;
-        } */
+        }
 
         .botton-header nav ul li a{
             color: #fff;
@@ -137,11 +89,6 @@
             background-color: #ED6b86;   
             color: #424247;
             box-shadow: inset 0 0 8px #000;
-        }
-
-        .nav-list {
-            display: flex;
-            gap: 32px;
         }
 
         /* configurações de menu abaixo do cabeçalho */
@@ -440,7 +387,7 @@
 
     <div>
         <!-- header é o cabeçalho do projeto e está em layouts/navigation -->
-        @include('layouts.navigation')
+        @include('layouts.navigationR')
 
         <!-- Page Content -->
         @yield('main')

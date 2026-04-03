@@ -7,11 +7,15 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
-<div class="recuo">
+<div class="container-md">
+    <div class="recuo">
     <br>
-    <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Nossas Coletâneas</h1>
+    <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">Nossas Coletâneas</h1>
     <br>
 </div>
+</div>
+
+
 
 <!-- 
 
@@ -79,7 +83,7 @@ CAPAS DOS OUTROS LIVROS
 
 <div class="recuo">
     <br>
-    <h1 style="font-size: 50px; font-weight: lighter; letter-spacing: 9.3px">Outras publicações de nossos autores</h1>
+    <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">Outras publicações de nossos autores</h1>
     <br>
 </div>
 
