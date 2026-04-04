@@ -4,7 +4,7 @@
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
 
-        <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ Storage::url('images/logo.png') }}" alt="imagem" style="height: 100px"></a>
+        <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ Storage::url('images/logo.png') }}" alt="imagem" style="height: 150px"></a>
 
         <section class="top-header">
             <div class="interface">                
@@ -45,6 +45,10 @@
 
                 <li class="nav-item">
                 <a class="nav-link" href="{{ route('catalogo') }}">catálogo</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="{{ route('concursos') }}">concursos</a>
                 </li>
 
                 <li class="nav-item dropdown">

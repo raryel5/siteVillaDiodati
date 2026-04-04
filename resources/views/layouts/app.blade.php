@@ -37,7 +37,7 @@
         }
 
         header{
-            width: 100%;
+            width: 90%;
             background-color: #424147;
             /* background-color: #fff; */
             /* position: relative; */
@@ -126,9 +126,9 @@
 
         .botton-header nav ul li a{
             color: #fff;
-            padding: 20px 40px;
+            padding: 10px 40px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 750;
             display: block;
             transition: .2s;
         }
