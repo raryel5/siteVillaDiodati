@@ -173,10 +173,21 @@
             margin: 0;
         }
 
+        .section-corpo {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
         .recuo {
-            /* margin-left: 50px; */
-            width: 620px;
+            width: 55%;
             line-height: 35px;
+            align-items: center;
+        }
+
+        .recuo-parag {
+            /* width: 100%; */
+            font-size: 20px;
+            line-height: 40px;
             align-items: center;
         }
 

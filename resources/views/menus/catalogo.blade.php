@@ -7,6 +7,8 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
+<section style="margin-left: 5%">
+
 <div class="container-md">
     <div class="recuo">
     <br>
@@ -14,6 +16,7 @@
     <br>
 </div>
 </div>
+</section>
 
 
 

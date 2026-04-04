@@ -6,8 +6,9 @@
 <!-- corpo da página -->
 @section('main')
     <!-- tudo aqui será renderizado com base no template -->
-    
-<div class="text-centralizado">
+
+<section class="section-corpo">
+    <div class="text-centralizado">
     <br>
     <h1>Prêmio Villa Diodati</h1>
     <h2>Concurso de Contos:</h2>
@@ -118,6 +119,8 @@
         
     </p>
 </div>
+</section>
+
 
 
 

@@ -4,7 +4,7 @@
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
 
-        <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ Storage::url('images/logo.png') }}" alt="imagem" style="height: 140px"></a>
+        <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ Storage::url('images/logo-03.png') }}" alt="imagem" style="height: 110px"></a>
 
         <section class="top-header">
             <div class="interface">                
