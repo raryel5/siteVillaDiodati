@@ -6,7 +6,7 @@
 <!-- corpo da página -->
 @section('main')
     <!-- tudo aqui será renderizado com base no template -->
-
+<section style="width=90%">
     <div class="recuo">
         <br>
         <h1 style="font-family: 'Aesthetic'; font-size: 85px">VILLA DIODATI</h1>
@@ -17,6 +17,9 @@
             <?php echo fake()->paragraphs(3, true); ?>
         </p>
     </div>
+</section>
+
+
 
 
 

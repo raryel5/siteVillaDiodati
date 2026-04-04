@@ -174,7 +174,7 @@
         }
 
         .recuo {
-            margin-left: 50px;
+            /* margin-left: 50px; */
             width: 620px;
             line-height: 35px;
             align-items: center;
