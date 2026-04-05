@@ -37,13 +37,11 @@
                     </a>
                 </div>
 
-                <div class="elemento-capa-desc">
-                    <h1>Noites Sem Alma</h1>
-                    <h2>vários autores, 2024</h2>
-                    <span>R$ 45,00</span>
-                    <br>
-                    <button><?php echo $botao ?></button>
-                </div>                
+                <h1>Noites Sem Alma</h1>
+                <h2>vários autores, 2024</h2>
+                <span>R$ 45,00</span>
+                <br>
+                <button><?php echo $botao ?></button>
             </div>
             
 
@@ -59,7 +57,6 @@
                 <span>R$ 50,00</span>
                 <br>
                 <button><?php echo $botao ?></button>
-
             </div>
 
             <div class="item">
@@ -74,7 +71,6 @@
                 <span>R$ 55,00</span>
                 <br>
                 <button><?php echo $botao ?></button>
-
             </div>
 
         </div>

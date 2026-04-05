@@ -273,20 +273,22 @@
         /* Cards de produtos */
 
         .container {
-            /* display: flex; Coloca as filhas lado a lado */
+            /* Coloca as filhas lado a lado */
+            /* display: flex; */
             gap: 30px;      /* Espaço entre as divs */
             align-items: center;
             justify-content: center;
         }
 
         .container button {
-            font-size: 30px;
+            /* font-size: 30px; */
             background-color: #424247;
-            height: 55px;
-            width: 130%;
+            height: 2em;
+            width: 85%;
             border: none;
+            padding: 2%;
             color: #fff;
-            /* font-size: 1rem; */
+            font-size: 1rem;
             font-weight: bold;
             border-radius: 12px;
         }
@@ -317,13 +319,15 @@
             background-color: #e6dede;
             padding: 10px 10px 10px 10px;
             display: flex;
+            /* justify-content: center; */
+            align-items: center;
             flex-direction: column;
             position: relative;
             border-radius: 12px;
             box-shadow: 4px 4px 16px #aaaa;
         }
 
-        .item h1 h2 span button {
+        .item h1 h2 span {
             justify-content: center;
             align-items: center;
         }
@@ -353,6 +357,7 @@
 
         .item button {
             background-color: #424247;
+            /* margin-top: 3px; */
             height: 2em;
             border: none;
             padding: 2%;
@@ -397,6 +402,8 @@
 
         .elemento-capa-desc {
             text-align: center;
+            justify-content: center;
+            align-items: center;
             border-radius: 5px;
             padding: 5px;
             margin-top: 5px; 
@@ -420,10 +427,11 @@
 
         .elemento-capa-desc button {
             background-color: #424247;
-            height: 30px;
+            margin-top:5px;
+            height: 2em;
             border: none;
-            padding: 3px;
-            width: 80%;
+            padding: 2%;
+            width: 90%;
             color: #fff;
             font-size: 1rem;
             font-weight: bold;
@@ -446,7 +454,6 @@
         }
 
     </style>
-
 
     <title>@yield('title')</title>
 

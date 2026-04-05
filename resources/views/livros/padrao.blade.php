@@ -70,7 +70,7 @@
             <span style="margin-top:5px; font-weight: bold" >R$ {{ $livro->preco }}</span>
             <br>
 
-            <button style="margin-top: 5px"><?php echo $botao ?></button>
+            <button><?php echo $botao ?></button>
         </div>        
 
     </div>
