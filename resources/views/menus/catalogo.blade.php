@@ -9,88 +9,94 @@
 
 <section style="margin-left: 5%">
 
-<div class="container-md">
-    <div class="recuo">
-    <br>
-    <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">Nossas Coletâneas</h1>
-    <br>
-</div>
-</div>
+    <div class="container-md">
+        <div class="recuo">
+        <br>
+        <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">Publicações pelo Coletivo</h1>
+        <br>
+        </div>
+    </div>
+
 </section>
-
-
 
 <!-- 
 
     PUBLICAÇÕES DO COLETIVO
 
 -->
-<div class="container">
-    <div class="items1">
-        <!-- variaveis PHP -->
-        <?php $botao = "Compre agora" ?>
+<section style="margin-left: 5%">
+    <div class="container">
+        <div class="items1">
+            <!-- variaveis PHP -->
+            <?php $botao = "Compre agora" ?>
 
-        <div class="item">
-            <div class="produto">
-                <a href="{{ route('livros', $id=2) }}">
-                    <img src="{{ Storage::url('capas/capaNSA.jpeg') }}">
-                </a>
+            <div class="item">
+                <div class="produto">
+                    <a href="{{ route('livros', $id=2) }}">
+                        <img src="{{ Storage::url('capas/capaNSA.jpeg') }}">
+                    </a>
+                </div>
+
+                <div class="elemento-capa-desc">
+                    <h1>Noites Sem Alma</h1>
+                    <h2>vários autores, 2024</h2>
+                    <span>R$ 45,00</span>
+                    <br>
+                    <button><?php echo $botao ?></button>
+                </div>                
+            </div>
+            
+
+            <div class="item">
+                <div class="produto">
+                    <a href="{{ route('livros', $id=3) }}">
+                        <img src="{{ Storage::url('capas/capaOQFE.jpeg') }}">
+                    </a>
+                </div>
+
+                <h1>O Que Ficou no Escuro</h1>
+                <h2>vários autores, 2025</h2>
+                <span>R$ 50,00</span>
+                <br>
+                <button><?php echo $botao ?></button>
+
             </div>
 
-            <h1>Noites Sem Alma</h1>
-            <h2>vários autores, 2024</h2>
-            <span>R$ 45,00</span>
-            <br>
-            <button><?php echo $botao ?></button>
-        </div>
-        
+            <div class="item">
+                <div class="produto">
+                    <a href="{{ route('livros', $id=4) }}">
+                        <img src="{{ Storage::url('capas/capaODDC.jpeg') }}">
+                    </a>
+                </div>
 
-        <div class="item">
-            <div class="produto">
-                <a href="{{ route('livros', $id=3) }}">
-                    <img src="{{ Storage::url('capas/capaOQFE.jpeg') }}">
-                </a>
+                <h1>O Diário da Coletora</h1>
+                <h2>Renan Santana, AAAA</h2>
+                <span>R$ 55,00</span>
+                <br>
+                <button><?php echo $botao ?></button>
+
             </div>
 
-            <h1>O Que Ficou no Escuro</h1>
-            <h2>vários autores, 2025</h2>
-            <span>R$ 50,00</span>
-            <br>
-            <button><?php echo $botao ?></button>
-
         </div>
-
-        <div class="item">
-            <div class="produto">
-                <a href="{{ route('livros', $id=4) }}">
-                    <img src="{{ Storage::url('capas/capaODDC.jpeg') }}">
-                </a>
-            </div>
-
-            <h1>O Diário da Coletora</h1>
-            <h2>Renan Santana, AAAA</h2>
-            <span>R$ 55,00</span>
-            <br>
-            <button><?php echo $botao ?></button>
-
-        </div>
-
     </div>
-</div>
+</section>
 
 <!-- 
 
 CAPAS DOS OUTROS LIVROS
 
 -->
+<section style="margin-left: 5%">
+    <div class="recuo">
+        <br>
+        <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">Outras publicações de nossos autores</h1>
+        <br>
+    </div>
+</section>
 
-<div class="recuo">
-    <br>
-    <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">Outras publicações de nossos autores</h1>
-    <br>
-</div>
 
-<div class="container">
+<section style="margin-left: 5%">
+    <div class="container">
     <div class="items2">
 
         <div class="item">
@@ -123,7 +129,7 @@ CAPAS DOS OUTROS LIVROS
 
         </div>
 
-        <div class="item">
+        {{-- <div class="item">
             <div class="produto">
                 <a href="#">
                     <img src="{{ Storage::url('capas/capaEPQSG.jpeg') }}">
@@ -136,7 +142,7 @@ CAPAS DOS OUTROS LIVROS
             <br>
             <button><?php echo $botao ?></button>
 
-        </div>
+        </div> --}}
 
         <div class="item">
             <div class="produto">
@@ -184,7 +190,9 @@ CAPAS DOS OUTROS LIVROS
         </div>
 
     </div>
-</div>
+    </div>
+</section>
+
 
 
 

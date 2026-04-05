@@ -273,7 +273,7 @@
         /* Cards de produtos */
 
         .container {
-            display: flex; /* Coloca as filhas lado a lado */
+            /* display: flex; Coloca as filhas lado a lado */
             gap: 30px;      /* Espaço entre as divs */
             align-items: center;
             justify-content: center;
@@ -298,30 +298,34 @@
 
         .items1 {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: repeat(auto-fit, minmax(160px, 165px));
             grid-gap: 30px;
+            justify-content: center;
+
         }
 
         .items2 {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(160px, 165px));
             grid-gap: 30px;
+            justify-content: center;
         }
 
         .item {
             text-align: center;
             background-color: #e6dede;
-            padding: 10px;
-            /* width: 190px; */
-            /* height: 390px; */
+            padding: 10px 10px 10px 10px;
             display: flex;
             flex-direction: column;
             position: relative;
             border-radius: 12px;
             box-shadow: 4px 4px 16px #aaaa;
+        }
+
+        .item h1 h2 span button {
             justify-content: center;
             align-items: center;
-
         }
 
         /* capa */
@@ -330,6 +334,7 @@
             height: 220px;
             width: 100%;
             border-radius: 5px;
+            align-items: flex-start;
         }
 
         .item img {
@@ -348,10 +353,10 @@
 
         .item button {
             background-color: #424247;
-            height: 30px;
+            height: 2em;
             border: none;
-            padding: 3px;
-            width: 80%;
+            padding: 2%;
+            width: 85%;
             color: #fff;
             font-size: 1rem;
             font-weight: bold;
