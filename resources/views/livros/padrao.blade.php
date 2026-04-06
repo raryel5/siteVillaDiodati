@@ -7,6 +7,7 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
+<section style="margin-left: 5%">
 <div class="livro-container">
     <!-- variaveis PHP -->
     <?php $botao = "Compre agora" ?>
@@ -50,8 +51,7 @@
             @if ( $livro['titulo'] == "SS Misery")
                 <img src="{{ Storage::url('capas/capaSSM.jpeg') }}" >
             @endif
-        </div>
-    
+        </div>    
 
         <div class="elemento-capa-desc">
             <h1>{{ $livro->autor }}</h1>
@@ -76,13 +76,16 @@
     </div>
 
     <div class="elemento-container-descricao">
-        <h1 style="font-family: 'Aesthetic'; font-size: 50px; letter-spacing: 9.3px; text-align: left"> {{ $livro->titulo }} </h1>
+        <h1 style="font-family: 'Aesthetic'; font-size: clamp(1rem, 5vw + 1rem, 4rem);letter-spacing: 6px; text-align: left"> {{ $livro->titulo }} </h1>
+
         <br>
-        <h2 style="font-size: 20px">
+        <p style="font-size: clamp(1rem, 0.3vw + 1rem, 6rem); text-align: justify">
             {{ $livro->descricao }}
-        </h2>
-        
+        </p>        
     </div>
+
 </div>
+</section>
+
 
 @endsection

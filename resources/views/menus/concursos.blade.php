@@ -7,7 +7,7 @@
 @section('main')
     <!-- tudo aqui será renderizado com base no template -->
 
-<section class="section-corpo">
+<section>
     <div class="text-centralizado">
     <br>
     <h1>Prêmio Villa Diodati</h1>
@@ -15,10 +15,9 @@
     <h2>PROMETEU MODERNO</h2>
     <br>
     <p>
-    <!-- < ? php echo fake()->paragraphs(4, true); ?> -->
      O Villa Diodati – Coletivo de Autores torna pública a abertura de inscrições para a antologia de contos "Prometeu Moderno". Este edital visa selecionar obras literárias inéditas que explorem o gênero Ficção Científica em suas diversas vertentes.
-     <br>
-    <br>
+    </p>
+    <!-- <br>
      <h3>Premiação</h3>
      ● Participação na próxima coletânea;<br />
      ● Prêmios para os três primeiros colocados:
@@ -98,26 +97,19 @@
     
     7.1. O ato da inscrição implica a plena aceitação de todos os termos deste edital.<br />
     7.2. O desrespeito a qualquer regra de formatação ou de ineditismo resultará em desclassificação imediata.<br />
-    7.3. Casos omissos serão decididos pela comissão organizadora.
+    7.3. Casos omissos serão decididos pela comissão organizadora. -->
+  
+
+    
+    <button onclick="window.location.href='{{ Storage::url('arquivos/A-Internacional.pdf') }}'">
+        <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> Baixe o edital aqui
+    </button>  
+
     <br>
-    <br>
-    <br>
-
-
-    <div class="container">
-        <a href="{{ route('formPVDPM') }}">
-            <button> Se Inscreva Aqui </button>  
-        </a>        
-    </div>
-
-
-    <!-- {{-- <div class="container">
-        <button onclick="window.location.href='{{ Storage::url('arquivos/A-Internacional.pdf') }}'">
-        Baixar Edital
-        </button>  
-    </div> --}} -->
-        
-    </p>
+    <a href="{{ route('formPVDPM') }}">
+        <button> <i class="bi bi-pen"></i> Se Inscreva Aqui </button>  
+    </a>        
+    
 </div>
 </section>
 
@@ -128,6 +120,6 @@
 
         <textarea class="minha-caixa" id="" name="" rows="20" cols="50" placeholder="">Teste e mais testes.</textarea>
     </div> -->
-    
+
 
 @endsection

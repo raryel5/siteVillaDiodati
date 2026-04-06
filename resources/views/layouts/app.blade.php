@@ -10,6 +10,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     
+    <!-- icone de PDF -->
+    <!-- <link rel="stylesheet" href="https://cloudflare.com"> -->
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
@@ -184,41 +186,61 @@
             align-items: center;
         }
 
-        .recuo-parag {
-            /* width: 100%; */
+        /* .recuo-parag {
+            width: 100%;
             font-size: 20px;
             line-height: 40px;
             align-items: center;
-        }
+        } */
 
         .text-centralizado {
-            font-size: 20px;
+            align-items: center;
             padding: 10px 15%;
             line-height: 35px;
             /* align-items: center; Centers vertically */
+            display: flex;
+            flex-direction: column;
             justify-content: center; /* Centers horizontally */
         }
 
         .text-centralizado h1 {
             font-family:'Aesthetic';
-            font-size: 110px;
-            text-align:center;
+            font-size: clamp(1rem, 5.5vw + 1rem, 6rem);
+            text-align: center;
         }
 
         .text-centralizado h2 {
             font-family: 'Quicksand', sans-serif;
-            font-size: 60px;
+            font-size: clamp(1rem, 2.5vw + 1rem, 6rem);
             font-weight: lighter;
             letter-spacing: 9.3px; 
-            text-align:center;
+            text-align: center;
         }
 
         .text-centralizado h3 {
+            font-size: clamp(1rem, 1.5vw + 1rem, 6rem);
             text-align: center;
         }
 
         .text-centralizado p {
+            font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
             text-align: justify;
+        }
+
+        .text-centralizado button {
+            background-color: #424247;
+            height: 2em;
+            border: none;
+            width: 15em;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        .text-centralizado button:hover {
+            background-color: #ED6b86;
+            cursor: pointer;
         }
 
         .container-caixa {
@@ -286,7 +308,7 @@
             height: 2em;
             width: 85%;
             border: none;
-            padding: 2%;
+            /* padding: 2%; */
             color: #fff;
             font-size: 1rem;
             font-weight: bold;
@@ -358,6 +380,7 @@
         .item button {
             background-color: #424247;
             /* margin-top: 3px; */
+            /* margin-bottom: 1em; */
             height: 2em;
             border: none;
             padding: 2%;
@@ -377,22 +400,25 @@
 
         .livro-container{
             display: flex; /* disposicao flexível de divs */
-            gap: 30px; /* espaço entre divs */
-            padding: 10px; /* distancia da borda da pagina */
+            gap: 20px; /* espaço entre divs */
+            /* padding: 10px; distancia da borda da pagina */
             flex-direction: row; /* alinhar divs em linha*/
+            width: 50%; /* Largura */
             
         }
 
         .elemento-container-capa{
-            width: 350px; /* Largura */
+            width: 75%; /* Largura */
             height: 100%; /* Altura */
             margin-top: 50px;
+            /* margin-right: 5%; */
             display: flex;
+            flex-direction: column; /* alinhar divs em linha*/
             justify-content: center;
             background-color: white; /* Cor de fundo */
             border: 1px solid white; /* cor da borda */
             border-radius: 12px;
-            flex-direction: column; /* alinhar divs em linha*/
+            
         }
 
         .elemento-capa {
@@ -402,10 +428,10 @@
 
         .elemento-capa-desc {
             text-align: center;
-            justify-content: center;
+            /* justify-content: center; */
             align-items: center;
             border-radius: 5px;
-            padding: 5px;
+            /* padding: 5px; */
             margin-top: 5px; 
         }
 
@@ -415,7 +441,7 @@
         }
 
         .elemento-capa-desc h1 {
-            font-size: 1.4rem;
+            font-size: clamp(1rem, 1.5vw + 1rem, 1.2rem);
             margin-top: 5px; 
         }
 
@@ -427,11 +453,11 @@
 
         .elemento-capa-desc button {
             background-color: #424247;
-            margin-top:5px;
+            margin-top: 10px;
             height: 2em;
             border: none;
-            padding: 2%;
-            width: 90%;
+            /* padding: 2%; */
+            width: 9em;
             color: #fff;
             font-size: 1rem;
             font-weight: bold;
@@ -444,13 +470,29 @@
         }
 
         .elemento-container-descricao{
-            width: 500px; /* Largura */
+            width: 100%;
             height: 50%; /* Altura */
+            /* word-wrap: break-word; */
             margin-top: 50px;
+            /* margin-right: 5%; */
             background-color: white; /* Cor de fundo */
             border: 1px solid white; /* cor da borda */
             border-radius: 12px;
-            text-align: justify;
+            /* text-align: justify; */
+        }
+
+        footer {
+            text-align: center;
+            font-size: small;
+            width: 100%;
+            /* line-height: 16px; */
+            /* background-color: #333; */
+            color: #333;
+        }
+
+        footer p {
+            word-wrap: break-word;
+            margin-bottom: 3px;
         }
 
     </style>
@@ -467,11 +509,17 @@
 
         <!-- Page Content -->
         @yield('main')
-
     </div>
-    
 
-  
+    <br>
+    <br>
+    <br>
+    <footer class="footer">
+        <p>&copy; 2026 Villa Diodati - Coletivo de Autores. Todos os direitos reservados.</p>
+        <p>Contato: villadiodaticoletivo@gmail.com</p>
+        <p>Desenvolvido por <a href="https://wa.me/5567996638417?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20contrução%20de%20um%20site.">Zephyro</a></p>
+        <!-- <a href="/politica-de-privacidade">Política de Privacidade</a> -->
+    </footer>  
 
 </body>
 </html>

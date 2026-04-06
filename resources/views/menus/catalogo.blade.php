@@ -9,13 +9,13 @@
 
 <section style="margin-left: 5%">
 
-    <div class="container-md">
+    <!-- <div class="container-md"> -->
         <div class="recuo">
         <br>
         <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">Publicações pelo Coletivo</h1>
         <br>
         </div>
-    </div>
+    <!-- </div> -->
 
 </section>
 
@@ -67,7 +67,7 @@
                 </div>
 
                 <h1>O Diário da Coletora</h1>
-                <h2>Renan Santana, AAAA</h2>
+                <h2>Renan Santana, 2025</h2>
                 <span>R$ 55,00</span>
                 <br>
                 <button><?php echo $botao ?></button>
@@ -103,7 +103,7 @@ CAPAS DOS OUTROS LIVROS
             </div>
 
             <h1>Cajado</h1>
-            <h2>Assores, AAAA</h2>
+            <h2>Assores, 2023</h2>
             <span>R$ 45,00</span>
             <br>
             <button><?php echo $botao ?></button>
@@ -125,7 +125,7 @@ CAPAS DOS OUTROS LIVROS
 
         </div>
 
-        {{-- <div class="item">
+        <!-- <div class="item">
             <div class="produto">
                 <a href="#">
                     <img src="{{ Storage::url('capas/capaEPQSG.jpeg') }}">
@@ -138,7 +138,7 @@ CAPAS DOS OUTROS LIVROS
             <br>
             <button><?php echo $botao ?></button>
 
-        </div> --}}
+        </div> -->
 
         <div class="item">
             <div class="produto">
@@ -178,7 +178,7 @@ CAPAS DOS OUTROS LIVROS
             </div>
 
             <h1>SS Misery</h1>
-            <h2>Assores, AAAA</h2>
+            <h2>Assores, 2023</h2>
             <span>R$ 45,00</span>
             <br>
             <button><?php echo $botao ?></button>
