@@ -24,7 +24,7 @@
     PUBLICAÇÕES DO COLETIVO
 
 -->
-<section style="margin-left: 5%">
+<section style="margin-left: 5%; margin-right: 5%">
     <div class="container">
         <div class="items1">
             <!-- variaveis PHP -->
@@ -41,7 +41,9 @@
                 <h2>vários autores, 2024</h2>
                 <span>R$ 45,00</span>
                 <br>
-                <button><?php echo $botao ?></button>
+                <a href="https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20a%20coletânea%20Noites%20Sem%20Alma.%20Vim%20pelo%20site%20de%20vocês.">
+                    <button><?php echo $botao ?></button>
+                </a>
             </div>
             
 
@@ -56,7 +58,9 @@
                 <h2>vários autores, 2025</h2>
                 <span>R$ 50,00</span>
                 <br>
-                <button><?php echo $botao ?></button>
+                <a href="https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20a%20coletânea%20O%20que%20Ficou%20no%20Escuro.%20Vim%20pelo%20site%20de%20vocês.">
+                    <button><?php echo $botao ?></button>
+                </a>
             </div>
 
             <div class="item">
@@ -70,7 +74,10 @@
                 <h2>Renan Santana, 2025</h2>
                 <span>R$ 55,00</span>
                 <br>
-                <button><?php echo $botao ?></button>
+                <a href="https://wa.me/5511996787049?text=Olá,%20gostaria%20de%20adquirir%20O%20Diário%20da%20Coletora.%20Vim%20pelo%20site%20de%20vocês.">
+                    <button><?php echo $botao ?></button>
+                </a>
+                
             </div>
 
         </div>
@@ -106,7 +113,9 @@ CAPAS DOS OUTROS LIVROS
             <h2>Assores, 2023</h2>
             <span>R$ 45,00</span>
             <br>
-            <button><?php echo $botao ?></button>
+            <a href="https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Cajado.%20Vim%20pelo%20site%20de%20vocês.">
+                <button><?php echo $botao ?></button>
+            </a>
 
         </div>
 
@@ -121,7 +130,9 @@ CAPAS DOS OUTROS LIVROS
             <h2>Israel de Oliveira Costa, AAAA</h2>
             <span>R$ XX,XX</span>
             <br>
-            <button><?php echo $botao ?></button>
+            <a href="https://wa.me/558699203283?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Dedo%20em%20Riste,%20Verso%20em%20Prosa.%20Vim%20pelo%20site%20de%20vocês.">
+                <button><?php echo $botao ?></button>
+            </a>
 
         </div>
 
@@ -151,7 +162,9 @@ CAPAS DOS OUTROS LIVROS
             <h2>Renan Santana, 2023</h2>
             <span>R$ 50,00</span>
             <br>
-            <button><?php echo $botao ?></button>
+            <a href="https://wa.me/5511996787049?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Noturnos.%20Vim%20pelo%20site%20de%20vocês.">
+                <button><?php echo $botao ?></button>
+            </a>
 
         </div>
 
@@ -166,7 +179,9 @@ CAPAS DOS OUTROS LIVROS
             <h2>Taís Turaça Arantes & Renan Aryel, 2022</h2>
             <span>R$ 32,50</span>
             <br>
-            <button><?php echo $botao ?></button>
+            <a href="https://wa.me/5567996638417?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Os%20Segredos%20da%20Mata.%20Vim%20pelo%20site%20de%20vocês.">
+                <button><?php echo $botao ?></button>
+            </a>
 
         </div>
 
@@ -181,7 +196,9 @@ CAPAS DOS OUTROS LIVROS
             <h2>Assores, 2023</h2>
             <span>R$ 45,00</span>
             <br>
-            <button><?php echo $botao ?></button>
+            <a href="https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20SS%20Misery.%20Vim%20pelo%20site%20de%20vocês.">
+                <button><?php echo $botao ?></button>
+            </a>
 
         </div>
 
