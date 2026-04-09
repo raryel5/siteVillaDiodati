@@ -37,7 +37,7 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: clamp(1rem, 0.3vw + 1rem, 6rem)">
 
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ route('quemsomos') }}">quem somos</a>
@@ -76,10 +76,10 @@
 
             </ul>
 
-            <form class="d-flex" role="search">
+            <!-- <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                 <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form> -->
 
             </div>
         </div>
