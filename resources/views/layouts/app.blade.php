@@ -494,6 +494,15 @@
             text-align: justify;
         }
 
+        .flex-servicos {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card-servico {
+            flex: 1 1 200px;
+        }
+
         footer {
             text-align: center;
             font-size: small;

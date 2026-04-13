@@ -10,6 +10,7 @@ use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\PubliqueController;
 use App\Http\Controllers\DiagramacaoController;
 use App\Http\Controllers\LivrosController;
+use App\Http\Controllers\ServicosController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -48,6 +49,10 @@ Route::prefix('/publique')->group(function(){
 
 Route::prefix('/diagramacao')->group(function(){
     Route::get('/', [DiagramacaoController::class, 'index'])->name('diagramacao');
+});
+
+Route::prefix('/servicos')->group(function(){
+Route::get('/', [ServicosController::class, 'index'])->name('servicos');
 });
 
 Route::fallback(function(){

@@ -47,11 +47,15 @@
                 <a class="nav-link" href="{{ route('catalogo') }}">catálogo</a>
                 </li>
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('concursos') }}">concursos</a>
+                </li> --}}
+
+                <li class="nav-item">
+                <a class="nav-link" href="{{ route('servicos') }}">servicos</a>
                 </li>
 
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     serviços
                 </a>
@@ -68,7 +72,7 @@
                     <li><a class="dropdown-item" href="#">Mentoria</a></li>
 
                 </ul>
-                </li>
+                </li> --}}
 
                 <!-- <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
