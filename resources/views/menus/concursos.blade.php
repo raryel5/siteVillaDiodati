@@ -20,13 +20,19 @@
     </p>
     <br>
     
-    <button>
+    <!-- <button>
         <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> EM BREVE
-    </button>
+    </button> -->
 
-    <button onclick="window.location.href='{{ Storage::url('arquivos/Prêmio\ Villa\ Diodati\ -\ Prometeu\ Moderno\ -\ Edital\ Oficial.pdf') }}'">
+    <!-- <button onclick="window.location.href='{{ Storage::url('arquivos/Prêmio\ Villa\ Diodati\ -\ Prometeu\ Moderno\ -\ Edital\ Oficial.pdf') }}'">
         <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> Baixe o edital aqui
-    </button>
+    </button> -->
+
+    <a src="{{ Storage::url('arquivos/Prêmio\ Villa\ Diodati\ -\ Prometeu\ Moderno\ -\ Edital\ Oficial.pdf') }}">
+        <button>
+        <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> Baixe o edital aqui
+        </button>
+    </a>
 
     <br>
     <a href="{{ route('formPVDPM') }}">
