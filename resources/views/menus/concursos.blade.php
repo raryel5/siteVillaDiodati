@@ -18,8 +18,8 @@
     <p>
      O Villa Diodati – Coletivo de Autores torna pública a abertura de inscrições para a antologia de contos "Prometeu Moderno". Este edital visa selecionar obras literárias inéditas que explorem o gênero Ficção Científica em suas diversas vertentes.
     </p>
+    <p>Oi um teste aqui!</p>
     <br>
-
     
     <button>
         <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> EM BREVE
