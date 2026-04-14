@@ -37,7 +37,7 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: clamp(1rem, 0.3vw + 1rem, 6rem)">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-expand-sm" style="font-size: clamp(1rem, 0.3vw + 1rem, 6rem)">
 
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ route('quemsomos') }}">quem somos</a>
@@ -47,15 +47,15 @@
                 <a class="nav-link" href="{{ route('catalogo') }}">catálogo</a>
                 </li>
 
-                {{-- <li class="nav-item">
-                <a class="nav-link" href="{{ route('concursos') }}">concursos</a>
-                </li> --}}
-
                 <li class="nav-item">
-                <a class="nav-link" href="{{ route('servicos') }}">servicos</a>
+                <a class="nav-link" href="{{ route('concursos') }}">concursos</a>
                 </li>
 
-                {{-- <li class="nav-item dropdown">
+                <!-- <li class="nav-item">
+                <a class="nav-link" href="{{ route('servicos') }}">serviços</a>
+                </li> -->
+
+                <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     serviços
                 </a>
@@ -63,16 +63,16 @@
 
                     <li><a class="dropdown-item" href="#">Diagramação</a></li>
 
-                    <li><a class="dropdown-item" href="#">Revisão</a></li>
+                    <li><a class="dropdown-item" href="#">Revisão</a></li> -->
 
                     <!-- <li><hr class="dropdown-divider"></li> -->
 
-                    <li><a class="dropdown-item" href="#">Leitura crítica</a></li>
+                    <!-- <li><a class="dropdown-item" href="#">Leitura crítica</a></li>
 
                     <li><a class="dropdown-item" href="#">Mentoria</a></li>
 
                 </ul>
-                </li> --}}
+                </li> -->
 
                 <!-- <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>

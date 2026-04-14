@@ -324,7 +324,7 @@
             display: grid;
             /* grid-template-columns: repeat(3, 1fr); */
             grid-template-columns: repeat(auto-fit, minmax(160px, 165px));
-            grid-gap: 15px;
+            grid-gap: 3%;
             justify-content: center;
 
         }
@@ -332,7 +332,7 @@
         .items2 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 165px));
-            grid-gap: 15px;
+            grid-gap: 3%;
             justify-content: center;
         }
 
@@ -497,10 +497,43 @@
         .flex-servicos {
             display: flex;
             flex-wrap: wrap;
+            max-width: 800px;
+            /* margin: 0 auto; */
+            /* align-items: center; */
+            /* justify-content: center; */
+            text-align: center;
+        
         }
 
         .card-servico {
             flex: 1 1 200px;
+            margin: 3em;
+        }
+
+        .title-servico {
+            text-align: left;
+        }
+
+        .corpo-servico {
+            text-align: justify;
+        }
+
+
+        .card-servico button {
+            background-color: #424247;
+            height: 2em;
+            border: none;
+            /* padding: 2%; */
+            width: 75%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        .card-servico button:hover {
+            background-color: #ED6b86;
+            cursor: pointer;
         }
 
         footer {
@@ -537,9 +570,15 @@
     <br>
     <br>
     <footer class="footer">
+        <br>
+        <br>
+        <br>
         <p>&copy; 2026 Villa Diodati - Coletivo de Autores. Todos os direitos reservados.</p>
+
         <p>Contato: villadiodaticoletivo@gmail.com</p>
-        <p>Desenvolvido por <a href="https://wa.me/5567996638417?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20contrução%20de%20um%20site.">Zephyro</a></p>
+
+        <p>Desenvolvido por <a href="https://wa.me/5567996638417?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20contrução%20de%20um%20site.">Zephyro</a> com Laravel</p>
+
         <!-- <a href="/politica-de-privacidade">Política de Privacidade</a> -->
     </footer>  
 

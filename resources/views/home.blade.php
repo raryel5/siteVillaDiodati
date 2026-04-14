@@ -14,9 +14,10 @@
         
         <br>
         <div style="width: clamp(1rem, 80vw + 1rem, 55rem)">
-            <p style="font-size: clamp(1rem, 0.8vw + 1rem, 1.5rem); line-height: 40px; text-align: justify">
-                <?php echo fake()->paragraphs(3, true); ?>
-            </p> 
+            <div style="font-size: clamp(1rem, 0.8vw + 1rem, 1.5rem); line-height: clamp(1rem, 1.3vw + 1rem, 2rem); text-align: justify">
+                <p>Há algo de especial no momento em que escritores se reconhecem uns nos outros. Para além das influências e referências literárias compartilhadas, mas também na experiência comum de produzir fora dos grandes circuitos editoriais, de construir um público leitor sem os recursos das grandes estruturas do mercado. Foi essa identificação que aproximou os autores independentes, que hoje formam este Coletivo.</p>
+                <p>As trocas foram se aprofundando e o grupo foi adquirindo uma coesão que ia muito além da proposta original. Chegou o momento de dar um nome a tudo aquilo. A conversa sobre como chamá-lo percorreu obras, personagens e trajetórias de escritores que os inspiraram, até pousar sobre um episódio singular da história literária: a reunião que aconteceu em 1816, às margens do Lago Léman, na Suíça, quando um pequeno grupo de amigos passou dias trocando histórias e produziu obras que definiram gerações. Era exatamente isso que este Coletivo queria ser: um lugar onde a literatura acontece no encontro.</p>
+                <p>Assim surgiu o Villa Diodati - Coletivo de Autores.</p>
         </div>      
     </div>
     
