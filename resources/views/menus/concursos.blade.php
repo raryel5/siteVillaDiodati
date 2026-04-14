@@ -24,9 +24,9 @@
         <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> EM BREVE
     </button>
 
-    {{-- <button onclick="window.location.href='{{ Storage::url('arquivos/Prêmio\ Villa\ Diodati\ -\ Prometeu\ Moderno.pdf') }}'">
+    <button onclick="window.location.href='{{ Storage::url('arquivos/Prêmio\ Villa\ Diodati\ -\ Prometeu\ Moderno\ -\ Edital\ Oficial.pdf') }}'">
         <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> Baixe o edital aqui
-    </button> --}}
+    </button>
 
     <br>
     <a href="{{ route('formPVDPM') }}">
