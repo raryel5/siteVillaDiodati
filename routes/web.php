@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Redirect;
 //     return view('home');
 // });
 
-Route::prefix('/home')->group(function(){
+Route::prefix('/')->group(function(){
     Route::get('/', [HomeController::class, 'index'])->name('home');
 });
 
