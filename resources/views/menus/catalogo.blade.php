@@ -127,7 +127,7 @@ CAPAS DOS OUTROS LIVROS
             </div>
 
             <h1>Dedo em Riste, Verso em Prosa</h1>
-            <h2>Israel de Oliveira Costa, AAAA</h2>
+            <h2>Israel de Oliveira Costa, 2023</h2>
             <span>R$ 60,00</span>
             <br>
             <a href="https://wa.me/558699203283?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Dedo%20em%20Riste,%20Verso%20em%20Prosa.%20Vim%20pelo%20site%20de%20vocês.">
