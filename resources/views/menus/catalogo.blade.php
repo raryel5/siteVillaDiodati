@@ -222,6 +222,10 @@ CAPAS DOS OUTROS LIVROS
             <h2>Assores, 2023</h2>
             <span>R$ 45,00</span>
             <br>
+            <a href="https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Cajado.%20Vim%20pelo%20site%20de%20vocês.">
+                <button><?php echo $Fbotao ?></button>
+            </a>
+            <br>
             <a href="https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20SS%20Misery.%20Vim%20pelo%20site%20de%20vocês.">
                 <button><?php echo $Ebotao ?></button>
             </a>
