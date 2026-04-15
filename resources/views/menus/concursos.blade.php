@@ -15,28 +15,24 @@
     <h2>Concurso de Contos:</h2>
     <h2>PROMETEU MODERNO</h2>
     <br>
-    <p>
-     O Villa Diodati – Coletivo de Autores torna pública a abertura de inscrições para a antologia de contos "Prometeu Moderno". Este edital visa selecionar obras literárias inéditas que explorem o gênero Ficção Científica em suas diversas vertentes.
-    </p>
+    <p>O Villa Diodati – Coletivo de Autores torna pública a abertura de inscrições para a antologia de contos "Prometeu Moderno". Este edital visa selecionar obras literárias inéditas que explorem o gênero Ficção Científica em suas diversas vertentes.</p>
+    <br>
+    <p>Período de inscrições: 15/04/26 a 31/05/26 até às 23h59min (horário de Brasília).</p>
     <br>
     
-    <!-- <button>
+    <button style="font-size: clamp(1rem, 0.2vw + 1rem, 4rem)">
         <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> EM BREVE
-    </button> -->
+    </button>
 
-    <!-- <button onclick="window.location.href='{{ Storage::url('arquivos/Prêmio\ Villa\ Diodati\ -\ Prometeu\ Moderno\ -\ Edital\ Oficial.pdf') }}'">
-        <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> Baixe o edital aqui
-    </button> -->
-
-    <a src="{{ Storage::url('arquivos/Prêmio\ Villa\ Diodati\ -\ Prometeu\ Moderno\ -\ Edital\ Oficial.pdf') }}">
-        <button>
-        <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> Baixe o edital aqui
+    <!-- <a onclick="window.location.href='{{ Storage::url('arquivos/PrêmioVillaDiodati-PrometeuModerno-EditalOficial.pdf') }}'">
+        <button style="font-size: clamp(1rem, 0.2vw + 1rem, 4rem)">
+        <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> Baixe o Edital Aqui
         </button>
-    </a>
+    </a> -->
 
     <br>
     <a href="{{ route('formPVDPM') }}">
-        <button> <i class="bi bi-pen"></i> Se Inscreva Aqui </button>  
+        <button style="font-size: clamp(1rem, 0.2vw + 1rem, 4rem)"> <i class="bi bi-pen"></i> Se Inscreva Aqui </button>  
     </a>        
     
 </div>

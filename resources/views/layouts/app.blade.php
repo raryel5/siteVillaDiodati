@@ -229,7 +229,7 @@
 
         .text-centralizado button {
             background-color: #424247;
-            height: 2em;
+            height: 2.5em;
             border: none;
             width: 15em;
             color: #fff;
