@@ -20,15 +20,15 @@
     <p>Período de inscrições: 15/04/26 a 31/05/26 até às 23h59min (horário de Brasília).</p>
     <br>
     
-    <button style="font-size: clamp(1rem, 0.2vw + 1rem, 4rem)">
+    {{-- <button style="font-size: clamp(1rem, 0.2vw + 1rem, 4rem)">
         <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> EM BREVE
-    </button>
+    </button> --}}
 
-    <!-- <a onclick="window.location.href='{{ Storage::url('arquivos/PrêmioVillaDiodati-PrometeuModerno-EditalOficial.pdf') }}'">
+    <a onclick="window.location.href='{{ Storage::url('arquivos/PrêmioVillaDiodati-PrometeuModerno-EditalOficial.pdf') }}'">
         <button style="font-size: clamp(1rem, 0.2vw + 1rem, 4rem)">
         <i style="color: #ED6b86" class="bi bi-filetype-pdf"></i> Baixe o Edital Aqui
         </button>
-    </a> -->
+    </a>
 
     <br>
     <a href="{{ route('formPVDPM') }}">

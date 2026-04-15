@@ -12,7 +12,9 @@
     <h1>Prêmio Villa Diodati</h1>
     <h2>Concurso de Contos:</h2>
     <h2>PROMETEU MODERNO</h2>
-    <br>    
+    <br>
+    <p>Período de inscrições: 15/04/26 a 31/05/26 até às 23h59min (horário de Brasília).</p>
+    <br>
 </div>
 
 <div class="container-form">
