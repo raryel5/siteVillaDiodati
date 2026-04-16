@@ -15,7 +15,9 @@
     <h2>Concurso de Contos:</h2>
     <h2>PROMETEU MODERNO</h2>
     <br>
-    <p>O Villa Diodati – Coletivo de Autores torna pública a abertura de inscrições para a antologia de contos "Prometeu Moderno". Este edital visa selecionar obras literárias inéditas que explorem o gênero Ficção Científica em suas diversas vertentes.</p>
+    <p>O Villa Diodati – Coletivo de Autores torna pública a abertura do edital de inscrições para o primeiro Prêmio Villa Diodati - Prometeu Moderno. Este edital visa selecionar contos inéditos que explorem o gênero Ficção Científica em suas diversas vertentes.</p>
+    <p>Em 2026, o Coletivo inaugura o Prêmio Villa Diodati — Prometeu Moderno, dedicado a reconhecer obras e vozes da literatura independente. Afinal, foi Prometeu quem ousou roubar o fogo dos deuses e entregá-lo aos homens, pagando com o próprio corpo o preço da iluminação. Séculos depois, naquelas noites que inspiraram a criação deste coletivo, Mary Shelley imaginou uma criatura formada de fragmentos, nascia ali o seu Prometeu Moderno. O prêmio nasce como um gesto de reconhecimento de que toda escrita independente tem algo desse impulso, a coragem de criar e de dar vida ao que ainda não existe, mesmo quando o caminho é difícil.</p>
+    <p>Saiba mais no edital clicando no botão abaixo.</p>
     <br>
     <p>Período de inscrições: 15/04/26 a 31/05/26 até às 23h59min (horário de Brasília).</p>
     <br>
