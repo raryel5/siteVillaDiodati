@@ -40,7 +40,7 @@
 
                 <h1>Noites Sem Alma</h1>
                 <h2>vários autores, 2024</h2>
-                <span>R$ 45,00</span>
+                <span>R$ 15,00</span>
                 <br>
                 <a href="https://www.amazon.com.br/Noites-Sem-Alma-Villa-Diodati-ebook/dp/B0CW1JNWFR">
                     <button><?php echo $Ebotao ?></button>
@@ -60,14 +60,15 @@
 
                 <h1>O Que Ficou no Escuro</h1>
                 <h2>vários autores, 2025</h2>
-                <span>R$ 50,00</span>
+                <span>Físico R$ 50,00</span>
+                <span>E-book R$ 15,00</span>
                 <br>
                 <a href="https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20a%20coletânea%20O%20que%20Ficou%20no%20Escuro.%20Vim%20pelo%20site%20de%20vocês.">
                     <button><?php echo $Fbotao ?></button>
                 </a>
                 <br>
                 <a href="https://www.amazon.com.br/Que-Ficou-No-Escuro-ebook/dp/B0GHP5D9N4">
-                    <button><?php echo $Ebotao ?></button>
+                    <button><?php echo $Ebotao ?> </button>
                 </a>
             </div>
 
@@ -80,7 +81,8 @@
 
                 <h1>O Diário da Coletora</h1>
                 <h2>Renan Santana, 2025</h2>
-                <span>R$ 55,00</span>
+                <span>Físico R$ 55,00</span>
+                <span>E-book R$ 4,99</span>
                 <br>
                 <a href="https://wa.me/5511996787049?text=Olá,%20gostaria%20de%20adquirir%20O%20Diário%20da%20Coletora.%20Vim%20pelo%20site%20de%20vocês.">
                     <button><?php echo $Fbotao ?></button>
@@ -122,7 +124,8 @@ CAPAS DOS OUTROS LIVROS
 
             <h1>Cajado</h1>
             <h2>Assores, 2023</h2>
-            <span>R$ 45,00</span>
+            <span>Físico: R$ 45,00</span>
+            <span>E-book: R$ 12,00</span>
             <br>
             <a href="https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Cajado.%20Vim%20pelo%20site%20de%20vocês.">
                 <button><?php echo $Fbotao ?></button>
@@ -142,7 +145,8 @@ CAPAS DOS OUTROS LIVROS
 
             <h1>Dedo em Riste, Verso em Prosa</h1>
             <h2>Israel de Oliveira Costa, 2023</h2>
-            <span>R$ 60,00</span>
+            <span>Físico: R$ 60,00</span>
+            <span>E-book: R$ 5,00</span>
             <br>
             <a href="https://wa.me/558699203283?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Dedo%20em%20Riste,%20Verso%20em%20Prosa.%20Vim%20pelo%20site%20de%20vocês.">
                 <button><?php echo $Fbotao ?></button>
@@ -177,7 +181,8 @@ CAPAS DOS OUTROS LIVROS
 
             <h1>Noturnos</h1>
             <h2>Renan Santana, 2023</h2>
-            <span>R$ 50,00</span>
+            <span>Físico: R$ 50,00</span>
+            <span>E-book: R$ 9,99</span>
             <br>
             <a href="https://wa.me/5511996787049?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Noturnos.%20Vim%20pelo%20site%20de%20vocês.">
                 <button><?php echo $Fbotao ?></button>
@@ -198,7 +203,8 @@ CAPAS DOS OUTROS LIVROS
 
             <h1>Os Segredos da Mata</h1>
             <h2>Taís Turaça Arantes & Renan Aryel, 2022</h2>
-            <span>R$ 32,50</span>
+            <span>Físico: R$ 32,50</span>
+            <span>E-book: R$ 12,00</span>
             <br>
             <a href="https://wa.me/5567996638417?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Os%20Segredos%20da%20Mata.%20Vim%20pelo%20site%20de%20vocês.">
             <button><?php echo $Fbotao ?></button>
@@ -220,7 +226,8 @@ CAPAS DOS OUTROS LIVROS
 
             <h1>SS Misery</h1>
             <h2>Assores, 2023</h2>
-            <span>R$ 45,00</span>
+            <span>Físico: R$ 45,00</span>
+            <span>E-book: R$ 7,00</span>
             <br>
             <a href="https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Cajado.%20Vim%20pelo%20site%20de%20vocês.">
                 <button><?php echo $Fbotao ?></button>

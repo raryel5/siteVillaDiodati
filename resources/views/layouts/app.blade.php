@@ -347,7 +347,7 @@
             position: relative;
             border-radius: 12px;
             box-shadow: 4px 4px 16px #aaaa;
-            max-height: 450px;
+            max-height: 480px;
         }
 
         .item h1 h2 span {
