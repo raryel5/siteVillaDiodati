@@ -11,6 +11,9 @@
 
 <div class="text-centralizado">
     <br>
+    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
+        <b>Inscrições encerradas!</b>
+    </p>
     <h1>Prêmio Villa Diodati</h1>
     <h2>Concurso de Contos:</h2>
     <h2>PROMETEU MODERNO</h2>
@@ -33,9 +36,15 @@
     </a>
 
     <br>
-    <a href="{{ route('formPVDPM') }}">
+    <br>
+
+    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
+        <b>Inscrições encerradas!</b>
+    </p>
+   
+    <!-- <a href="{{ route('formPVDPM') }}">
         <button style="font-size: clamp(1rem, 0.2vw + 1rem, 4rem)"> <i class="bi bi-pen"></i> Se Inscreva Aqui </button>  
-    </a>        
+    </a>         -->
     
 </div>
 
