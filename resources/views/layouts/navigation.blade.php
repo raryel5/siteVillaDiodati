@@ -51,6 +51,10 @@
                 <a class="nav-link" href="{{ route('concursos') }}">concursos</a>
                 </li>
 
+                <li class="nav-item">
+                <a class="nav-link" href="{{ route('lancamentos') }}">lançamentos</a>
+                </li>
+
                 <!-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('servicos') }}">serviços</a>
                 </li> -->

@@ -11,6 +11,7 @@ use App\Http\Controllers\PubliqueController;
 use App\Http\Controllers\DiagramacaoController;
 use App\Http\Controllers\LivrosController;
 use App\Http\Controllers\ServicosController;
+use App\Http\Controllers\LancamentosController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -52,7 +53,11 @@ Route::prefix('/diagramacao')->group(function(){
 });
 
 Route::prefix('/servicos')->group(function(){
-Route::get('/', [ServicosController::class, 'index'])->name('servicos');
+    Route::get('/', [ServicosController::class, 'index'])->name('servicos');
+});
+
+Route::prefix('/lancamentos')->group(function(){
+    Route::get('/', [LancamentosController::class, 'index'])->name('lancamentos');
 });
 
 Route::fallback(function(){
