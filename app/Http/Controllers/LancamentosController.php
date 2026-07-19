@@ -11,7 +11,7 @@ class LancamentosController extends Controller
      */
     public function index()
     {
-        return view('menus.lancamentos');
+        return view('menus.lancamentos.lancamentos');
     }
 
     /**
