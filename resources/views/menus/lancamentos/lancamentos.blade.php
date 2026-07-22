@@ -34,7 +34,7 @@
         <div class="card-servico">
             <div class="corpo-servico">
                 <div class="servico-foto">
-                    <img src="{{ Storage::url('lancamentos/card01.jpeg') }}" style="max-width: 100%; display: block">
+                    <img src="{{ Storage::url('lancamentos/card01.png') }}" style="max-width: 100%; display: block">
                 </div>
             </div>
 
