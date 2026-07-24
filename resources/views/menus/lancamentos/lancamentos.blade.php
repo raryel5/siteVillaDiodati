@@ -7,8 +7,7 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
-<?php
-// require 'vendor/autoload.php';
+{{-- <?php
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
@@ -40,7 +39,7 @@ $preference = $client->create([
 // A URL de pagamento gerada pelo Mercado Pago
 $paymentUrl = $preference->init_point;
 
-?>
+?> --}}
 
 <!-- <section style="margin-left: 5%">
     <div class="recuo">
@@ -69,7 +68,7 @@ $paymentUrl = $preference->init_point;
         <div class="card-servico">
             <div class="corpo-servico">
                 <div class="servico-foto">
-                    <img src="{{ Storage::url('lancamentos/card01.png') }}" style="max-width: 100%; display: block">
+                    <img src="{{ Storage::url('lancamentos/card01.jpeg') }}" style="max-width: 100%; display: block">
                 </div>
             </div>
 
