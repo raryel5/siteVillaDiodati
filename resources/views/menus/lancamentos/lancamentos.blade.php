@@ -37,8 +37,6 @@ $preference = $client->create([
     "auto_return" => "approved",
 ]);
 
-echo $preference
-
 // A URL de pagamento gerada pelo Mercado Pago
 $paymentUrl = $preference->init_point;
 
