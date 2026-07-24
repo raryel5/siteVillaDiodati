@@ -60,6 +60,19 @@ Route::prefix('/lancamentos')->group(function(){
     Route::get('/', [LancamentosController::class, 'index'])->name('lancamentos');
 });
 
+Route::prefix('/lancamentos/sucesso')->group(function(){
+    Route::get('/', [LancamentosController::class, 'sucesso'])->name('sucesso');
+});
+
+Route::prefix('/lancamentos/failure')->group(function(){
+    Route::get('/', [LancamentosController::class, 'failure'])->name('failure');
+});
+
+Route::prefix('/lancamentos/pending')->group(function(){
+    Route::get('/', [LancamentosController::class, 'pending'])->name('pending');
+});
+
+
 Route::fallback(function(){
     return "Erro!";
 });

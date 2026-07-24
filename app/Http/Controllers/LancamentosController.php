@@ -14,6 +14,21 @@ class LancamentosController extends Controller
         return view('menus.lancamentos.lancamentos');
     }
 
+    public function sucesso()
+    {
+        return view('menus.lancamentos.sucessos');
+    }
+
+    public function failure()
+    {
+        return view('menus.lancamentos.failures');
+    }
+
+    public function pending()
+    {
+        return view('menus.lancamentos.pendings');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
