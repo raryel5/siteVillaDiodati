@@ -7,8 +7,9 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
+<?php 
 
-{{-- use MercadoPago\MercadoPagoConfig;
+use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
 
 // Defina o seu Access Token de produção ou testes
@@ -36,7 +37,9 @@ $preference = $client->create([
 ]);
 
 // A URL de pagamento gerada pelo Mercado Pago
-$paymentUrl = $preference->init_point; --}}
+$paymentUrl = $preference->init_point;
+
+?>
 
 
 <!-- <section style="margin-left: 5%">
@@ -79,9 +82,9 @@ $paymentUrl = $preference->init_point; --}}
                 <h3 class="">R$ 55,00</h3>             
             </div>
 
-            {{-- <a href="<?php echo $paymentUrl ?>">
+            <a href="<?php echo $paymentUrl ?>">
                 <button>Compre aqui 1</button>
-            </a> --}}
+            </a>
             <br>
             <br>
 
