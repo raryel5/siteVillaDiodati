@@ -21,9 +21,9 @@ $client = new PreferenceClient();
 $preference = $client->create([
     "items" => [
         [
-            "title" => "Nome do seu Produto",
+            "title" => "livro01",
             "quantity" => 1,
-            "unit_price" => 100.00 // Valor do produto
+            "unit_price" => 50.00 // Valor do produto
         ]
     ],
     "back_urls" => [
@@ -36,6 +36,8 @@ $preference = $client->create([
     ],
     "auto_return" => "approved",
 ]);
+
+echo $preference
 
 // A URL de pagamento gerada pelo Mercado Pago
 $paymentUrl = $preference->init_point;
