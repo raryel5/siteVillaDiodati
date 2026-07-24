@@ -13,14 +13,14 @@ use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
 
 // Defina o seu Access Token de produção ou testes
-MercadoPagoConfig::setAccessToken("APP_USR-1352144246141107-072322-f6473b0062b63e09dc1265a0b79ac662-3548270378");
+MercadoPagoConfig::setAccessToken("APP_USR-2565856998726542-071618-27c01d05a6024e4226b6e51231ab0687-3548270378");
 
 // Prepara os dados do produto
 $client = new PreferenceClient();
 $preference = $client->create([
     "items" => [
         [
-            "title" => "livro01",
+            "title" => "livro",
             "quantity" => 1,
             "unit_price" => 50.00 // Valor do produto
         ]
@@ -29,9 +29,9 @@ $preference = $client->create([
         // "success" => "{{ route('lancamentos.sucessos'}}",
         // "failure" => "{{ route('lancamentos.failures'}}",
         // "pending" => "{{ route('lancamentos.pendings'}}"
-        "success" => "https://seusite.com",
-        "failure" => "https://seusite.com",
-        "pending" => "https://seusite.com"
+        "success" => "https://villadiodati.com.br/lancamentos/sucessos",
+        "failure" => "https://villadiodati.com.br/lancamentos/failures",
+        "pending" => "https://villadiodati.com.br/lancamentos/pendings"
     ],
     "auto_return" => "approved",
 ]);
@@ -52,6 +52,22 @@ $paymentUrl = $preference->init_point;
         <h2>do autor Anderson José</h2>
     </div>
 </section> -->
+
+<div class="text-centralizado">
+    <br>
+    <br>
+    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
+        <b>ATENÇÃO!</b>
+    </p>
+    <br>
+    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
+        <b>Página em construção.</b>
+    </p>
+    <br>
+    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
+        <b>Não clique em nada abaixo!</b>
+    </p>
+</div>
 
 <section class="section-corpo">
 
