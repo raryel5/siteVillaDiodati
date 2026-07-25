@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'mytoken' => [
+        'key' => env('MINHA_API_TOKEN'),
+    ]
+
 ];

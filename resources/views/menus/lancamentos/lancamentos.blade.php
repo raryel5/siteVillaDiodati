@@ -7,14 +7,15 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
-
 <?php
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
 
 // Defina o seu Access Token de produção ou testes
-MercadoPagoConfig::setAccessToken("APP_USR-5818720173247021-071618-266aa7caee7cccf205b95edd2e4eaeaf-154774907");
+$chave = config('services.mytoken.key');
+MercadoPagoConfig::setAccessToken($chave);
+
 
 // identificador de preferência 169547488707
 

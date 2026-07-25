@@ -20,9 +20,13 @@
 
 <section class="section-corpo">
 
-  <div class="">
-    <h1 class="">Pagamento pendente!</h1>
-  </div>
+<div class="text-centralizado">
+    <br>
+    <br>
+    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
+        <b>Pagamento pendente...</b>
+    </p>
+</div>
 
 
 

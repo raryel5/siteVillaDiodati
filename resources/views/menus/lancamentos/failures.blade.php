@@ -20,9 +20,14 @@
 
 <section class="section-corpo">
 
-  <div class="">
-    <h1 class="">Falha no pagamento...</h1>
-  </div>
+<div class="text-centralizado">
+    <br>
+    <br>
+    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
+        <b>Falha no pagamento!</b>
+    </p>
+</div>
+
 
 
 
