@@ -1,38 +1,21 @@
 <?php 
 
-use MercadoPago\Webhook\WebhookSignatureValidator;
-use MercadoPago\Exceptions\InvalidWebhookSignatureException;
+use MercadoPago\Client\Common\RequestOptions;
+use MercadoPago\Client\Payment\PaymentClient;
+use MercadoPago\Exceptions\MPApiException;
+use MercadoPago\MercadoPagoConfig;
 
-// TURORIAL MERCADO PAGO: https://www.mercadopago.com.br/developers/pt/docs/checkout-pro/payment-notifications#editor_1
+# Vamos capturar o json do Mercado Pago.
+$body = json_decode(file_get_contents('php://input'));
 
-try {
-    WebhookSignatureValidator::validate(
-        $_SERVER['HTTP_X_SIGNATURE'],
-        $_SERVER['HTTP_X_REQUEST_ID'],
-        $_GET['data_id'],
-        $secret
-    );
-    http_response_code(200);
-} catch (InvalidWebhookSignatureException $e) {
-    http_response_code(401);
-}
+# Vericamos se exist o id do pagamento
+$id = $body->data->id;
+$client = new PaymentClient();
 
-MercadoPago\SDK::setAccessToken("ENV_ACCESS_TOKEN");
- switch($_POST["type"]) {
-     case "payment":
-         $payment = MercadoPago\Payment::find_by_id($_POST["data"]["id"]);
-         break;
-     case "plan":
-         $plan = MercadoPago\Plan::find_by_id($_POST["data"]["id"]);
-         break;
-     case "subscription":
-         $plan = MercadoPago\Subscription::find_by_id($_POST["data"]["id"]);
-         break;
-     case "invoice":
-         $plan = MercadoPago\Invoice::find_by_id($_POST["data"]["id"]);
-         break;
-     case "point_integration_wh":
-         // $_POST contiene la informaciòn relacionada a la notificaciòn.
-         break;
- }
+# captura o pagamento
+$payment = $client->get($id);
+
+$external_reference = $payment->external_reference;
+$status = $payment->status; // para aprovado = 'approved'
+
 ?>

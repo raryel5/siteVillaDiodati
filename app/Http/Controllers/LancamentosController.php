@@ -12,8 +12,7 @@ class LancamentosController extends Controller
      */
     public function index()
     {
-        $mytoken = env('MINHA_API_TOKEN');
-        return view('menus.lancamentos.lancamentos', ['mytoken'=>$mytoken]);
+        return view('menus.lancamentos.lancamentos');
 
     }
 

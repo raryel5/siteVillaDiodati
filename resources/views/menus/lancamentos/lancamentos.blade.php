@@ -11,17 +11,65 @@
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
-use MercadoPago\Webhook\WebhookSignatureValidator;
-use MercadoPago\Exceptions\InvalidWebhookSignatureException;
+// use MercadoPago\Webhook\WebhookSignatureValidator;
+// use MercadoPago\Exceptions\InvalidWebhookSignatureException;
+use MercadoPago\Client\Common\RequestOptions;
+use MercadoPago\Client\Payment\PaymentClient;
+use MercadoPago\Exceptions\MPApiException;
+
 
 // Defina o seu Access Token de produção ou testes
 $chave = config('services.mytoken.key');
 MercadoPagoConfig::setAccessToken($chave);
 
+# Para evitar pagamentos duplicados.
+$request_options = new RequestOptions();
+$request_options->setCustomHeaders(["X-Idempotency-Key: " . uniqid()]);
+
+// $client = new PaymentClient();
+
+// try {
+
+//     $payment = $client->create(
+//         [
+//             "transaction_amount" => 50.00,
+//             "payment_method_id" => 'pix',
+//             "external_reference" => '1',
+//             "notification_url" => "https://villadiodati.com.br/notificacoes",
+//             "payer" => [
+//                 "first_name" => "Nome",
+//                 "last_name" => "Sobrenome",
+//                 "email" => "fulano@gmail.com",
+//                 "identification" => [
+//                     "type" => "CPF",
+//                     "number" => "12345678910"
+//                 ]            
+//             ]
+
+//         ], $request_options
+//     );
+
+//     $paymentUrl = $payment->init_point;
+    
+//     $dados_pix = $payment->point_of_interaction->transaction_data;
+//     $payload = $dados_pix->qr_code;
+//     $qrcode = "data:image/jpeg;base64,{$dados_pix->qr_code_base64}";
+
+//     echo "<img src'{$qrcode}' /> <br />";
+//     echo $payload;
+
+// } catch (MPApiException $e) {
+//     print_r($e->getApiResponse()->getContent());
+// } 
+// catch (\Exception $e) {
+//     print_r($e->getApiResponse()->getMessage());
+// }
+
 // Prepara os dados do produto
 $client = new PreferenceClient();
+
 $preference = $client->create([
-    // "notification_url" => "https://villadiodati.com.br/notificacao",
+    "notification_url" => "https://villadiodati.com.br/notificacao",
     "items" => array(
     array(
       "id" => 1,
@@ -29,6 +77,17 @@ $preference = $client->create([
       "quantity" => 1,
       "unit_price" => 50.00
       )),
+
+    "payer" => [
+        "first_name" => "Nome",
+        "last_name" => "Sobrenome",
+        "email" => "fulano@gmail.com",
+        "identification" => [
+            "type" => "CPF",
+            "number" => "12345678910"
+        ]            
+    ],
+
     "back_urls" => array(
         "success" => "https://villadiodati.com.br/lancamentos/sucessos",
         "failure" => "https://villadiodati.com.br/lancamentos/failures",
@@ -36,15 +95,9 @@ $preference = $client->create([
         ),
     ]);
 
-// $preference->back_urls = array(
-//     "success" => "https://villadiodati.com.br/lancamentos/sucessos",
-//     "failure" => "https://villadiodati.com.br/lancamentos/failures",
-//     "pending" => "https://villadiodati.com.br/lancamentos/pendings"
-// );
-
 $preference->auto_return = "approved";
 
-// A URL de pagamento gerada pelo Mercado Pago
+#A URL de pagamento gerada pelo Mercado Pago
 $paymentUrl = $preference->init_point;
 
 ?>
