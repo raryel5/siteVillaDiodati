@@ -1,7 +1,7 @@
 <!-- as configurações de página estão layouts/app -->
 @extends('layouts.app')
 
-@section('title', 'Catálogo')
+@section('title', 'lançamentos')
 
 <!-- corpo da página -->
 @section('main')
@@ -20,9 +20,10 @@ $client = new PreferenceClient();
 $preference = $client->create([
     "items" => [
         [
+            "id" => 1,
             "title" => "livro",
             "quantity" => 1,
-            "unit_price" => 50.00 // Valor do produto
+            "unit_price" => 3.00 // Valor do produto
         ]
     ],
     "back_urls" => [
