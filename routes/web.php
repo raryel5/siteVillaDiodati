@@ -60,15 +60,15 @@ Route::prefix('/lancamentos')->group(function(){
     Route::get('/', [LancamentosController::class, 'index'])->name('lancamentos');
 });
 
-Route::prefix('/lancamentos/sucesso')->group(function(){
+Route::prefix('/lancamentos/sucessos')->group(function(){
     Route::get('/', [LancamentosController::class, 'sucesso'])->name('sucesso');
 });
 
-Route::prefix('/lancamentos/failure')->group(function(){
+Route::prefix('/lancamentos/failures')->group(function(){
     Route::get('/', [LancamentosController::class, 'failure'])->name('failure');
 });
 
-Route::prefix('/lancamentos/pending')->group(function(){
+Route::prefix('/lancamentos/pendings')->group(function(){
     Route::get('/', [LancamentosController::class, 'pending'])->name('pending');
 });
 
