@@ -13,7 +13,7 @@ use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
 
 // Defina o seu Access Token de produção ou testes
-MercadoPagoConfig::setAccessToken("APP_USR-2565856998726542-071618-27c01d05a6024e4226b6e51231ab0687-3548270378");
+MercadoPagoConfig::setAccessToken("APP_USR-5818720173247021-071618-266aa7caee7cccf205b95edd2e4eaeaf-154774907");
 
 // Prepara os dados do produto
 $client = new PreferenceClient();
