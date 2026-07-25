@@ -63,7 +63,8 @@ $preference = $client->create([
         ),
 
     'auto_return' => "approved",
-    ]);
+    ],
+    );
 
 
 // $preference->auto_return = "approved";
