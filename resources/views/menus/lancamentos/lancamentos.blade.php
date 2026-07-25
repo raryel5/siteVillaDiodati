@@ -11,33 +11,38 @@
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
+use MercadoPago\Webhook\WebhookSignatureValidator;
+use MercadoPago\Exceptions\InvalidWebhookSignatureException;
 
 // Defina o seu Access Token de produção ou testes
 $chave = config('services.mytoken.key');
 MercadoPagoConfig::setAccessToken($chave);
 
-
-// identificador de preferência 169547488707
-
 // Prepara os dados do produto
 $client = new PreferenceClient();
 $preference = $client->create([
-    "items" => [
-        [
-            "id" => 1,
-            "title" => "livro",
-            "quantity" => 1,
-            "unit_price" => 3.00 // Valor do produto
-        ]
-    ],
-    "back_urls" => [
+    // "notification_url" => "https://villadiodati.com.br/notificacao",
+    "items" => array(
+    array(
+      "id" => 1,
+      "title" => "Livro",
+      "quantity" => 1,
+      "unit_price" => 50.00
+      )),
+    "back_urls" => array(
         "success" => "https://villadiodati.com.br/lancamentos/sucessos",
         "failure" => "https://villadiodati.com.br/lancamentos/failures",
         "pending" => "https://villadiodati.com.br/lancamentos/pendings"
-    ],
-    "auto_return" => "approved",
-]);
+        ),
+    ]);
 
+// $preference->back_urls = array(
+//     "success" => "https://villadiodati.com.br/lancamentos/sucessos",
+//     "failure" => "https://villadiodati.com.br/lancamentos/failures",
+//     "pending" => "https://villadiodati.com.br/lancamentos/pendings"
+// );
+
+$preference->auto_return = "approved";
 
 // A URL de pagamento gerada pelo Mercado Pago
 $paymentUrl = $preference->init_point;
