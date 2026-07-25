@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Env;
 
 class LancamentosController extends Controller
 {
@@ -12,8 +11,8 @@ class LancamentosController extends Controller
      */
     public function index()
     {
-        $mytoken = env('MINHA_API_TOKEN');
-        return view('menus.lancamentos.lancamentos', ['mytoken'=>$mytoken]);
+        // $mytoken = env('MINHA_API_TOKEN');
+        return view('menus.lancamentos.lancamentos');
 
     }
 

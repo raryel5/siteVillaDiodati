@@ -9,14 +9,22 @@
 
 <?php
 
+# Etapa 1: importar bibliotecas.
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
 use MercadoPago\Webhook\WebhookSignatureValidator;
 use MercadoPago\Exceptions\InvalidWebhookSignatureException;
+use MercadoPago\Client\Common\RequestOptions;
+use MercadoPago\Client\Payment\PaymentClient;
+use MercadoPago\Exceptions\MPApiException;
 
-// Defina o seu Access Token de produção ou testes
+# Etapa 2: Defina o seu Access Token de produção ou testes
 $chave = config('services.mytoken.key');
 MercadoPagoConfig::setAccessToken($chave);
+
+# Para evitar pagamentos duplicados:
+$request_options = new RequestOptions();
+$request_options -> setCustomHeaders(["X-Idempotency-Key: " . uniqid()]);
 
 // Prepara os dados do produto
 $client = new PreferenceClient();
@@ -27,22 +35,38 @@ $preference = $client->create([
       "id" => 1,
       "title" => "Livro",
       "quantity" => 1,
-      "unit_price" => 50.00
+      "unit_price" => 50.00,
+      "payer" => [
+            "first_name" => "Name",
+            "last_name"  => "Surname",
+            "email"      => "{{EMAIL}}",
+            "identification" => [
+                "number" => "{{DOCUMENT_NUMBER}}",
+                "type"   => "CPF"
+            ],
+            "phone" => [
+                "area_code" => "11",
+                "number"    => "{{PHONE_NUMBER}}"
+            ],
+            "address" => [
+                "street_name"    => "Av. das Nações Unidas",
+                "street_number"  => "3003",
+                "complemento"  => "complemento",
+                "zip_code"       => "206233-2002"
+            ]
+        ],
       )),
     "back_urls" => array(
         "success" => "https://villadiodati.com.br/lancamentos/sucessos",
         "failure" => "https://villadiodati.com.br/lancamentos/failures",
         "pending" => "https://villadiodati.com.br/lancamentos/pendings"
         ),
+
+    'auto_return' => "approved",
     ]);
 
-// $preference->back_urls = array(
-//     "success" => "https://villadiodati.com.br/lancamentos/sucessos",
-//     "failure" => "https://villadiodati.com.br/lancamentos/failures",
-//     "pending" => "https://villadiodati.com.br/lancamentos/pendings"
-// );
 
-$preference->auto_return = "approved";
+// $preference->auto_return = "approved";
 
 // A URL de pagamento gerada pelo Mercado Pago
 $paymentUrl = $preference->init_point;
