@@ -7,6 +7,26 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
+<?php
+
+use MercadoPago\Client\Preference\PreferenceClient;
+
+$client = new PreferenceClient();
+$preference = $client->create([
+  "items" => [["title" => "Meu produto", "quantity" => 1, "unit_price" => 2000]],
+  "external_reference" => "pedido-123",
+  "auto_return" => "approved",
+  "back_urls" => [
+    "success" => "https://villadiodati.com.br/sucessos",
+    "pending" => "https://seu-site/pending",
+    "failure" => "https://seu-site/failure",
+  ],
+  "notification_url" => "https://seu-site/webhooks/mp",
+]);
+
+return redirect()->away($preference->init_point);
+
+ ?>
 
 
 <section class="section-corpo">
