@@ -60,6 +60,10 @@ Route::prefix('/lancamentos')->group(function(){
     Route::get('/', [LancamentosController::class, 'index'])->name('lancamentos');
 });
 
+Route::prefix('/formLancamento')->group(function(){
+    Route::get('/', [LancamentosController::class, 'formulario'])->name('formLancamento');
+});
+
 Route::prefix('/lancamentos/sucesso')->group(function(){
     Route::get('/', [LancamentosController::class, 'sucesso'])->name('sucesso');
 });
@@ -72,6 +76,9 @@ Route::prefix('/lancamentos/pending')->group(function(){
     Route::get('/', [LancamentosController::class, 'pending'])->name('pending');
 });
 
+Route::prefix('/formPVDPM')->group(function(){
+    Route::get('/', [ConcursosController::class, 'formulario'])->name('formPVDPM');
+});
 
 Route::fallback(function(){
     return "Erro!";
@@ -87,6 +94,3 @@ Route::prefix('/livros/{titulo}')->group(function(){
 Route::get('/', [LivrosController::class, 'exibir'])->name('livros');
 });
 
-Route::prefix('/formPVDPM')->group(function(){
-    Route::get('/', [ConcursosController::class, 'formulario'])->name('formPVDPM');
-});

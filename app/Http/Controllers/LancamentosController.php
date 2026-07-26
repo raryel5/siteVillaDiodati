@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use MercadoPago\SDK;
+use MercadoPago\Payment;
 
 class LancamentosController extends Controller
 {
@@ -12,6 +14,15 @@ class LancamentosController extends Controller
     public function index()
     {
         return view('menus.lancamentos.lancamentos');
+    }
+
+    /**
+     * Exibir página de formulário de cadastro e pagamento.
+     */
+    public function formulario(Request $request)
+    {
+        return view('formularios/formLancamento');
+        
     }
 
     public function sucesso()
