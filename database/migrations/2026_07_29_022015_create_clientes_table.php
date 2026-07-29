@@ -15,17 +15,17 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('product');
-            $table->string('value');
+            $table->string('product')->default('vazio');
+            $table->string('quantity')->default('vazio');
+            $table->string('valor')->default('vazio');
             $table->enum('payment_status', ['pendente', 'pago', 'falha', 'cancelado'])->default('pendente');
             $table->string('email')->unique();
-            // $table->timestamp('email_verified_at')->nullable(); // opção para verificação de e-mail pelo Laravel. NÃO IMPLEMENTADA AQUI.
             $table->string('email_confirmation')->unique();
-            $table->string('cpf');
-            $table->string('nameReceiver')->default('name');
+            $table->string('cpf', 11)->unique();
+            $table->string('nameReceiver')->default('Mesmo nome');
             $table->string('adress');
             $table->string('number');
-            $table->string('complement')->nullable();
+            $table->string('complement')->nullable();;
             $table->string('city');
             $table->string('state');
             $table->string('cep');

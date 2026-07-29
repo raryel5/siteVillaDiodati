@@ -10,35 +10,32 @@
 
 <div class="text-centralizado">
 
+<h1 class="">Listagem de Clientes</h1>
+
 <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Valor R$</th>
+      <th scope="col">Status de pagamento</th>
+      <th scope="col">Recebedor</th>
     </tr>
   </thead>
+
   <tbody>
+    @foreach($clientes as $cliente)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>{{ $cliente->id }}</td>
+      <td>{{ $cliente->name }}</td>
+      <td>{{ $cliente->value }}</td>
+      <td>{{ $cliente->payment_status }}</td>
+      <td>{{ $cliente->nameReceiver }}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+
+    @endforeach
   </tbody>
+
 </table>
 
 </div>

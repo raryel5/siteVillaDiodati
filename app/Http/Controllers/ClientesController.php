@@ -31,7 +31,9 @@ class ClientesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        Cliente::create($request->all());
+        return redirect()->route('clientes-index');
     }
 
     /**

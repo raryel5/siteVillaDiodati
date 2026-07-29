@@ -94,6 +94,7 @@ Route::prefix('/formPVDPM')->group(function(){
 Route::prefix('/clientes')->group(function(){
     Route::get('/', [ClientesController::class, 'index'])->name('clientes-index');
     Route::get('/create', [ClientesController::class, 'create'])->name('clientes-create');
+    Route::post('/', [ClientesController::class, 'store'])->name('clientes-store');
 });
 
 Route::fallback(function(){
