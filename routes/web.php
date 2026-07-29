@@ -12,6 +12,7 @@ use App\Http\Controllers\DiagramacaoController;
 use App\Http\Controllers\LivrosController;
 use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\LancamentosController;
+use App\Http\Controllers\ClientesController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -56,6 +57,8 @@ Route::prefix('/servicos')->group(function(){
     Route::get('/', [ServicosController::class, 'index'])->name('servicos');
 });
 
+# ROTAS PARA PÁGINA DE LANÇAMENTOS
+
 Route::prefix('/lancamentos')->group(function(){
     Route::get('/', [LancamentosController::class, 'index'])->name('lancamentos');
 });
@@ -72,21 +75,27 @@ Route::prefix('/lancamentos/pendings')->group(function(){
     Route::get('/', [LancamentosController::class, 'pending'])->name('pending');
 });
 
-
-Route::fallback(function(){
-    return "Erro!";
-});
-
 # ROTAS PARA LIVROS
 
 Route::prefix('/lista')->group(function(){
-Route::get('/', [LivrosController::class, 'index'])->name('lista');
+    Route::get('/', [LivrosController::class, 'index'])->name('lista');
 });
 
 Route::prefix('/livros/{titulo}')->group(function(){
-Route::get('/', [LivrosController::class, 'exibir'])->name('livros');
+    Route::get('/', [LivrosController::class, 'exibir'])->name('livros');
 });
 
 Route::prefix('/formPVDPM')->group(function(){
     Route::get('/', [ConcursosController::class, 'formulario'])->name('formPVDPM');
+});
+
+# ROTAS PARA CLIENTES
+
+Route::prefix('/clientes')->group(function(){
+    Route::get('/', [ClientesController::class, 'index'])->name('clientes-index');
+    Route::get('/create', [ClientesController::class, 'create'])->name('clientes-create');
+});
+
+Route::fallback(function(){
+    return "Erro!";
 });
