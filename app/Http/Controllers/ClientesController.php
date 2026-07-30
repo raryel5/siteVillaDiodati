@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Models\Cliente;
-
 use Illuminate\Http\Request;
 
 class ClientesController extends Controller
@@ -16,6 +15,14 @@ class ClientesController extends Controller
         $clientes = Cliente::all();
         // dd($clientes);
         return view('clientes.index', ['clientes' => $clientes]);
+    }
+
+    public function notification()
+    {
+        // dd('Olá, mundo!');
+        // $clientes = Cliente::all();
+        // dd($clientes);
+        return view('clientes.notifications');
     }
 
     /**
@@ -32,8 +39,15 @@ class ClientesController extends Controller
     public function store(Request $request)
     {
         // dd($request);
+
+        $dados = $request;
+        dd($dados->name);
         Cliente::create($request->all());
-        return redirect()->route('clientes-index');
+
+        // $dados = Cliente::all();
+        // dd(['dados' => $dados]);
+
+        return redirect()->route('clientes-notification');            
     }
 
     /**
