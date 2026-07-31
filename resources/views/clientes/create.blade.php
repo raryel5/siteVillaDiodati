@@ -2,78 +2,11 @@
 
 @extends('layouts.app')  
 
-@section('title', 'Inscrição')  
+@section('title', 'cadastro')  
 
 <!-- corpo da página -->
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
-
-<?php
-
-# Etapa 1: importar bibliotecas.
-use MercadoPago\MercadoPagoConfig;
-use MercadoPago\Client\Preference\PreferenceClient;
-use MercadoPago\Client\Common\RequestOptions;
-use MercadoPago\Webhook\WebhookSignatureValidator;
-use MercadoPago\Exceptions\InvalidWebhookSignatureException;
-use MercadoPago\Client\Payment\PaymentClient;
-use MercadoPago\Exceptions\MPApiException;
-
-# Etapa 2: Defina o seu Access Token de produção ou testes
-$chave = config('services.mytoken.key');
-MercadoPagoConfig::setAccessToken($chave);
-
-# Para evitar pagamentos duplicados:
-$request_options = new RequestOptions();
-$request_options -> setCustomHeaders(["X-Idempotency-Key: " . uniqid()]);
-
-// Prepara os dados do produto
-$client = new PreferenceClient();
-$preference = $client->create([
-    "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
-    "items" => array(
-    array(
-      "id" => 1,
-      "title" => "Livro",
-      "quantity" => 1,
-      "unit_price" => 50.00,
-      "payer" => [
-            "first_name" => "Name",
-            "last_name"  => "Surname",
-            "email"      => "{{EMAIL}}",
-            "identification" => [
-                "number" => "{{DOCUMENT_NUMBER}}",
-                "type"   => "CPF"
-            ],
-            "phone" => [
-                "area_code" => "11",
-                "number"    => "{{PHONE_NUMBER}}"
-            ],
-            "address" => [
-                "street_name"    => "Av. das Nações Unidas",
-                "street_number"  => "3003",
-                "complemento"  => "complemento",
-                "zip_code"       => "206233-2002"
-            ]
-        ],
-      )),
-    "back_urls" => array(
-        "success" => "https://villadiodati.com.br/lancamentos/sucessos",
-        "failure" => "https://villadiodati.com.br/lancamentos/failures",
-        "pending" => "https://villadiodati.com.br/lancamentos/pendings"
-        ),
-
-    'auto_return' => "approved",
-    ],
-    );
-
-
-// $preference->auto_return = "approved";
-
-// A URL de pagamento gerada pelo Mercado Pago
-$paymentUrl = $preference->init_point;
-
-?>
 
 <!-- variaveis PHP -->
 <?php
@@ -156,48 +89,34 @@ $obrigatorio = " *"
         <p style="font-size: clamp(1rem, 0.1vw + 1rem, 6rem)"> * Itens obrigatórios</p>
 
         <br>   
-        <input type="hidden" name="value" value="55.00">
-        <br>    
+        <input type="hidden" name="valor" value="55.00">
+        <input type="hidden" name="product" value="Livro do Anderson">
+        <br>
+
+        <!-- < ?php
+        if(isset($_POST['product'])){
+                $title = $_POST['product'];
+            }
+        ?> -->
+
 
         <div class="form-group">
-            <a href="<?php echo $paymentUrl ?>" class="">
+            <!-- <a href="< ?php echo $paymentUrl ?>" class=""> -->
                 <button type="submit"> Ir para pagamento </button>
-            </a>
+            <!-- </a> -->
                    
         </div>
 
     </div>
-
-  
-
-<!-- Detalhes do Pagamento -->
-
-<!-- <p class="">Ir para pagamento</p> -->
-
-<!-- <select name="payment_method_id" required>
-
-<option value="pix">Pix</option>
-
-<option value="bolbradesco">Boleto Bancário</option>
-
-</select> -->
-
   
 
 @error('email')
-
-<span style="color: red">{{ $message }}</span>
-
+    <span style="color: red">{{ $message }}</span>
 @enderror
 
-</form>
-
-  
+</form>  
 
 </div>
-
-  
-  
   
 
 @endsection

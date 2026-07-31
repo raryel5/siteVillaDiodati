@@ -41,7 +41,7 @@
         <br>
         <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Pré-lançamento:</h2>
 
-        <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">TÍTULO DO LIVRO</h1>
+        <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">O Diabo são as Verdades que não te Contam</h1>
         <br>
         <h2>do autor Anderson José</h2>
     </div>
@@ -81,18 +81,28 @@
         <div class="servico-desc">
             <h1 class="">SINOPSE</h1>
             <br>
-            <p><?php echo fake()->paragraphs(3, true); ?></p>
+            <p>Nuno Nepomuceno, o mais respeitado investigador de Portugal, vê sua vida ruir quando um caso antigo volta à tona, reabrindo feridas que o tempo tentou sepultar.</p>
+            <p>À medida que corpos surgem em cenários sagrados e símbolos religiosos se transformam em assinaturas de horror, Nuno percebe que o mal pode estar mais próximo do que imagina — talvez dentro da própria casa, ou do coração daqueles em quem mais confia.</p>
+            <p>Entre a justiça e a vingança, o amor e a perdição, ele será obrigado a encarar não apenas um assassino, mas a própria face do inferno.</p>
+            <p>Porque, às vezes, o diabo não mente. Apenas conta as verdades que ninguém quer ouvir.</p>
             <br>
 
             <h1 class="">SOBRE O AUTOR</h1>
             <br>
-            <p><?php echo fake()->paragraphs(3, true); ?></p>
+            <p>Anderson José dos Anjos é escritor brasileiro e terapeuta. Durante muitos tempos atuou como servidor público, experiência que lhe permitiu observar de perto diferentes realidades humanas e sociais.</p>
+            <p>Hoje dedica-se à terapia e à escrita, explorando em suas obras gêneros como terror, horror, romance policial, mistério e fantasia. Suas histórias costumam mergulhar nos conflitos da mente humana, no medo, no suspense e nos limites entre realidade e imaginação.</p>
+            <p>Vivendo entre o Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p>
             <br>
 
             <h1 class="">CRONOGRAMA</h1>
             <br>
-            <p><?php echo fake()->paragraphs(3, true); ?></p>
+            <p><?php echo fake()->paragraphs(2, true); ?></p>
             <br>
+            <h2 class="">Detalhes</h2>
+            <br>
+            <p class="">Tamanho: 16X23</p>
+            <p class="">Número de páginas: 304</p>
+            <p class="">ISBN (físico): 9786501973784</p>
         </div>
 
     </div>

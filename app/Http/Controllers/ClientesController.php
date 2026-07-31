@@ -40,15 +40,48 @@ class ClientesController extends Controller
     {
         // dd($request);
 
-        $dados = $request;
-        dd($dados->name);
+        // $dados = $request;
+        // dd($dados->name);
+        $email = $request->input('email');
         Cliente::create($request->all());
 
         // $dados = Cliente::all();
         // dd(['dados' => $dados]);
 
-        return redirect()->route('clientes-notification');            
+        return redirect()->route('clientes-pagamento', ['email'=>$email]);            
     }
+
+    public function pagamento(Cliente $email)
+    {
+        // dd($request);
+
+        // $dados = $request;
+        // dd($dados->name);
+        // Cliente::create($request->all());
+
+        // $dados = Cliente::all();
+        // dd(['dados' => $dados]);
+        // dd($email);
+
+        return view('clientes.pagamento', ['email'=>$email]);
+    }
+
+    public function teste(Cliente $id)
+    {
+        // $dados = Cliente::all();
+        return view('clientes.teste',['cliente'=>$id]);
+
+        // dd($request);
+
+        // $dados = $request;
+        // dd($dados->name);
+        // Cliente::create($request->all());
+
+        // $dados = Cliente::all();
+        // dd(['dados' => $dados]);
+    }
+
+
 
     /**
      * Display the specified resource.

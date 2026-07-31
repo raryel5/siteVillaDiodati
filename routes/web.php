@@ -92,10 +92,14 @@ Route::prefix('/formPVDPM')->group(function(){
 # ROTAS PARA CLIENTES
 
 Route::prefix('/clientes')->group(function(){
-    Route::get('/', [ClientesController::class, 'index'])->name('clientes-index');
+    Route::get('/index', [ClientesController::class, 'index'])->name('clientes-index');
     Route::get('/create', [ClientesController::class, 'create'])->name('clientes-create');
     Route::post('/', [ClientesController::class, 'store'])->name('clientes-store');
     Route::get('/notificacoes', [ClientesController::class, 'notification'])->name('clientes-notification');
+    Route::get('/pagamento', [ClientesController::class, 'pagamento'])->name('clientes-pagamento');
+    Route::get('/teste/{id?}', [ClientesController::class, 'teste'])->name('clientes-teste');
+
+
 });
 
 Route::fallback(function(){
