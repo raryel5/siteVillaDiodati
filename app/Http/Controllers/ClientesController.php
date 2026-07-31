@@ -48,7 +48,7 @@ class ClientesController extends Controller
         // $dados = Cliente::all();
         // dd(['dados' => $dados]);
 
-        return redirect()->route('clientes-pagamento', ['email'=>$email]);            
+        // return redirect()->route('clientes-pagamento', ['email'=>$email]);            
     }
 
     public function pagamento(Cliente $email)
@@ -62,8 +62,9 @@ class ClientesController extends Controller
         // $dados = Cliente::all();
         // dd(['dados' => $dados]);
         // dd($email);
+        $dados = Cliente::all();
 
-        return view('clientes.pagamento', ['email'=>$email]);
+        return view('clientes.pagamento', ['email'=>$email], compact('dados'));
     }
 
     public function teste(Cliente $id)
