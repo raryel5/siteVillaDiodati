@@ -26,5 +26,6 @@ class Cliente extends Model
         'city',
         'state',
         'cep',
+        'timestamp_envio'
     ];
 }

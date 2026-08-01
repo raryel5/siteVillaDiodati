@@ -49,7 +49,7 @@ $obrigatorio = " *"
         </div>
         <br>
 
-    <p class="">Endereço para envio do material</p>
+    <p>Endereço para envio do material</p>
 
         <div class="form-group">
             <label for="nameReceiver" class="">Nome do recebedor (sefor diferente do cliente):</label><br>
@@ -91,6 +91,9 @@ $obrigatorio = " *"
         <br>   
         <input type="hidden" name="valor" value="55.00">
         <input type="hidden" name="product" value="Livro do Anderson">
+        <!-- <input type="hidden" name="timestamp_envio" value="{{ now()->format('Uv') }}"> -->
+        <input type="hidden" name="timestamp_envio" value="{{ $timestamp }}">
+
         <br>
 
         <!-- < ?php

@@ -1,7 +1,7 @@
 <!-- as configurações de página estão layouts/app -->
 @extends('layouts.app')
 
-@section('title', 'pagamento')
+@section('title', 'TESTE')
 
 <!-- corpo da página -->
 @section('main')
@@ -11,7 +11,8 @@
 
     <h1>Testes</h1>
 
-    <!-- <p> {{ $cliente->name }} </p> -->
+    <p> Nome: {{ $cliente->name }} </p>
+    <p> Endereço de e-mail: {{ $cliente->email }} </p>
 
     <!-- <form action=" route('cliente-teste') " method="POST">
         <label for="usuario">Nome de Usuário:</label>
@@ -19,19 +20,10 @@
         <button type="submit">Enviar</button>
     </form> -->
 
-    <form action="foo.php" method="HEAD">
-        Nome:  <input type="text" name="username" /><br />
-        Email: <input type="text" name="email" /><br />
-        <input type="submit" name="submit" value="Me aperte!" />
-    </form>
+    <!-- @for ($i = 0; $i < 10; $i++)
+        The current value is {{ $i }}
+    @endfor -->
 
-    <?php
-        // $data = "Um nome qualquer";
-        // echo "<input type='hidden' value='" . htmlspecialchars($data) . "' />\n";
-        // echo $data;
-
-        echo $_REQUEST['username'];
-    ?>
 
     <!-- < ?php
         // arquivo: processa.php

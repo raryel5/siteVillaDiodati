@@ -7,7 +7,16 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
-<?php
+<div class="text-centralizado">
+    
+    <p>Cadastro realizado com sucesso.</p>
+
+    <p>Dados: {{ $cliente->name }}</p>
+    
+
+    <p>Segunda maneira</p>
+
+    <?php
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
@@ -68,14 +77,11 @@ use MercadoPago\Client\Common\RequestOptions;
     $paymentUrl = $preference->init_point;
 ?>
 
-<div class="text-centralizado">
-
-<h1 class="">Redirecionando para o pagamento...</h1>
-
-<p class="">{{ $email->email }}</p>
+    <a href="<?php echo $paymentUrl ?>" class="">
+        <button type="submit"> Pague agora </button>
+    </a>
 
 
 </div>
-
 
 @endsection

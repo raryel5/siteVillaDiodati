@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('quantity')->default('vazio');
             $table->string('valor')->default('vazio');
             $table->enum('payment_status', ['pendente', 'pago', 'falha', 'cancelado'])->default('pendente');
-            $table->string('email')->unique();
-            $table->string('email_confirmation')->unique();
-            $table->string('cpf', 11)->unique();
+            $table->string('email');
+            $table->string('email_confirmation');
+            $table->string('cpf', 11);
             $table->string('nameReceiver')->default('Mesmo nome');
             $table->string('adress');
             $table->string('number');
@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('cep');
+            $table->string('timestamp_envio');
         });
     }
 
