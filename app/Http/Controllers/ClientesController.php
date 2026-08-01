@@ -88,9 +88,10 @@ class ClientesController extends Controller
 
     }
 
-    public function pagamento(Cliente $request)
+    public function pagamento(Request $request)
     {
-        dd($request);
+        // dd($request);
+        $id = $request->integer('id');
         // $id = $request[0];
         // dd($id);
 
@@ -103,14 +104,14 @@ class ClientesController extends Controller
         // dd($id);
         // $dados = Cliente::all();
 
-        // $cliente = Cliente::select()
-                    //   ->where('id', [$id])
-                    //   ->get();
+        $cliente = Cliente::select()
+                      ->where('id', [$id])
+                      ->get();
 
         // dd($cliente);
 
-        // return view('clientes.pagamento', ['cliente'=>$cliente]);
-        return view('clientes.pagamento', ['cliente'=>$id]);
+        return view('clientes.pagamento', ['cliente'=>$cliente]);
+        // return view('clientes.pagamento', ['cliente'=>$id]);
 
     }
 
