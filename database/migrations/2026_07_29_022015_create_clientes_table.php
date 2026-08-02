@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('email_confirmation');
             $table->string('cpf');
             $table->string('fone');
-            $table->string('nameReceiver')->default('Mesmo nome');
+            $table->string('nameReceiver')->nullable();
             $table->string('adress');
             $table->string('number');
             $table->string('complement')->nullable();;

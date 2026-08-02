@@ -26,6 +26,19 @@
     <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
         <b>Falha no pagamento!</b>
     </p>
+    <br>
+    <p>Você será redirecionado em 3 segundos...</p>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "{{ route('lancamentos') }}";
+        }, 3000); // 3000 milissegundos = 3 segundos
+    </script>
+{{-- 
+    <a href="{{ route('lancamentos') }}">
+        <button>Adquira aqui</button>
+    </a> --}}
+            
 </div>
 
 

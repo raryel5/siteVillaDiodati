@@ -22,9 +22,9 @@
 <div class="text-centralizado">
     <br>
     <br>
-    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
+    {{-- <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
         <b>ATENÇÃO!</b>
-    </p>
+    </p> --}}
     <br>
     <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
         <b>Página em construção.</b>
@@ -57,29 +57,34 @@
 
         </div>
 
+        <?php
+            $valor = "5";
+        ?>
+
         <div class="card-servico">
             <div class="title-servico">
                 <h1>Dias restantes</h1>
-                <h2 class="">XX dias</h2>
-                <h3 class="">R$ 55,00</h3>             
+                <h2>XX dias</h2>
+                <h3>R$ {{ $valor }}</h3>             
             </div>
+            <br>
 
             <a href="{{ route('clientes-create') }}">
-                <button>Compre aqui 1</button>
+                <button>Adquira aqui</button>
             </a>
-            <br>
-            <br>
+            
 
-            <a href="#">
+            {{-- <a href="#">
                 <button>Compre aqui 2</button>
-            </a>
+            </a> --}}
 
         </div>    
     </div>
 
     <div class="flex-servicos">
-        <div class="servico-desc">
-            <h1 class="">SINOPSE</h1>
+        {{-- <div class="servico-desc"> --}}
+        <div class="text-justificado">
+            <h1>SINOPSE</h1>
             <br>
             <p>Nuno Nepomuceno, o mais respeitado investigador de Portugal, vê sua vida ruir quando um caso antigo volta à tona, reabrindo feridas que o tempo tentou sepultar.</p>
             <p>À medida que corpos surgem em cenários sagrados e símbolos religiosos se transformam em assinaturas de horror, Nuno percebe que o mal pode estar mais próximo do que imagina — talvez dentro da própria casa, ou do coração daqueles em quem mais confia.</p>
@@ -87,33 +92,26 @@
             <p>Porque, às vezes, o diabo não mente. Apenas conta as verdades que ninguém quer ouvir.</p>
             <br>
 
-            <h1 class="">SOBRE O AUTOR</h1>
+            <h1>SOBRE O AUTOR</h1>
             <br>
             <p>Anderson José dos Anjos é escritor brasileiro e terapeuta. Durante muitos tempos atuou como servidor público, experiência que lhe permitiu observar de perto diferentes realidades humanas e sociais.</p>
             <p>Hoje dedica-se à terapia e à escrita, explorando em suas obras gêneros como terror, horror, romance policial, mistério e fantasia. Suas histórias costumam mergulhar nos conflitos da mente humana, no medo, no suspense e nos limites entre realidade e imaginação.</p>
             <p>Vivendo entre o Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p>
             <br>
 
-            <h1 class="">CRONOGRAMA</h1>
+            <h1>CRONOGRAMA</h1>
             <br>
             <p><?php echo fake()->paragraphs(2, true); ?></p>
             <br>
-            <h2 class="">Detalhes</h2>
+            <h2>Detalhes da edição:</h2>
             <br>
-            <p class="">Tamanho: 16X23</p>
-            <p class="">Número de páginas: 304</p>
-            <p class="">ISBN (físico): 9786501973784</p>
+            <p>Tamanho: 16X23</p>
+            <p>Número de páginas: 304</p>
+            <p>ISBN (físico): 9786501973784</p>
         </div>
 
-    </div>
-
-
-
-    
+    </div>    
 
 </section>
-
-
-
 
 @endsection

@@ -203,6 +203,17 @@
             align-items: center;
         } */
 
+        .text-justificado {
+            text-align: justify;
+            /* align-items: center; */
+            padding: 10px 15%;
+            line-height: 35px;
+            /* align-items: center; Centers vertically */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers horizontally */
+        }
+
         .text-centralizado {
             align-items: center;
             padding: 10px 15%;
@@ -239,11 +250,12 @@
 
         .text-centralizado button {
             background-color: #424247;
-            height: 2.5em;
+            height: 2.9em;
             border: none;
-            width: 15em;
+            width: 19em;
+            align-items: center;
             color: #fff;
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: bold;
             border-radius: 12px;
         }

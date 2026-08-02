@@ -30,7 +30,7 @@ class ClientesController extends Controller
      */
     public function create()
     {
-        $timestamp = now()->valueOf(); 
+        $timestamp = now()->valueOf();
         // return view('clientes.create');
         return view('clientes.create', compact('timestamp'));
     }

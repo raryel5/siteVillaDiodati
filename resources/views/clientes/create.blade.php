@@ -20,7 +20,7 @@ $obrigatorio = " *"
     <h1>Cadastro inicial</h1>
     <br>
     <p>Prencha seus dados para cadastro e envio do material.</p>
-    <br>    
+    <br>
 
 <form action="{{ route('clientes-store') }}" method="POST">
     @csrf
@@ -58,8 +58,8 @@ $obrigatorio = " *"
     <p>Endereço para envio do material</p>
 
         <div class="form-group">
-            <label for="nameReceiver" class="">Nome do recebedor (sefor diferente do cliente):</label><br>
-            <input type="text" class="form-group" name="nameReceiver" placeholder="Nome do recebedor">
+            <label for="nameReceiver" class="">Nome do recebedor:</label><br>
+            <input type="text" class="form-group" name="nameReceiver" placeholder="Deixar em branco se for o mesmo nome">
         </div>
 
         <div class="form-group">
@@ -84,7 +84,7 @@ $obrigatorio = " *"
 
         <div class="form-group">
             <label for="state" class="">Estado:</label><br>
-            <input type="text" class="form-group" name="state" placeholder="Estado (apenas sigla)" required><b class="">*</b>
+            <input type="text" class="form-group" name="state" placeholder="Estado (apenas sigla)" required><b> <?php echo $obrigatorio ?> </b>
         </div>
 
         <div class="form-group">
@@ -97,7 +97,7 @@ $obrigatorio = " *"
         <br>   
         <input type="hidden" name="valor" value="5.00">
         <input type="hidden" name="product" value="Livro do Anderson">
-        <!-- <input type="hidden" name="timestamp_envio" value="{{ now()->format('Uv') }}"> -->
+        {{-- <input type="hidden" name="timestamp_envio" value="{{ now()->format('Uv') }}"> --}}
         <input type="hidden" name="timestamp_envio" value="{{ $timestamp }}">
 
         <br>
@@ -108,13 +108,7 @@ $obrigatorio = " *"
             }
         ?> -->
 
-
-        <div class="form-group">
-            <!-- <a href="< ?php echo $paymentUrl ?>" class=""> -->
-                <button type="submit"> Ir para pagamento </button>
-            <!-- </a> -->
-                   
-        </div>
+        <button type="submit"> Cadastrar </button>
 
     </div>
   

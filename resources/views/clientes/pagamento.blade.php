@@ -8,24 +8,13 @@
 <!-- tudo aqui será renderizado com base no template -->
 
 <div class="text-centralizado">
-    
-    <p>Cadastro realizado com sucesso.</p>
+    <br>
+    <h2>Cadastro realizado com sucesso.</h2>
+    <br>
 
-    <p>Dados: {{ $nome = $cliente->name }}</p>
+    <p>Nome do cliente: {{ $nome = $cliente->name }}</p>
 
-    <p>
-        Nome: {{ $nome }}
-    </p>
-
-    <p>{{ $valor = $cliente->valor }}</p>
-
-    <p>
-        <?php
-            echo $valor;
-        ?>
-    </p>
-
-
+    <p>Valor total: R$ {{ $valor = $cliente->valor }}</p>
 
 <?php
 
@@ -44,7 +33,7 @@ use MercadoPago\Client\Common\RequestOptions;
     // Prepara os dados do produto
     $client = new PreferenceClient();
     $preference = $client->create([
-        // "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
+        "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
         "items" => array(
         array(
         "id" => 1,
@@ -89,7 +78,7 @@ use MercadoPago\Client\Common\RequestOptions;
 ?>
 
     <a href="<?php echo $paymentUrl ?>">
-        <button type="submit"> Pague agora </button>
+        <button type="submit"> Escolher forma de pagamento </button>
     </a>
 
 

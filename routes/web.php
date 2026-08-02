@@ -93,7 +93,7 @@ Route::prefix('/formPVDPM')->group(function(){
 
 Route::prefix('/clientes')->group(function(){
     Route::get('/index', [ClientesController::class, 'index'])->name('clientes-index');
-    Route::get('/create', [ClientesController::class, 'create'])->name('clientes-create');
+    Route::get('/create/{valor?}', [ClientesController::class, 'create'])->name('clientes-create');
     Route::post('/', [ClientesController::class, 'store'])->name('clientes-store');
     Route::get('/notificacoes', [ClientesController::class, 'notification'])->name('clientes-notification');
     Route::get('/pagamento/{id?}', [ClientesController::class, 'pagamento'])->name('clientes-pagamento');
