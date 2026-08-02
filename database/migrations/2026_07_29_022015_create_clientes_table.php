@@ -21,7 +21,8 @@ return new class extends Migration
             $table->enum('payment_status', ['pendente', 'pago', 'falha', 'cancelado'])->default('pendente');
             $table->string('email');
             $table->string('email_confirmation');
-            $table->string('cpf', 11);
+            $table->string('cpf');
+            $table->string('fone');
             $table->string('nameReceiver')->default('Mesmo nome');
             $table->string('adress');
             $table->string('number');

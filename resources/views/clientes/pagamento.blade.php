@@ -11,12 +11,23 @@
     
     <p>Cadastro realizado com sucesso.</p>
 
-    <p>Dados: {{ $cliente->name }}</p>
-    
+    <p>Dados: {{ $nome = $cliente->name }}</p>
 
-    <p>Segunda maneira</p>
+    <p>
+        Nome: {{ $nome }}
+    </p>
 
-    <?php
+    <p>{{ $valor = $cliente->valor }}</p>
+
+    <p>
+        <?php
+            echo $valor;
+        ?>
+    </p>
+
+
+
+<?php
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
@@ -33,15 +44,15 @@ use MercadoPago\Client\Common\RequestOptions;
     // Prepara os dados do produto
     $client = new PreferenceClient();
     $preference = $client->create([
-        "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
+        // "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
         "items" => array(
         array(
         "id" => 1,
         "title" => "Livro",
         "quantity" => 1,
-        "unit_price" => 50.00,
+        "unit_price" => intval($valor),
         "payer" => [
-                "first_name" => "Name",
+                "first_name" => "Nome",
                 "last_name"  => "Surname",
                 "email"      => "{{EMAIL}}",
                 "identification" => [
@@ -77,7 +88,7 @@ use MercadoPago\Client\Common\RequestOptions;
     $paymentUrl = $preference->init_point;
 ?>
 
-    <a href="<?php echo $paymentUrl ?>" class="">
+    <a href="<?php echo $paymentUrl ?>">
         <button type="submit"> Pague agora </button>
     </a>
 

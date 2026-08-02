@@ -19,6 +19,7 @@ class Cliente extends Model
         'email',
         'email_confirmation',
         'cpf',
+        'fone',
         'nameReceiver',
         'adress',
         'number',

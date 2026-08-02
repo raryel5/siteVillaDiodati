@@ -47,6 +47,12 @@ $obrigatorio = " *"
             <label for="cpf" class="">CPF:</label><br>
             <input type="int" class="form-group" name="cpf" placeholder="CPF (apenas números)" required><b> <?php echo $obrigatorio ?> </b>
         </div>
+
+        <div class="form-group">
+            <label for="fone" class="">Celular:</label><br>
+            <input type="int" class="form-group" name="fone" placeholder="DDD + celular (apenas números)" required><b> <?php echo $obrigatorio ?> </b>
+        </div>
+
         <br>
 
     <p>Endereço para envio do material</p>
@@ -89,7 +95,7 @@ $obrigatorio = " *"
         <p style="font-size: clamp(1rem, 0.1vw + 1rem, 6rem)"> * Itens obrigatórios</p>
 
         <br>   
-        <input type="hidden" name="valor" value="55.00">
+        <input type="hidden" name="valor" value="5.00">
         <input type="hidden" name="product" value="Livro do Anderson">
         <!-- <input type="hidden" name="timestamp_envio" value="{{ now()->format('Uv') }}"> -->
         <input type="hidden" name="timestamp_envio" value="{{ $timestamp }}">

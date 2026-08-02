@@ -40,22 +40,12 @@ class ClientesController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'timestamp_envio' => 'required|integer',
-        // ]);
-
-        // dd($request);
-
-        // $dados = $request;
-        // dd($dados->name);
+        
         $timeSend = $request->input('timestamp_envio');
         $name = $request->input('name');
         $email = $request->input('email');
-        // dd($email);
 
         Cliente::create($request->all());
-
-        $cliente = Cliente::where('name', [$name])->where('email', [$email])->whereIn('timestamp_envio', [$timeSend])->get();
 
         $identidade = Cliente::select('id')
                       ->where('name', [$name])
@@ -63,55 +53,28 @@ class ClientesController extends Controller
                       ->where('timestamp_envio', [$timeSend])
                       ->get();
 
-        // dd($id[0]);
         $identidade1 = $identidade[0];
-        $id = $identidade1['id'];
-        // dd($id);
+        $iD = $identidade1['id'];
+        $id = strval($iD);
 
-        // return response()->json($cliente);
-        // $clienteJson = $cliente->toJson(JSON_UNESCAPED_UNICODE);
+        // $var_dados = array('id', 'name', 'email', 'cpf');
+        // $dados = compact("cliente", $var_dados);
 
-        // dd($cliente[array]['id']);
-
-        // $dados = Cliente::all();
-        // dd(['dados' => $dados]);
-        // dd($cliente->toArray());
-        $dadosCliente = $cliente->toArray();
-        // dd($dadosCliente);
-
-        // return redirect()->route('clientes-pagamento', ['email'=>$email]);
-        // return redirect()->route('clientes-pagamento', ['id' => $cliente('id')]);
-        // return view ('clientes.pagamento', compact('dadosCliente'));
-        // return view ('clientes.pagamento', $id);
+        // return redirect()->route('clientes-pagamento', compact('cliente', $var_dados));
         return redirect()->route('clientes-pagamento', ['id'=>$id]);
-        // return redirect()->route('clientes-pagamento', [$id]);
-
     }
 
-    public function pagamento(Request $request)
+    public function pagamento(Cliente $id)
     {
-        // dd($request);
-        $id = $request->integer('id');
-        // $id = $request[0];
-        // dd($id);
 
-        // $dados = $request;
-        // dd($dados->name);
-        // Cliente::create($request->all());
+        // $cliente = Cliente::select()
+        //               ->where('id', [$id])
+        //               ->get();
 
-        // $dados = Cliente::all();
-        // dd(['dados' => $dados]);
-        // dd($id);
-        // $dados = Cliente::all();
+        // $clienteJson = $cliente->toJson(JSON_UNESCAPED_UNICODE);
 
-        $cliente = Cliente::select()
-                      ->where('id', [$id])
-                      ->get();
-
-        // dd($cliente);
-
-        return view('clientes.pagamento', ['cliente'=>$cliente]);
-        // return view('clientes.pagamento', ['cliente'=>$id]);
+        return view('clientes.pagamento', ['cliente'=>$id]);
+        // return view('clientes.pagamento', compact('cliente', $clienteJson));
 
     }
 
