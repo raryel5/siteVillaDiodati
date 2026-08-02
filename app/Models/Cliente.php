@@ -24,6 +24,7 @@ class Cliente extends Model
         'adress',
         'number',
         'complement',
+        'bairro',
         'city',
         'state',
         'cep',

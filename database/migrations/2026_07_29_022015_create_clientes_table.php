@@ -26,7 +26,8 @@ return new class extends Migration
             $table->string('nameReceiver')->nullable();
             $table->string('adress');
             $table->string('number');
-            $table->string('complement')->nullable();;
+            $table->string('complement')->nullable();
+            $table->string('bairro');
             $table->string('city');
             $table->string('state');
             $table->string('cep');
