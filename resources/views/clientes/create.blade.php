@@ -78,6 +78,11 @@ $obrigatorio = " *"
         </div>
 
         <div class="form-group">
+            <label for="bairro" class="">Bairro:</label><br>
+            <input type="text" class="form-group" name="bairro" placeholder="Bairro" required><b> <?php echo $obrigatorio ?> </b>
+        </div>
+
+        <div class="form-group">
             <label for="city" class="">Cidade:</label><br>
             <input type="text" class="form-group" name="city" placeholder="Cidade" required><b> <?php echo $obrigatorio ?> </b>
         </div>

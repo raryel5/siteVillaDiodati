@@ -26,6 +26,14 @@
     <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
         <b>SUCESSO!</b>
     </p>
+    <br>
+    <p>Você será redirecionado em 3 segundos...</p>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "{{ route('home') }}";
+        }, 3000); // 3000 milissegundos = 3 segundos
+    </script>
 </div>
 
     
