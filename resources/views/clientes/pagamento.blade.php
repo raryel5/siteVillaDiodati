@@ -12,11 +12,19 @@
     <h2>Cadastro realizado com sucesso.</h2>
     <br>
 
-    <p>Nome do cliente: {{ $nome = $cliente->name }}</p>
+    <p>Nome do cliente: {{ $cliente->name }}</p>
 
-    <p>Valor total: R$ {{ $valor = $cliente->valor }}</p>
+    <p>Valor total: R$ {{ $cliente->valor }}</p>
 
 <?php
+
+$id = $cliente->id;
+$nome = $cliente->name;
+$email = $cliente->email;
+$product = $cliente->product;
+$quantity = $cliente->quantity;
+$valor = $cliente->valor;
+$cpf = $cliente->cpf;
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
@@ -36,16 +44,16 @@ use MercadoPago\Client\Common\RequestOptions;
         "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
         "items" => array(
         array(
-        "id" => intval($cliente->id),
-        "title" => $cliente->product,
-        "quantity" => intval($cliente->quantity),
-        "unit_price" => intval($cliente->valor),
+        "id" => intval($id),
+        "title" => $product,
+        "quantity" => intval($quantity),
+        "unit_price" => intval($valor),
         "payer" => [
-                "first_name" => $cliente->name,
+                "first_name" => $nome,
                 "last_name"  => "Surname",
-                "email"      => $cliente->email,
+                "email"      => $email,
                 "identification" => [
-                    "number" => intval($cliente->cpf),
+                    "number" => intval($cpf),
                     "type"   => "CPF"
                 ],
                 // "phone" => [
