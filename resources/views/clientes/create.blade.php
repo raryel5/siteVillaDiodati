@@ -102,6 +102,7 @@ $obrigatorio = " *"
         <br>   
         <input type="hidden" name="valor" value="5.00">
         <input type="hidden" name="product" value="Livro do Anderson">
+        <input type="hidden" name="quantity" value="1">
         {{-- <input type="hidden" name="timestamp_envio" value="{{ now()->format('Uv') }}"> --}}
         <input type="hidden" name="timestamp_envio" value="{{ $timestamp }}">
 
