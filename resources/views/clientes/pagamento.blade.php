@@ -36,27 +36,27 @@ use MercadoPago\Client\Common\RequestOptions;
         "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
         "items" => array(
         array(
-        "id" => 1,
-        "title" => "Livro",
-        "quantity" => 1,
-        "unit_price" => intval($valor),
+        "id" => intval($cliente->id),
+        "title" => $cliente->product,
+        "quantity" => intval($cliente->quantity),
+        "unit_price" => intval($cliente->valor),
         "payer" => [
-                "first_name" => "Nome",
+                "first_name" => $cliente->name,
                 "last_name"  => "Surname",
-                "email"      => "{{EMAIL}}",
+                "email"      => $cliente->email,
                 "identification" => [
-                    "number" => "{{DOCUMENT_NUMBER}}",
+                    "number" => intval($cliente->cpf),
                     "type"   => "CPF"
                 ],
-                "phone" => [
-                    "area_code" => "11",
-                    "number"    => "{{PHONE_NUMBER}}"
-                ],
+                // "phone" => [
+                //     "area_code" => "11",
+                //     "number"    => "{{PHONE_NUMBER}}"
+                // ],
                 "address" => [
-                    "street_name"    => "Av. das Nações Unidas",
-                    "street_number"  => "3003",
-                    "complemento"  => "complemento",
-                    "zip_code"       => "206233-2002"
+                    "street_name"    => $cliente->adress,
+                    "street_number"  => intval($cliente->number),
+                    "complemento"  => $cliente->complement,
+                    "zip_code"       => intval($cliente->cep)
                 ]
             ],
         )),
