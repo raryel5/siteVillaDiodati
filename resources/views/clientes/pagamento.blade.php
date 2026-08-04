@@ -12,14 +12,15 @@
     <h2>Cadastro realizado com sucesso.</h2>
     <br>
 
-    <p>Nome do cliente: {{ $cliente->name }}</p>
+    <p>Nome do cliente: {{ $cliente->firstname }}</p>
 
     <p>Valor total: R$ {{ $cliente->valor }}</p>
 
 <?php
 
 $id = $cliente->id;
-$nome = $cliente->name;
+$nome = $cliente->firstname;
+$surname = $cliente->surname;
 $email = $cliente->email;
 $product = $cliente->product;
 $quantity = $cliente->quantity;
@@ -50,7 +51,7 @@ use MercadoPago\Client\Common\RequestOptions;
         "unit_price" => intval($valor),
         "payer" => [
                 "first_name" => $nome,
-                "last_name"  => "Surname",
+                "last_name"  => $surname,
                 "email"      => $email,
                 "identification" => [
                     "number" => intval($cpf),
