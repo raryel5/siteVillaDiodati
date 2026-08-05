@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Cliente;
 use Illuminate\Http\Request;
+use MercadoPago\Webhook\WebhookSignatureValidator;
+use MercadoPago\Exceptions\InvalidWebhookSignatureException;
 
 class ClientesController extends Controller
 {
@@ -76,6 +78,34 @@ class ClientesController extends Controller
         return view('clientes.pagamento', ['cliente'=>$id]);
         // return view('clientes.pagamento', compact('cliente', $clienteJson));
 
+    }
+
+    public function handle(Request $request)
+    {
+        $dataId = $request->query('data.id') ?? $request->query('data_id');
+
+        try {
+            WebhookSignatureValidator::validate(
+            $request->header('x-signature'),
+            $request->header('x-request-id'),
+            $dataId,
+            // $request->query('data.id'),
+            config('services.mercadopago.webhook_secret')
+            );
+        } catch (InvalidWebhookSignatureException $e) {
+            return response()->noContent(401);
+        }
+
+        // Processe o evento e atualize seu pedido no seu banco
+        // Recomendo: responder 200 e processar em background (fila)
+        // dispatch(new ProcessPaymentWebhook($dataId));
+        // $paymentId = $dataId;
+
+        // $payment = Http::withToken(config('services.mercadopago.api_key'))
+        // ->get("https://api.mercadopago.com/v1/payments/{$paymentId}")
+        // ->json();
+
+        return response()->noContent(200);
     }
 
     public function teste(Cliente $id)

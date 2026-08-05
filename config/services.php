@@ -35,8 +35,9 @@ return [
         ],
     ],
 
-    'mytoken' => [
-        'key' => env('MINHA_API_TOKEN'),
+    'mercadopago' => [
+        'api_key' => env('MINHA_API_TOKEN'),
+        'webhook_secret' => env('MERCADOPAGO_WEBHOOK_SECRET'),
     ]
 
 ];
