@@ -29,8 +29,13 @@ $obrigatorio = " *"
     <div class="form-group">
 
         <div class="form-group">
-            <label for="name" class="">Nome:</label><br>
-            <input type="text" class="form-group" name="name" placeholder="Nome completo" required><b> <?php echo $obrigatorio ?> </b>
+            <label for="firstname" class="">Primeiro nome:</label><br>
+            <input type="text" class="form-group" name="firstname" placeholder="Primeiro nome" required><b> <?php echo $obrigatorio ?> </b>
+        </div>
+
+        <div class="form-group">
+            <label for="surname" class="">Sobrenome:</label><br>
+            <input type="text" class="form-group" name="surname" placeholder="Sobrenome completo" required><b> <?php echo $obrigatorio ?> </b>
         </div>
 
         <div class="form-group">
@@ -101,7 +106,8 @@ $obrigatorio = " *"
 
         <br>   
         <input type="hidden" name="valor" value="5.00">
-        <input type="hidden" name="product" value="Livro do Anderson">
+        <input type="hidden" name="product" value="Livro de Anderson José">
+        <input type="hidden" name="quantity" value="1">
         {{-- <input type="hidden" name="timestamp_envio" value="{{ now()->format('Uv') }}"> --}}
         <input type="hidden" name="timestamp_envio" value="{{ $timestamp }}">
 

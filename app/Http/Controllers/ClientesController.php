@@ -42,13 +42,13 @@ class ClientesController extends Controller
     {
         
         $timeSend = $request->input('timestamp_envio');
-        $name = $request->input('name');
+        $firstname = $request->input('firstname');
         $email = $request->input('email');
 
         Cliente::create($request->all());
 
         $identidade = Cliente::select('id')
-                      ->where('name', [$name])
+                      ->where('firstname', [$firstname])
                       ->where('email', [$email])
                       ->where('timestamp_envio', [$timeSend])
                       ->get();

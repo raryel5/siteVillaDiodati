@@ -27,8 +27,8 @@
     @foreach($clientes as $cliente)
     <tr>
       <td>{{ $cliente->id }}</td>
-      <td>{{ $cliente->name }}</td>
-      <td>{{ $cliente->value }}</td>
+      <td>{{ $cliente->firstname }}</td>
+      <td>{{ $cliente->valor }}</td>
       <td>{{ $cliente->payment_status }}</td>
       <td>{{ $cliente->nameReceiver }}</td>
     </tr>

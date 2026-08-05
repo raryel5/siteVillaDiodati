@@ -12,11 +12,20 @@
     <h2>Cadastro realizado com sucesso.</h2>
     <br>
 
-    <p>Nome do cliente: {{ $nome = $cliente->name }}</p>
+    <p>Nome do cliente: {{ $cliente->firstname }}</p>
 
-    <p>Valor total: R$ {{ $valor = $cliente->valor }}</p>
+    <p>Valor total: R$ {{ $cliente->valor }}</p>
 
 <?php
+
+$id = $cliente->id;
+$nome = $cliente->firstname;
+$surname = $cliente->surname;
+$email = $cliente->email;
+$product = $cliente->product;
+$quantity = $cliente->quantity;
+$valor = $cliente->valor;
+$cpf = $cliente->cpf;
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
@@ -36,27 +45,27 @@ use MercadoPago\Client\Common\RequestOptions;
         "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
         "items" => array(
         array(
-        "id" => 1,
-        "title" => "Livro",
-        "quantity" => 1,
+        "id" => intval($id),
+        "title" => $product,
+        "quantity" => intval($quantity),
         "unit_price" => intval($valor),
         "payer" => [
-                "first_name" => "Nome",
-                "last_name"  => "Surname",
-                "email"      => "{{EMAIL}}",
+                "first_name" => $nome,
+                "last_name"  => $surname,
+                "email"      => $email,
                 "identification" => [
-                    "number" => "{{DOCUMENT_NUMBER}}",
+                    "number" => intval($cpf),
                     "type"   => "CPF"
                 ],
-                "phone" => [
-                    "area_code" => "11",
-                    "number"    => "{{PHONE_NUMBER}}"
-                ],
+                // "phone" => [
+                //     "area_code" => "11",
+                //     "number"    => "{{PHONE_NUMBER}}"
+                // ],
                 "address" => [
-                    "street_name"    => "Av. das Nações Unidas",
-                    "street_number"  => "3003",
-                    "complemento"  => "complemento",
-                    "zip_code"       => "206233-2002"
+                    "street_name"    => $cliente->adress,
+                    "street_number"  => intval($cliente->number),
+                    "complemento"  => $cliente->complement,
+                    "zip_code"       => intval($cliente->cep)
                 ]
             ],
         )),
@@ -78,7 +87,7 @@ use MercadoPago\Client\Common\RequestOptions;
 ?>
 
     <a href="<?php echo $paymentUrl ?>">
-        <button type="submit"> Escolher forma de pagamento </button>
+        <button type="submit">Escolher forma de pagamento</button>
     </a>
 
 
