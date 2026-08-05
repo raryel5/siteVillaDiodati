@@ -11,7 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->validateCsrfTokens(except: [
+        '/clientes/notificacoes', // substitua pelo caminho exato da sua rota
+    ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
