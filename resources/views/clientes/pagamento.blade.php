@@ -87,7 +87,7 @@ use MercadoPago\Client\Common\RequestOptions;
 ?>
 
     <a href="<?php echo $paymentUrl ?>">
-        <button type="submit"> Escolher forma de pagamento </button>
+        <button type="submit">Escolher forma de pagamento</button>
     </a>
 
 

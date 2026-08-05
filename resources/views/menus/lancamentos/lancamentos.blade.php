@@ -21,18 +21,10 @@
 
 <div class="text-centralizado">
     <br>
-    <br>
-    {{-- <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
-        <b>ATENÇÃO!</b>
-    </p> --}}
-    <br>
     <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
-        <b>Página em construção.</b>
+        <b>Atenção: Página em construção.</b>
     </p>
     <br>
-    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
-        <b>Não clique em nada abaixo!</b>
-    </p>
 </div>
 
 <section class="section-corpo">
