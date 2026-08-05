@@ -9,5 +9,12 @@
 
 <h1>Processamento de pagamentos</h1>
 
+<?php
+use MercadoPago\Webhook\WebhookSignatureValidator;
+use MercadoPago\Exceptions\InvalidWebhookSignatureException;
+
+
+?>
+
 
 @endsection

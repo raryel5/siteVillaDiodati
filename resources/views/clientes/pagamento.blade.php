@@ -32,7 +32,7 @@ use MercadoPago\Client\Preference\PreferenceClient;
 use MercadoPago\Client\Common\RequestOptions;
 
 # Etapa 2: Defina o seu Access Token de produção ou testes
-    $chave = config('services.mytoken.key');
+    $chave = config('services.mercadopago.api_key');
     MercadoPagoConfig::setAccessToken($chave);
 
     # Para evitar pagamentos duplicados:
