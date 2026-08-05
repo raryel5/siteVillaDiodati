@@ -101,9 +101,7 @@ class ClientesController extends Controller
         // dispatch(new ProcessPaymentWebhook($dataId));
         // $paymentId = $dataId;
 
-        // $payment = Http::withToken(config('services.mercadopago.api_key'))
-        // ->get("https://api.mercadopago.com/v1/payments/{$paymentId}")
-        // ->json();
+        // ProcessPaymentWebhook::dispatch($dataId)->afterResponse();
 
         return response()->noContent(200);
     }
