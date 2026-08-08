@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use MercadoPago\Webhook\WebhookSignatureValidator;
 use MercadoPago\Exceptions\InvalidWebhookSignatureException;
 use App\Jobs\ProcessarMpPagamento;
+use Illuminate\Support\Facades\Log;
 
 class ClientesController extends Controller
 {
@@ -83,6 +84,8 @@ class ClientesController extends Controller
 
     public function handle(Request $request)
     {
+        Log::info(json_encode($request->all()));
+
         $dataId = $request->query('data.id') ?? $request->query('data_id');
 
         try {
