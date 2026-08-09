@@ -96,7 +96,8 @@ class ClientesController extends Controller
 
     public function handle(Request $request)
     {
-        // Log::info(json_encode($request->all()));
+        Log::info(json_encode($request->all()));
+
 
         // $id = $request->input(key: 'data')['id'];
 
