@@ -46,6 +46,7 @@ use MercadoPago\Client\Common\RequestOptions;
         "items" => array(
         array(
         "id" => intval($id),
+        "external_reference" => intval($id),
         "title" => $product,
         "quantity" => intval($quantity),
         "unit_price" => intval($valor),

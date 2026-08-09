@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use MercadoPago\Webhook\WebhookSignatureValidator;
 use MercadoPago\Exceptions\InvalidWebhookSignatureException;
 use App\Jobs\ProcessarMpPagamento;
+use Faker\Provider\Payment;
 use Illuminate\Support\Facades\Log;
 
 class ClientesController extends Controller
@@ -85,6 +86,18 @@ class ClientesController extends Controller
     public function handle(Request $request)
     {
         Log::info(json_encode($request->all()));
+
+        $id = $request->input(key: 'data')['id'];
+
+        $pago = Payment::get($id);
+
+        if ($pago->staus === 'approved')
+            {
+                $externalReference = $pago->external_reference;
+                $compra = Compra::find($externalReference);
+                $compra->pagado = true;
+                $compra->save();
+            }
 
         $dataId = $request->query('data.id') ?? $request->query('data_id');
 
