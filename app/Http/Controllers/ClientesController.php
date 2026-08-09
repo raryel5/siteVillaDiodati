@@ -98,25 +98,6 @@ class ClientesController extends Controller
     {
         // Log::info(json_encode($request->all()));
 
-        if ($request->get('type') === 'payment') {
-            $paymentId = $request->get('data')['id'];
-
-            $chave = config('services.mercadopago.api_key');
-
-            MercadoPagoConfig::setAccessToken($chave);
-            $client = new PaymentClient();
-            $payment = $client->get($paymentId);
-
-            if ($payment->status === 'approved') {
-                Cliente::where('id', $paymentId)->update(['payment_status' => 'pago']);
-
-                // Lógica para aprovar o pedido no seu banco de dados
-            }
-        }
-
-
-
-
         // $id = $request->input(key: 'data')['id'];
 
         // $pago = Payment::get($id);
@@ -145,7 +126,28 @@ class ClientesController extends Controller
             return response()->noContent(401);
         }
 
-        ProcessarMpPagamento::dispatch($dataId);
+        // PROCESSAMENTO DE PAGAMENTO
+
+        if ($request->get('type') === 'payment') {
+            $paymentId = $request->get('data')['id'];
+
+            $chave = config('services.mercadopago.api_key');
+
+            MercadoPagoConfig::setAccessToken($chave);
+            $client = new PaymentClient();
+            $payment = $client->get($paymentId);
+
+            if ($payment->status === 'approved') {
+
+                $apoaidor = Cliente::where('id', $paymentId)->first();
+                if ($apoaidor) {
+                    $apoaidor->payment_status = 'pago';
+                    $apoaidor->save();
+                }
+            }
+        }
+
+        // ProcessarMpPagamento::dispatch($dataId);
 
         // Processe o evento e atualize seu pedido no seu banco
         // Recomendo: responder 200 e processar em background (fila)
