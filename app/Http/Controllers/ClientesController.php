@@ -136,10 +136,11 @@ class ClientesController extends Controller
             MercadoPagoConfig::setAccessToken($chave);
             $client = new PaymentClient();
             $payment = $client->get($paymentId);
+            $clienteId = $payment->external_reference;
 
             if ($payment->status === 'approved') {
 
-                $apoaidor = Cliente::where('id', $paymentId)->first();
+                $apoaidor = Cliente::where('id', $clienteId)->first();
                 if ($apoaidor) {
                     $apoaidor->payment_status = 'pago';
                     $apoaidor->save();
