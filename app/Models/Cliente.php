@@ -11,6 +11,7 @@ class Cliente extends Model
 
     protected $fillable = [
         'id',
+        'external_reference',
         'firstname',
         'surname',
         'product',

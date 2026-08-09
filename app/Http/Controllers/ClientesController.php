@@ -5,9 +5,12 @@ use App\Models\Cliente;
 use Illuminate\Http\Request;
 use MercadoPago\Webhook\WebhookSignatureValidator;
 use MercadoPago\Exceptions\InvalidWebhookSignatureException;
+// use MercadoPago\Client\Payment\PaymentCaptureRequest;
+use MercadoPago\Client\Payment\PaymentClient;
+use MercadoPago\MercadoPagoConfig;
 use App\Jobs\ProcessarMpPagamento;
-use Faker\Provider\Payment;
 use Illuminate\Support\Facades\Log;
+// use Illuminate\Http\JsonResponse;
 
 class ClientesController extends Controller
 {
@@ -62,6 +65,14 @@ class ClientesController extends Controller
         $iD = $identidade1['id'];
         $id = strval($iD);
 
+        $user = Cliente::where('id', $id)->first();
+        if ($user) {
+            $user->external_reference = $id;
+            $user->save();
+        }
+
+        
+
         // $var_dados = array('id', 'name', 'email', 'cpf');
         // $dados = compact("cliente", $var_dados);
 
@@ -85,19 +96,40 @@ class ClientesController extends Controller
 
     public function handle(Request $request)
     {
-        Log::info(json_encode($request->all()));
+        // Log::info(json_encode($request->all()));
 
-        $id = $request->input(key: 'data')['id'];
+        if ($request->get('type') === 'payment') {
+            $paymentId = $request->get('data')['id'];
 
-        $pago = Payment::get($id);
+            $chave = config('services.mercadopago.api_key');
 
-        if ($pago->staus === 'approved')
-            {
-                $externalReference = $pago->external_reference;
-                $compra = Compra::find($externalReference);
-                $compra->pagado = true;
-                $compra->save();
+            MercadoPagoConfig::setAccessToken($chave);
+            $client = new PaymentClient();
+            $payment = $client->get($paymentId);
+
+            if ($payment->status === 'approved') {
+                Cliente::where('id', $paymentId)->update(['payment_status' => 'pago']);
+
+                // Lógica para aprovar o pedido no seu banco de dados
             }
+        }
+
+
+
+
+        // $id = $request->input(key: 'data')['id'];
+
+        // $pago = Payment::get($id);
+        // $pago = PaymentCaptureRequest::get($id);
+
+        // if ($pago->status === 'approved')
+        //     {
+        //         // $externalReference = $pago->external_reference;
+        //         $id = $pago->external_reference;
+        //         $compra = Cliente::find($id);
+        //         $compra->payment_status = 'pago';
+        //         $compra->save();
+        //     }
 
         $dataId = $request->query('data.id') ?? $request->query('data_id');
 

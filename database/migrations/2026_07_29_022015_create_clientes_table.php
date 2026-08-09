@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('externalReference')->nullable();
             $table->string('firstname');
             $table->string('surname');
             $table->string('product')->default('vazio');
