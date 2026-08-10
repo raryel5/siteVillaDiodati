@@ -113,7 +113,9 @@ class ClientesController extends Controller
         //         $compra->save();
         //     }
 
-        $dataId = $request->query('data.id') ?? $request->query('data_id');
+        // $dataId = $request->query('data.id') ?? $request->query('data_id');
+        $dataId = (int) $request->input('data.id');
+        // $paymentId = (int) $request->input('data.id');
 
         try {
             WebhookSignatureValidator::validate(
@@ -130,21 +132,23 @@ class ClientesController extends Controller
         // PROCESSAMENTO DE PAGAMENTO
 
         if ($request->get('type') === 'payment') {
-            $paymentId = $request->get('data')['id'];
+            // $paymentId = $request->get('data')['id'];
+            // $paymentId = $dataId;
 
             $chave = config('services.mercadopago.api_key');
 
             MercadoPagoConfig::setAccessToken($chave);
             $client = new PaymentClient();
-            $payment = $client->get($paymentId);
+            $payment = $client->get($dataId);
             $clienteId = $payment->external_reference;
 
             if ($payment->status === 'approved') {
+                $id = strval($clienteId);
 
-                $apoaidor = Cliente::where('id', $clienteId)->first();
-                if ($apoaidor) {
-                    $apoaidor->payment_status = 'pago';
-                    $apoaidor->save();
+                $apoiador = Cliente::where('id', $id)->first();
+                if ($apoiador) {
+                    $apoiador->payment_status = 'pago';
+                    $apoiador->save();
                 }
             }
         }
