@@ -43,10 +43,10 @@ use MercadoPago\Client\Common\RequestOptions;
     $client = new PreferenceClient();
     $preference = $client->create([
         "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
+        "external_reference" => (string) $id,
         "items" => array(
         array(
         "id" => strval($id),
-        "external_reference" => strval($id),
         "title" => $product,
         "quantity" => intval($quantity),
         "unit_price" => intval($valor),
