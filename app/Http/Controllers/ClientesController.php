@@ -136,27 +136,27 @@ class ClientesController extends Controller
 
         // PROCESSAMENTO DE PAGAMENTO
 
-        // if ($request->get('type') === 'payment') {
-            // $paymentId = $request->get('data')['id'];
-            // $paymentId = $dataId;
+        if ($request->get('type') === 'payment') {
+            $paymentId = $request->get('data')['id'];
+            $paymentId = $dataId;
 
-            // $chave = config('services.mercadopago.api_key');
+            $chave = config('services.mercadopago.api_key');
 
-            // MercadoPagoConfig::setAccessToken($chave);
-            // $client = new PaymentClient();
-            // $payment = $client->get($dataId);
-            // $clienteId = $payment->external_reference;
+            MercadoPagoConfig::setAccessToken($chave);
+            $client = new PaymentClient();
+            $payment = $client->get($dataId);
+            $clienteId = $payment->external_reference;
 
-            // if ($payment->status === 'approved') {
-            //     $id = intval($clienteId);
+            if ($payment->status === 'approved') {
+                $id = $clienteId;
 
-            //     $apoiador = Cliente::where('id', $id)->first();
-            //     if ($apoiador) {
-            //         $apoiador->payment_status = 'pago';
-            //         $apoiador->save();
-            //     }
-            // }
-        // }
+                $apoiador = Cliente::where('id', $id)->first();
+                if ($apoiador) {
+                    $apoiador->payment_status = 'pago';
+                    $apoiador->save();
+                }
+            }
+        }
 
         // ProcessarMpPagamento::dispatch($dataId);
 

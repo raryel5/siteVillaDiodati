@@ -38,11 +38,11 @@ class LancamentosController extends Controller
 
         // Atualiza o status do pedido no seu sistema
         if ($status === 'approved') {
-            $order->status = 'pago';
+            $order->payment_status = 'pago';
         } elseif ($status === 'pending') {
-            $order->status = 'pendente';
+            $order->payment_status = 'pendente';
         } else {
-            $order->status = 'falha';
+            $order->payment_status = 'falha';
         }
 
         $order->save();
