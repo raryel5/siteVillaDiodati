@@ -34,7 +34,7 @@ class LancamentosController extends Controller
 
         // Registra o pagamento para auditoria (se você tiver campos para isso)
         // $order->mp_payment_id = $paymentId;
-        $order->payment_status = $status;
+        // $order->payment_status = $status;
 
         // Atualiza o status do pedido no seu sistema
         if ($status === 'approved') {
