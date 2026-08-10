@@ -26,6 +26,7 @@
     <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
         <b>Pagamento pendente...</b>
     </p>
+    <p> Aguarde a confirmação do pagamento via e-mail. </p>
     <br>
     <p>Você será redirecionado em 3 segundos...</p>
 

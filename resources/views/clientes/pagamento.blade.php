@@ -45,8 +45,8 @@ use MercadoPago\Client\Common\RequestOptions;
         "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
         "items" => array(
         array(
-        "id" => intval($id),
-        "external_reference" => intval($id),
+        "id" => strval($id),
+        "external_reference" => strval($id),
         "title" => $product,
         "quantity" => intval($quantity),
         "unit_price" => intval($valor),
