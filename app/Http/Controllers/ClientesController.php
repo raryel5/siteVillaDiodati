@@ -114,7 +114,12 @@ class ClientesController extends Controller
         //     }
 
         // $dataId = $request->query('data.id') ?? $request->query('data_id');
-        $dataId = (int) $request->input('data.id');
+        // $dataId = (int) $request->input('data.id');
+
+        $dataId =
+            $request->input('data.id')          // quando vem no JSON body
+            ?? $request->query('data_id')       // quando vem no query string como data_id
+            ?? $request->query('data.id');      // quando o framework preserva o nome
         // $paymentId = (int) $request->input('data.id');
 
         try {
