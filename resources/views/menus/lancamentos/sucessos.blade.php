@@ -26,6 +26,7 @@
     <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
         <b>SUCESSO!</b>
     </p>
+    <p>Em até 24 horas enviaremos um e-mail de confirmação.</p>
     <br>
     <p>Você será redirecionado em 3 segundos...</p>
 

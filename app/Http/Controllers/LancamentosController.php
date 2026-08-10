@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cliente;
+
 
 class LancamentosController extends Controller
 {
@@ -16,9 +18,41 @@ class LancamentosController extends Controller
 
     }
 
-    public function sucesso()
+    public function sucesso(Request $request)
     {
-        return view('menus.lancamentos.sucessos');
+        // return view('menus.lancamentos.sucessos');
+
+        $orderId   = $request->query('external_reference'); // ex.: "29"
+        $paymentId = $request->query('payment_id');         // ex.: "172061218063"
+        $status    = $request->query('status');             // ex.: "approved"
+
+        if (!$orderId) {
+            abort(400, 'external_reference ausente');
+        }
+
+        $order = Cliente::findOrFail((int) $orderId);
+
+        // Registra o pagamento para auditoria (se você tiver campos para isso)
+        // $order->mp_payment_id = $paymentId;
+        $order->payment_status = $status;
+
+        // Atualiza o status do pedido no seu sistema
+        if ($status === 'approved') {
+            $order->status = 'paid';
+        } elseif ($status === 'pending') {
+            $order->status = 'pending_payment';
+        } else {
+            $order->status = 'payment_failed';
+        }
+
+        $order->save();
+
+        // Renderize uma view de sucesso
+        return view('menus.lancamentos.sucessos', [
+            'order' => $order,
+            'paymentId' => $paymentId,
+            'status' => $status,
+        ]);
     }
 
     public function failure()
