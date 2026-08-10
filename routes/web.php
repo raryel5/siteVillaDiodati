@@ -64,7 +64,7 @@ Route::prefix('/lancamentos')->group(function(){
 });
 
 Route::prefix('/lancamentos/sucessos')->group(function(){
-    Route::get('/', [LancamentosController::class, 'sucesso'])->name('sucesso');
+    Route::post('/', [LancamentosController::class, 'sucesso'])->name('sucesso');
 });
 
 Route::prefix('/lancamentos/failures')->group(function(){
