@@ -40,45 +40,68 @@ use MercadoPago\Client\Common\RequestOptions;
     $request_options -> setCustomHeaders(["X-Idempotency-Key: " . uniqid()]);
 
     // Prepara os dados do produto
-    $client = new PreferenceClient();
-    $preference = $client->create([
-        "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
-        "external_reference" => (string) $id,
-        "items" => array(
-        array(
-        "id" => strval($id),
-        "title" => $product,
-        "quantity" => intval($quantity),
-        "unit_price" => intval($valor),
-        "payer" => [
-                "first_name" => $nome,
-                "last_name"  => $surname,
-                "email"      => $email,
-                "identification" => [
-                    "number" => intval($cpf),
-                    "type"   => "CPF"
-                ],
-                // "phone" => [
-                //     "area_code" => "11",
-                //     "number"    => "{{PHONE_NUMBER}}"
-                // ],
-                "address" => [
-                    "street_name"    => $cliente->adress,
-                    "street_number"  => intval($cliente->number),
-                    "complemento"  => $cliente->complement,
-                    "zip_code"       => intval($cliente->cep)
-                ]
-            ],
-        )),
-        "back_urls" => array(
-            "success" => "https://villadiodati.com.br/lancamentos/sucessos",
-            "failure" => "https://villadiodati.com.br/lancamentos/failures",
-            "pending" => "https://villadiodati.com.br/lancamentos/pendings"
-            ),
 
-        'auto_return' => "approved",
-        ],
-        );
+    $client = new PreferenceClient();
+
+    $preference = $client->create([
+    "notification_url"    => "https://villadiodati.com.br/clientes/notificacoes",
+    "external_reference"  => (string) $id,
+
+    "items" => [[
+        "id"         => (string) $id,
+        "title"      => $product,
+        "quantity"   => (int) $quantity,
+        "unit_price" => (float) $valor,
+    ]],
+
+    "back_urls" => [
+        "success" => "https://villadiodati.com.br/lancamentos/sucessos",
+        "failure" => "https://villadiodati.com.br/lancamentos/failures",
+        "pending" => "https://villadiodati.com.br/lancamentos/pendings",
+    ],
+
+    "auto_return" => "approved",
+    ]);
+
+    // $client = new PreferenceClient();
+    // $preference = $client->create([
+    //     "notification_url" => "https://villadiodati.com.br/clientes/notificacoes",
+    //     "external_reference" => (string) $id,
+    //     "items" => array(
+    //     array(
+    //     "id" => strval($id),
+    //     "title" => $product,
+    //     "quantity" => intval($quantity),
+    //     "unit_price" => intval($valor),
+    //     "payer" => [
+    //             "first_name" => $nome,
+    //             "last_name"  => $surname,
+    //             "email"      => $email,
+    //             "identification" => [
+    //                 "number" => intval($cpf),
+    //                 "type"   => "CPF"
+    //             ],
+    //             // "phone" => [
+    //             //     "area_code" => "11",
+    //             //     "number"    => "{{PHONE_NUMBER}}"
+    //             // ],
+    //             "address" => [
+    //                 "street_name"    => $cliente->adress,
+    //                 "street_number"  => intval($cliente->number),
+    //                 "complemento"  => $cliente->complement,
+    //                 "zip_code"       => intval($cliente->cep)
+    //             ]
+    //         ],
+    //     )),
+    //     "back_urls" => array(
+    //         "success" => "https://villadiodati.com.br/lancamentos/sucessos",
+    //         "failure" => "https://villadiodati.com.br/lancamentos/failures",
+    //         "pending" => "https://villadiodati.com.br/lancamentos/pendings"
+    //         ),
+
+    //     'auto_return' => "approved",
+    //     ],
+    //     );
 
 
     // $preference->auto_return = "approved";

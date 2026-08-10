@@ -148,7 +148,7 @@ class ClientesController extends Controller
             $clienteId = $payment->external_reference;
 
             if ($payment->status === 'approved') {
-                $id = $clienteId;
+                $id = intval($clienteId);
 
                 $apoiador = Cliente::where('id', $id)->first();
                 if ($apoiador) {
