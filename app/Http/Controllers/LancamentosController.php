@@ -55,14 +55,77 @@ class LancamentosController extends Controller
         ]);
     }
 
-    public function failure()
+    public function failure(Request $request)
     {
-        return view('menus.lancamentos.failures');
+        // return view('menus.lancamentos.failures');
+        $orderId   = $request->query('external_reference'); // ex.: "29"
+        $paymentId = $request->query('payment_id');         // ex.: "172061218063"
+        $status    = $request->query('status');             // ex.: "approved"
+
+        if (!$orderId) {
+            abort(400, 'external_reference ausente');
+        }
+
+        $order = Cliente::findOrFail((int) $orderId);
+
+        // Registra o pagamento para auditoria (se você tiver campos para isso)
+        // $order->mp_payment_id = $paymentId;
+        // $order->payment_status = $status;
+
+        // Atualiza o status do pedido no seu sistema
+        if ($status === 'approved') {
+            $order->payment_status = 'pago';
+        } elseif ($status === 'pending') {
+            $order->payment_status = 'pendente';
+        } else {
+            $order->payment_status = 'falha';
+        }
+
+        $order->save();
+
+        // Renderize uma view de sucesso
+        return view('menus.lancamentos.failures', [
+            'order' => $order,
+            'paymentId' => $paymentId,
+            'status' => $status,
+        ]);        
+
     }
 
-    public function pending()
+    public function pending(Request $request)
     {
-        return view('menus.lancamentos.pendings');
+        // return view('menus.lancamentos.pendings');
+        $orderId   = $request->query('external_reference'); // ex.: "29"
+        $paymentId = $request->query('payment_id');         // ex.: "172061218063"
+        $status    = $request->query('status');             // ex.: "approved"
+
+        if (!$orderId) {
+            abort(400, 'external_reference ausente');
+        }
+
+        $order = Cliente::findOrFail((int) $orderId);
+
+        // Registra o pagamento para auditoria (se você tiver campos para isso)
+        // $order->mp_payment_id = $paymentId;
+        // $order->payment_status = $status;
+
+        // Atualiza o status do pedido no seu sistema
+        if ($status === 'approved') {
+            $order->payment_status = 'pago';
+        } elseif ($status === 'pending') {
+            $order->payment_status = 'pendente';
+        } else {
+            $order->payment_status = 'falha';
+        }
+
+        $order->save();
+
+        // Renderize uma view de sucesso
+        return view('menus.lancamentos.pendings', [
+            'order' => $order,
+            'paymentId' => $paymentId,
+            'status' => $status,
+        ]);
     }
 
     /**
