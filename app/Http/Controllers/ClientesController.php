@@ -96,13 +96,24 @@ class ClientesController extends Controller
 
     public function handle(Request $request)
     {
-        Log::info(json_encode($request->all()));
+        // Log::info(json_encode($request->all()));
+
+        Log::info('MP webhook recebido', [
+            'type' => $request->input('type') ?? $request->query('type'),
+            'data_id_body' => $request->input('data.id'),
+            'data_id_query' => $request->query('data_id') ?? $request->query('data.id'),
+            'x_request_id' => $request->header('x-request-id'),
+        ]);
 
         $dataId =
             $request->input('data.id')          // quando vem no JSON body
             ?? $request->input('data_id')
             ?? $request->query('data_id')       // quando vem no query string como data_id
             ?? $request->query('data.id');      // quando o framework preserva o nome
+
+        Log::info('MP webhook dataId resolvido', [
+            'dataId' => $dataId,
+        ]);
 
         if (!$dataId) {
             return response()->noContent(400);
@@ -117,6 +128,10 @@ class ClientesController extends Controller
             config('services.mercadopago.webhook_secret')
             );
         } catch (InvalidWebhookSignatureException $e) {
+            Log::warning('MP webhook assinatura inválida', [
+                'dataId' => $dataId,
+                'x_request_id' => $request->header('x-request-id'),
+            ]);
             return response()->noContent(401);
         }
 

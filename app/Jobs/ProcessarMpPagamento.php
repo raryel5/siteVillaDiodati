@@ -9,11 +9,14 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use App\Models\Cliente;
+
+use Illuminate\Support\Facades\Log;
+
 // use Illuminate\Foundation\Queue\Queueable;
 // use MercadoPago\SDK;
 // use MercadoPago\Client\Payment\PaymentCaptureRequest;
 // use Illuminate\Http\Request;
-use App\Models\Cliente;
 // use MercadoPago\MercadoPagoConfig;
 // use MercadoPago\Client\Payment\PaymentClient;
 
@@ -35,6 +38,11 @@ class ProcessarMpPagamento implements ShouldQueue
      */
     public function handle(): void
     {
+        Log::info('MP Job iniciado', [
+            'payment_id' => $this->paymentId,
+            'attempt' => $this->attempts(),
+        ]);
+
         Cache::lock("mp:payment:{$this->paymentId}", 30)->block(5, function () {
 
             $token = config('services.mercadopago.api_key');
@@ -49,14 +57,32 @@ class ProcessarMpPagamento implements ShouldQueue
             $externalReference = $payment['external_reference'] ?? null;
             $mpStatus = $payment['status'] ?? null;
 
+            Log::info('MP payment consultado', [
+                'payment_id' => $this->paymentId,
+                'mp_status' => $payment['status'] ?? null,
+                'external_reference' => $payment['external_reference'] ?? null,
+                'transaction_amount' => $payment['transaction_amount'] ?? null,
+            ]);
+
             if (!$externalReference || !$mpStatus) {
                 return;
             }
 
             $cliente = Cliente::where('external_reference', $externalReference)->first();
             if (!$cliente) {
+                // tenta de novo mais tarde (ex.: até 10 tentativas)
+                if ($this->attempts() < 10) {
+                    $this->release(30); // reprocessa em 30s
+                }
                 return;
             }
+
+            Log::info('MP Cliente lookup', [
+                'external_reference' => $externalReference,
+                'found' => (bool) $cliente,
+                'cliente_id' => $cliente?->id,
+                'current_payment_status' => $cliente?->payment_status,
+            ]);
 
             // Idempotência: se já finalizou, não mexe
             if (in_array($cliente->payment_status, ['pago', 'falha', 'cancelado'], true)) {
@@ -91,7 +117,20 @@ class ProcessarMpPagamento implements ShouldQueue
                     break;
             }
 
+            Log::info('MP Cliente antes de salvar', [
+                'cliente_id' => $cliente->id,
+                'novo_status' => $cliente->payment_status,
+                'mp_paymente_id' => $cliente->mp_payment_id,
+            ]);
+
             $cliente->save();
+
+            Log::info('MP Cliente salvo', [
+                'cliente_id' => $cliente->id,
+                'payment_status' => $cliente->payment_status,
+            ]);
+
+            
         });
     }
 }
