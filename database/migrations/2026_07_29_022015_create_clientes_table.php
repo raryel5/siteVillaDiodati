@@ -14,12 +14,13 @@ return new class extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('externalReference')->nullable();
+            $table->string('external_reference')->nullable();
+            $table->string('mp_payment_id')->nullable();
             $table->string('firstname');
             $table->string('surname');
             $table->string('product')->default('vazio');
             $table->string('quantity')->default('vazio');
-            $table->string('valor')->default('vazio');
+            $table->decimal('valor')(10,2)->default('vazio');
             $table->enum('payment_status', ['pendente', 'pago', 'falha', 'cancelado'])->default('pendente');
             $table->string('email');
             $table->string('email_confirmation');

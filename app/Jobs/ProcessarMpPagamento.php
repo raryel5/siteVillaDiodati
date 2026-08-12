@@ -35,7 +35,6 @@ class ProcessarMpPagamento implements ShouldQueue
      */
     public function handle(): void
     {
-        // Evita processar o mesmo payment_id em paralelo e reduz duplicidade
         Cache::lock("mp:payment:{$this->paymentId}", 30)->block(5, function () {
 
             $token = config('services.mercadopago.api_key');
@@ -44,23 +43,55 @@ class ProcessarMpPagamento implements ShouldQueue
                 ->timeout(10)
                 ->get("https://api.mercadopago.com/v1/payments/{$this->paymentId}");
 
-            if (!$resp->ok()) {
-                // Faz o Job falhar para o Laravel re-tentar (não re-tente via webhook)
-                $resp->throw();
-            }
-
+            $resp->throw();
             $payment = $resp->json();
 
-            $status = $payment['status'] ?? null;
             $externalReference = $payment['external_reference'] ?? null;
+            $mpStatus = $payment['status'] ?? null;
 
-            // Aqui você encontra seu pedido pelo external_reference (ou metadata)
-            // e atualiza conforme o status.
-            //
-            // Exemplo (pseudo):
-            $pedido = Cliente::where('external_reference', $externalReference)->firstOrFail();
-            if ($status === 'approved') { $pedido->marcarComoPago(...); }
-            if ($status === 'rejected') { $pedido->marcarComoRecusado(...); }
+            if (!$externalReference || !$mpStatus) {
+                return;
+            }
+
+            $cliente = Cliente::where('external_reference', $externalReference)->first();
+            if (!$cliente) {
+                return;
+            }
+
+            // Idempotência: se já finalizou, não mexe
+            if (in_array($cliente->payment_status, ['pago', 'falha', 'cancelado'], true)) {
+                return;
+            }
+
+            // Atualiza o id do pagamento (guarda rastreabilidade)
+            $cliente->mp_paymente_id = (string) $this->paymentId;
+
+            // Mapeamento de status
+            switch ($mpStatus) {
+                case 'approved':
+                    $cliente->payment_status = 'pago';
+                    break;
+
+                case 'rejected':
+                    $cliente->payment_status = 'falha';
+                    break;
+
+                case 'cancelled':
+                    $cliente->payment_status = 'cancelado';
+                    break;
+
+                case 'refunded':
+                case 'charged_back':
+                    $cliente->payment_status = 'cancelado';
+                    break;
+
+                default:
+                    // pending / in_process / etc.
+                    $cliente->payment_status = 'pendente';
+                    break;
+            }
+
+            $cliente->save();
         });
     }
 }
