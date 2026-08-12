@@ -64,7 +64,7 @@ class ProcessarMpPagamento implements ShouldQueue
             }
 
             // Atualiza o id do pagamento (guarda rastreabilidade)
-            $cliente->mp_paymente_id = (string) $this->paymentId;
+            $cliente->mp_payment_id = (string) $this->paymentId;
 
             // Mapeamento de status
             switch ($mpStatus) {
