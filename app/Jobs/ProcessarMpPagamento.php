@@ -87,7 +87,7 @@ class ProcessarMpPagamento implements ShouldQueue
 
                 default:
                     // pending / in_process / etc.
-                    $cliente->payment_status = 'pendente';
+                    $cliente->payment_status = 'pendente2';
                     break;
             }
 
