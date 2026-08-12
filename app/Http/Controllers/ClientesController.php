@@ -98,6 +98,23 @@ class ClientesController extends Controller
     {
         // Log::info(json_encode($request->all()));
 
+        $raw = $request->getContent();
+        $payload = json_decode($raw, true);
+
+        $paymentId = $payload['data']['id'] ?? null;
+        if (!$paymentId) { http_response_code(400); exit; } // sem id, não processa
+
+        $accessToken = getenv('services.mercadopago.api_key'); // mantenha isso no servidor
+        $ch = curl_init("https://api.mercadopago.com/v1/payments/$paymentId");
+        curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => ["Authorization: Bearer $accessToken"]
+        ]);
+        $payment = json_decode(curl_exec($ch), true);
+        curl_close($ch);
+
+
+
         Log::info('MP webhook recebido', [
             'type' => $request->input('type') ?? $request->query('type'),
             'data_id_body' => $request->input('data.id'),
@@ -106,32 +123,45 @@ class ClientesController extends Controller
         ]);
 
         $dataId =
-            $request->input('data.id')          // quando vem no JSON body
+            ($payload['data']['id'] ?? null)
+            ?? ($payload['id'] ?? null)
+            ?? $request->input('data.id')
             ?? $request->input('data_id')
-            ?? $request->query('data_id')       // quando vem no query string como data_id
-            ?? $request->query('data.id');      // quando o framework preserva o nome
+            ?? $request->query('data_id')
+            ?? $request->query('data.id')
+            ?? $request->query('id'); // muito comum em notificações por query
+
+        $topic =
+            ($payload['type'] ?? null)
+            ?? $request->query('topic')
+            ?? $request->query('type');
+
+        if (!$dataId) {
+            Log::warning('MP webhook sem dataId', [
+                'raw_len' => strlen($raw ?? ''),
+                'query' => $request->query(),
+            ]);
+            return response()->noContent(400);
+        }
+
+        // $dataId =
+        //     $request->input('data.id')          // quando vem no JSON body
+        //     ?? $request->input('data_id')
+        //     ?? $request->query('data_id')       // quando vem no query string como data_id
+        //     ?? $request->query('data.id');      // quando o framework preserva o nome
 
         Log::info('MP webhook dataId resolvido', [
             'dataId' => $dataId,
         ]);
 
-        if (!$dataId) {
-            return response()->noContent(400);
-        }
-
         try {
             WebhookSignatureValidator::validate(
-            $request->header('x-signature'),
-            $request->header('x-request-id'),
-            $dataId,
-            // $request->query('data.id'),
-            config('services.mercadopago.webhook_secret')
+                $request->header('x-signature'),
+                $request->header('x-request-id'),
+                $dataId,
+                config('services.mercadopago.webhook_secret')
             );
         } catch (InvalidWebhookSignatureException $e) {
-            Log::warning('MP webhook assinatura inválida', [
-                'dataId' => $dataId,
-                'x_request_id' => $request->header('x-request-id'),
-            ]);
             return response()->noContent(401);
         }
 
