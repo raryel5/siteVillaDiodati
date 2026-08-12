@@ -2,54 +2,65 @@
 
 namespace App\Jobs;
 
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Queue\Queueable;
-use MercadoPago\SDK;
-use MercadoPago\Client\Payment\PaymentCaptureRequest;
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Http;
+// use Illuminate\Foundation\Queue\Queueable;
+// use MercadoPago\SDK;
+// use MercadoPago\Client\Payment\PaymentCaptureRequest;
+// use Illuminate\Http\Request;
 use App\Models\Cliente;
-use MercadoPago\MercadoPagoConfig;
-use MercadoPago\Client\Payment\PaymentClient;
+// use MercadoPago\MercadoPagoConfig;
+// use MercadoPago\Client\Payment\PaymentClient;
 
 
 class ProcessarMpPagamento implements ShouldQueue
 {
-    use Queueable;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     /**
      * Create a new job instance.
      */
-    public function __construct()
+    public function __construct(public string $paymentId)
     {
-        $chave = config('services.mercadopago.api_key');
-        SDK::setAcessToken($chave);
+        //
     }
 
     /**
      * Execute the job.
      */
-    public function handle(Request $request): void
+    public function handle(): void
     {
+        // Evita processar o mesmo payment_id em paralelo e reduz duplicidade
+        Cache::lock("mp:payment:{$this->paymentId}", 30)->block(5, function () {
 
-        $chave = config('services.mercadopago.api_key');
-        MercadoPagoConfig::setAccessToken($chave);
+            $token = config('services.mercadopago.api_key');
 
-        $paymentId = (int) $request->input('data.id'); // ou do query param data.id
-        $client = new PaymentClient();
+            $resp = Http::withToken($token)
+                ->timeout(10)
+                ->get("https://api.mercadopago.com/v1/payments/{$this->paymentId}");
 
-        $payment = $client->get($paymentId);
-
-        $externalReference = $payment->external_reference;
-        $status = $payment->status; // approved | pending | rejected ...
-
-        if ($status === 'approved') {
-
-            $apoaidor = Cliente::where('id', $externalReference)->first();
-            if ($apoaidor) {
-                $apoaidor->payment_status = 'pago';
-                $apoaidor->save();
+            if (!$resp->ok()) {
+                // Faz o Job falhar para o Laravel re-tentar (não re-tente via webhook)
+                $resp->throw();
             }
-        }
 
+            $payment = $resp->json();
+
+            $status = $payment['status'] ?? null;
+            $externalReference = $payment['external_reference'] ?? null;
+
+            // Aqui você encontra seu pedido pelo external_reference (ou metadata)
+            // e atualiza conforme o status.
+            //
+            // Exemplo (pseudo):
+            $pedido = Cliente::where('external_reference', $externalReference)->firstOrFail();
+            if ($status === 'approved') { $pedido->marcarComoPago(...); }
+            if ($status === 'rejected') { $pedido->marcarComoRecusado(...); }
+        });
     }
 }

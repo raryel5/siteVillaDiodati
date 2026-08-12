@@ -98,29 +98,15 @@ class ClientesController extends Controller
     {
         Log::info(json_encode($request->all()));
 
-
-        // $id = $request->input(key: 'data')['id'];
-
-        // $pago = Payment::get($id);
-        // $pago = PaymentCaptureRequest::get($id);
-
-        // if ($pago->status === 'approved')
-        //     {
-        //         // $externalReference = $pago->external_reference;
-        //         $id = $pago->external_reference;
-        //         $compra = Cliente::find($id);
-        //         $compra->payment_status = 'pago';
-        //         $compra->save();
-        //     }
-
-        // $dataId = $request->query('data.id') ?? $request->query('data_id');
-        // $dataId = (int) $request->input('data.id');
-
         $dataId =
             $request->input('data.id')          // quando vem no JSON body
+            ?? $request->input('data_id')
             ?? $request->query('data_id')       // quando vem no query string como data_id
             ?? $request->query('data.id');      // quando o framework preserva o nome
-        // $paymentId = (int) $request->input('data.id');
+
+        if (!$dataId) {
+            return response()->noContent(400);
+        }
 
         try {
             WebhookSignatureValidator::validate(
@@ -135,37 +121,8 @@ class ClientesController extends Controller
         }
 
         // PROCESSAMENTO DE PAGAMENTO
-
-        // if ($request->get('type') === 'payment') {
-        //     $paymentId = $request->get('data')['id'];
-        //     $paymentId = $dataId;
-
-        //     $chave = config('services.mercadopago.api_key');
-
-        //     MercadoPagoConfig::setAccessToken($chave);
-        //     $client = new PaymentClient();
-        //     $payment = $client->get($dataId);
-        //     $clienteId = $payment->external_reference;
-
-        //     if ($payment->status === 'approved') {
-        //         $id = $clienteId;
-
-        //         $apoiador = Cliente::where('id', $id)->first();
-        //         if ($apoiador) {
-        //             $apoiador->payment_status = 'pago';
-        //             $apoiador->save();
-        //         }
-        //     }
-        // }
-
-        // ProcessarMpPagamento::dispatch($dataId);
-
-        // Processe o evento e atualize seu pedido no seu banco
-        // Recomendo: responder 200 e processar em background (fila)
-        // dispatch(new ProcessPaymentWebhook($dataId));
-        // $paymentId = $dataId;
-
-        // ProcessPaymentWebhook::dispatch($dataId)->afterResponse();
+        // No controller tem que garantir que é string/int:
+        ProcessarMpPagamento::dispatch((string) $dataId);
 
         return response()->noContent(200);
     }
