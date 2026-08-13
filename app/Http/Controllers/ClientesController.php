@@ -153,7 +153,7 @@ class ClientesController extends Controller
             'payment_id' => (string) $dataIdForValidation,
         ]);
 
-        ProcessarMpPagamento::dispatchSync((string) $dataIdForValidation);
+        ProcessarMpPagamento::dispatch((string) $dataIdForValidation);
         return response()->noContent(200);
     }
 
