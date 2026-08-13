@@ -100,9 +100,24 @@ class ClientesController extends Controller
         $raw = $request->getContent();
         $payload = json_decode($raw, true) ?: [];
 
+        // (1) LOG NO COMEÇO: captura o que realmente chegou
+        Log::info('MP webhook recebido', [
+            'content_type' => $request->header('content-type'),
+            'raw_len'      => strlen($raw ?? ''),
+            'query'        => $request->query(),
+            'has_signature'=> (bool) $request->header('x-signature'),
+            'x_request_id' => $request->header('x-request-id'),
+        ]);
+
         $topic = $request->query('topic')
             ?? $request->query('type')
             ?? ($payload['type'] ?? null);
+
+         // (2) LOG APÓS EXTRAIR: confirma o que o seu código resolveu
+        Log::info('MP webhook resolvido', [
+            'topic'  => $topic,
+            'dataId' => $dataId,
+        ]);
 
         // Se você quiser focar só em pagamento, ignore merchant_order
         if ($topic && $topic !== 'payment') {
@@ -127,8 +142,20 @@ class ClientesController extends Controller
                 config('services.mercadopago.webhook_secret')
             );
         } catch (InvalidWebhookSignatureException $e) {
+            // (3) LOG NO CATCH: quando a assinatura falhar
+            Log::warning('MP webhook assinatura inválida', [
+                'topic' => $topic,
+                'dataId' => $dataId,
+                'x_request_id' => $request->header('x-request-id'),
+            ]);
+
             return response()->noContent(401);
         }
+
+        // (4) LOG ANTES DO DISPATCH: garante que vai enfileirar o ID certo
+        Log::info('MP webhook enfileirando job', [
+            'payment_id' => (string) $dataId,
+        ]);
 
         ProcessarMpPagamento::dispatch((string) $dataId);
         return response()->noContent(200);
