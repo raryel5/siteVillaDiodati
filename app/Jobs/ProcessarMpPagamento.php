@@ -126,6 +126,19 @@ class ProcessarMpPagamento implements ShouldQueue
             // Atualiza o id do pagamento (guarda rastreabilidade)
             $cliente->mp_payment_id = (string) $this->paymentId;
 
+            // Se já está pago, não rebaixa para pendente por causa de outra notificação
+            if ($cliente->payment_status === 'pago') {
+                $mpStatus = $payment['status'] ?? null;
+
+                // Só mude se for algo que invalida o pagamento
+                if (in_array($mpStatus, ['refunded', 'charged_back', 'cancelled'], true)) {
+                    $cliente->payment_status = 'cancelado';
+                    $cliente->save();
+                }
+
+                return;
+            }
+
             // Mapeamento de status
             switch ($mpStatus) {
                 case 'approved':
