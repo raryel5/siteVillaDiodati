@@ -63,6 +63,9 @@ class ProcessarMpPagamento implements ShouldQueue
             Log::info('MP payment dados-chave', [
                 'payment_id' => $this->paymentId,
                 'mp_status' => $payment['status'] ?? null,
+                'status_detail' => $payment['status_detail'] ?? null,
+                'payment_method_id' => $payment['payment_method_id'] ?? null,
+                'payment_type_id' => $payment['payment_type_id'] ?? null,
                 'external_reference' => $payment['external_reference'] ?? null,
                 'transaction_amount' => $payment['transaction_amount'] ?? null,
             ]);
