@@ -51,8 +51,21 @@ class ProcessarMpPagamento implements ShouldQueue
                 ->timeout(10)
                 ->get("https://api.mercadopago.com/v1/payments/{$this->paymentId}");
 
+            Log::info('MP Job consultou payment', [
+                'payment_id' => $this->paymentId,
+                'http_ok' => $resp->ok(),
+                'http_status' => $resp->status(),
+            ]);
+
             $resp->throw();
             $payment = $resp->json();
+
+            Log::info('MP payment dados-chave', [
+                'payment_id' => $this->paymentId,
+                'mp_status' => $payment['status'] ?? null,
+                'external_reference' => $payment['external_reference'] ?? null,
+                'transaction_amount' => $payment['transaction_amount'] ?? null,
+            ]);
 
             $externalReference = $payment['external_reference'] ?? null;
             $mpStatus = $payment['status'] ?? null;
@@ -69,6 +82,16 @@ class ProcessarMpPagamento implements ShouldQueue
             }
 
             $cliente = Cliente::where('external_reference', $externalReference)->first();
+
+            Log::info('MP Cliente lookup', [
+                'external_reference' => $externalReference,
+                'found' => (bool) $cliente,
+                'cliente_id' => $cliente?->id,
+                'current_payment_status' => $cliente?->payment_status,
+            ]);
+
+
+
             if (!$cliente) {
                 // tenta de novo mais tarde (ex.: até 10 tentativas)
                 if ($this->attempts() < 10) {
@@ -125,9 +148,9 @@ class ProcessarMpPagamento implements ShouldQueue
 
             $cliente->save();
 
-            Log::info('MP Cliente salvo', [
+            Log::info('MP Cliente atualizado', [
                 'cliente_id' => $cliente->id,
-                'payment_status' => $cliente->payment_status,
+                'novo_status' => $cliente->payment_status,
             ]);
 
             
