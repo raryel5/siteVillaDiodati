@@ -50,7 +50,7 @@
         </div>
 
         <?php
-            $valor = "6.30";
+            $valor = "5.00";
         ?>
 
         <div class="card-servico">
