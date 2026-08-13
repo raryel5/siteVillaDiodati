@@ -97,76 +97,41 @@ class ClientesController extends Controller
     public function handle(Request $request)
     {
         // Log::info(json_encode($request->all()));
-
         $raw = $request->getContent();
-        $payload = json_decode($raw, true);
-
-        $paymentId = $payload['data']['id'] ?? null;
-        if (!$paymentId) { http_response_code(400); exit; } // sem id, não processa
-
-        $accessToken = getenv('services.mercadopago.api_key'); // mantenha isso no servidor
-        $ch = curl_init("https://api.mercadopago.com/v1/payments/$paymentId");
-        curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HTTPHEADER => ["Authorization: Bearer $accessToken"]
-        ]);
-        $payment = json_decode(curl_exec($ch), true);
-        curl_close($ch);
-
-
+        $payload = json_decode($raw, true) ?: [];
 
         Log::info('MP webhook recebido', [
-            'type' => $request->input('type') ?? $request->query('type'),
-            'data_id_body' => $request->input('data.id'),
-            'data_id_query' => $request->query('data_id') ?? $request->query('data.id'),
+            'content_type' => $request->header('content-type'),
+            'raw_len' => strlen($raw ?? ''),
+            'query' => $request->query(),
+            'has_signature' => (bool) $request->header('x-signature'),
             'x_request_id' => $request->header('x-request-id'),
         ]);
 
+        // Em PHP, query param "data.id" frequentemente vira "data_id"
         $dataId =
-            ($payload['data']['id'] ?? null)
-            ?? ($payload['id'] ?? null)
-            ?? $request->input('data.id')
-            ?? $request->input('data_id')
-            ?? $request->query('data_id')
+            $request->query('data_id')
             ?? $request->query('data.id')
-            ?? $request->query('id'); // muito comum em notificações por query
-
-        $topic =
-            ($payload['type'] ?? null)
-            ?? $request->query('topic')
-            ?? $request->query('type');
+            ?? ($payload['data']['id'] ?? null)
+            ?? ($payload['id'] ?? null)
+            ?? $request->query('id');
 
         if (!$dataId) {
-            Log::warning('MP webhook sem dataId', [
-                'raw_len' => strlen($raw ?? ''),
-                'query' => $request->query(),
-            ]);
+            Log::warning('MP webhook sem dataId', ['query' => $request->query()]);
             return response()->noContent(400);
         }
-
-        // $dataId =
-        //     $request->input('data.id')          // quando vem no JSON body
-        //     ?? $request->input('data_id')
-        //     ?? $request->query('data_id')       // quando vem no query string como data_id
-        //     ?? $request->query('data.id');      // quando o framework preserva o nome
-
-        Log::info('MP webhook dataId resolvido', [
-            'dataId' => $dataId,
-        ]);
 
         try {
             WebhookSignatureValidator::validate(
                 $request->header('x-signature'),
                 $request->header('x-request-id'),
-                $dataId,
-                config('services.mercadopago.webhook_secret')
+                (string) $dataId,
+                config('services.mercadopago.api_key')
             );
         } catch (InvalidWebhookSignatureException $e) {
             return response()->noContent(401);
         }
 
-        // PROCESSAMENTO DE PAGAMENTO
-        // No controller tem que garantir que é string/int:
         ProcessarMpPagamento::dispatch((string) $dataId);
 
         return response()->noContent(200);
