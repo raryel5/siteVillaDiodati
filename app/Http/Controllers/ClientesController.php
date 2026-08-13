@@ -102,25 +102,22 @@ class ClientesController extends Controller
 
         // (1) LOG NO COMEÇO: captura o que realmente chegou
         Log::info('MP webhook recebido', [
-            'content_type' => $request->header('content-type'),
-            'raw_len'      => strlen($raw ?? ''),
-            'query'        => $request->query(),
-            'has_signature'=> (bool) $request->header('x-signature'),
+            'query' => $request->query(),
+            'has_signature' => (bool) $request->header('x-signature'),
             'x_request_id' => $request->header('x-request-id'),
         ]);
 
         $topic = $request->query('topic')
             ?? $request->query('type')
             ?? ($payload['type'] ?? null);
-        
-        // Defina $dataId ANTES de usar/logar
-        $dataId = $request->query('data_id')   // quando "data.id" vira "data_id" no PHP
-            ?? $request->query('id')           // quando vem como id direto
+
+        // ID “canônico” para validar assinatura (data.id -> data_id em PHP)
+        $dataIdForValidation = $request->query('data_id')
             ?? ($payload['data']['id'] ?? null);
         
         Log::info('MP webhook resolvido', [
-            'topic'  => $topic,
-            'dataId' => $dataId,
+            'topic' => $topic,
+            'dataIdForValidation' => $dataIdForValidation,
         ]);
 
         // Se você quiser focar só em pagamento, ignore merchant_order
@@ -128,35 +125,35 @@ class ClientesController extends Controller
             return response()->noContent(200);
         }
 
-        if (!$dataId) {
-            return response()->noContent(400);
+        // Se não veio data_id (ou payload.data.id), ignore para não aceitar sem validação
+        if (!$dataIdForValidation) {
+        Log::info('MP webhook ignorado (sem data_id para validar assinatura)', [
+            'query' => $request->query(),
+            ]);
+            return response()->noContent(200);
         }
-
-        // Validação de assinatura: passe exatamente o dataId que veio na URL
+        
         try {
             WebhookSignatureValidator::validate(
                 $request->header('x-signature'),
                 $request->header('x-request-id'),
-                (string) $dataId,
+                (string) $dataIdForValidation,
                 config('services.mercadopago.webhook_secret')
             );
         } catch (InvalidWebhookSignatureException $e) {
-            // (3) LOG NO CATCH: quando a assinatura falhar
-            Log::warning('MP webhook assinatura inválida', [
-                'topic' => $topic,
-                'dataId' => $dataId,
-                'x_request_id' => $request->header('x-request-id'),
-            ]);
-
-            return response()->noContent(401);
+        Log::warning('MP webhook assinatura inválida', [
+            'topic' => $topic,
+            'dataId' => $dataIdForValidation,
+            'x_request_id' => $request->header('x-request-id'),
+        ]);
+        return response()->noContent(401);
         }
 
-        // (4) LOG ANTES DO DISPATCH: garante que vai enfileirar o ID certo
         Log::info('MP webhook enfileirando job', [
-            'payment_id' => (string) $dataId,
+            'payment_id' => (string) $dataIdForValidation,
         ]);
 
-        ProcessarMpPagamento::dispatch((string) $dataId);
+        ProcessarMpPagamento::dispatch((string) $dataIdForValidation);
         return response()->noContent(200);
     }
 
