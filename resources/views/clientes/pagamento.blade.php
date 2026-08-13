@@ -43,9 +43,17 @@ use MercadoPago\Client\Common\RequestOptions;
 
     $client = new PreferenceClient();
 
+    \Log::info('MP pref valor debug', [
+      'valor_raw' => $valor,
+      'valor_float' => (float) $valor,
+    ]);
+
     $preference = $client->create([
     "notification_url"    => "https://villadiodati.com.br/clientes/notificacoes",
     "external_reference"  => (string) $id,
+    "metadata" => [
+        "cliente_id" => (string) $id,
+    ],
 
     "items" => [[
         "id"         => (string) $id,

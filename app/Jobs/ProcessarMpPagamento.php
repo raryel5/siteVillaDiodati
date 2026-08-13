@@ -68,9 +68,17 @@ class ProcessarMpPagamento implements ShouldQueue
                 'payment_type_id' => $payment['payment_type_id'] ?? null,
                 'external_reference' => $payment['external_reference'] ?? null,
                 'transaction_amount' => $payment['transaction_amount'] ?? null,
+                'description' => $payment['description'] ?? null,
+                'additional_items' => $payment['additional_info']['items'] ?? null,
             ]);
 
             $externalReference = $payment['external_reference'] ?? null;
+
+            if (!$externalReference) {
+                $externalReference = $payment['additional_info']['items'][0]['id'] ?? null;
+                $externalReference = $payment['metadata']['cliente_id'] ?? null;
+            }
+
             $mpStatus = $payment['status'] ?? null;
 
             Log::info('MP payment consultado', [
