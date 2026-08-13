@@ -112,8 +112,12 @@ class ClientesController extends Controller
         $topic = $request->query('topic')
             ?? $request->query('type')
             ?? ($payload['type'] ?? null);
-
-         // (2) LOG APÓS EXTRAIR: confirma o que o seu código resolveu
+        
+        // Defina $dataId ANTES de usar/logar
+        $dataId = $request->query('data_id')   // quando "data.id" vira "data_id" no PHP
+            ?? $request->query('id')           // quando vem como id direto
+            ?? ($payload['data']['id'] ?? null);
+        
         Log::info('MP webhook resolvido', [
             'topic'  => $topic,
             'dataId' => $dataId,
@@ -123,11 +127,6 @@ class ClientesController extends Controller
         if ($topic && $topic !== 'payment') {
             return response()->noContent(200);
         }
-
-        // Priorize query string (é o que seu log está mostrando)
-        $dataId = $request->query('data_id')   // quando o MP manda data.id e o PHP converte para data_id
-            ?? $request->query('id')           // quando vem como id direto
-            ?? ($payload['data']['id'] ?? null);
 
         if (!$dataId) {
             return response()->noContent(400);
