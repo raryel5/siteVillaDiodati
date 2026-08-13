@@ -100,40 +100,37 @@ class ClientesController extends Controller
         $raw = $request->getContent();
         $payload = json_decode($raw, true) ?: [];
 
-        Log::info('MP webhook recebido', [
-            'content_type' => $request->header('content-type'),
-            'raw_len' => strlen($raw ?? ''),
-            'query' => $request->query(),
-            'has_signature' => (bool) $request->header('x-signature'),
-            'x_request_id' => $request->header('x-request-id'),
-        ]);
+        $topic = $request->query('topic')
+            ?? $request->query('type')
+            ?? ($payload['type'] ?? null);
 
-        // Em PHP, query param "data.id" frequentemente vira "data_id"
-        $dataId =
-            $request->query('data_id')
-            ?? $request->query('data.id')
-            ?? ($payload['data']['id'] ?? null)
-            ?? ($payload['id'] ?? null)
-            ?? $request->query('id');
+        // Se você quiser focar só em pagamento, ignore merchant_order
+        if ($topic && $topic !== 'payment') {
+            return response()->noContent(200);
+        }
+
+        // Priorize query string (é o que seu log está mostrando)
+        $dataId = $request->query('data_id')   // quando o MP manda data.id e o PHP converte para data_id
+            ?? $request->query('id')           // quando vem como id direto
+            ?? ($payload['data']['id'] ?? null);
 
         if (!$dataId) {
-            Log::warning('MP webhook sem dataId', ['query' => $request->query()]);
             return response()->noContent(400);
         }
 
+        // Validação de assinatura: passe exatamente o dataId que veio na URL
         try {
             WebhookSignatureValidator::validate(
                 $request->header('x-signature'),
                 $request->header('x-request-id'),
                 (string) $dataId,
-                config('services.mercadopago.api_key')
+                config('services.mercadopago.webhook_secret')
             );
         } catch (InvalidWebhookSignatureException $e) {
             return response()->noContent(401);
         }
 
         ProcessarMpPagamento::dispatch((string) $dataId);
-
         return response()->noContent(200);
     }
 
