@@ -19,7 +19,7 @@
       <th scope="col">Nome</th>
       <th scope="col">Valor R$</th>
       <th scope="col">Status de pagamento</th>
-      <th scope="col">Recebedor</th>
+      {{-- <th scope="col">Recebedor</th> --}}
     </tr>
   </thead>
 
@@ -30,7 +30,7 @@
       <td>{{ $cliente->firstname }}</td>
       <td>{{ $cliente->valor }}</td>
       <td>{{ $cliente->payment_status }}</td>
-      <td>{{ $cliente->nameReceiver }}</td>
+      {{-- <td>{{ $cliente->nameReceiver }}</td> --}}
     </tr>
 
     @endforeach
