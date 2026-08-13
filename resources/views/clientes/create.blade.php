@@ -105,7 +105,7 @@ $obrigatorio = " *"
         <p style="font-size: clamp(1rem, 0.1vw + 1rem, 6rem)"> * Itens obrigatórios</p>
 
         <br>   
-        <input type="hidden" name="valor" value="5.00">
+        <input type="hidden" name="valor" value="6.30">
         <input type="hidden" name="product" value="Livro de Anderson José">
         <input type="hidden" name="quantity" value="1">
         {{-- <input type="hidden" name="timestamp_envio" value="{{ now()->format('Uv') }}"> --}}
