@@ -157,6 +157,28 @@ class ClientesController extends Controller
         return response()->noContent(200);
     }
 
+    // “log universal” sempre que payment_status mudar (melhor forma de achar o culpado)
+    // Criando um Observer/Hook no próprio model Cliente para logar toda alteração de payment_status (temporário até identificar a origem).
+    // Quando acontecer de novo, esse log vai te dizer qual método/classe está fazendo o update (pela trace).
+
+    protected static function booted()
+    {
+        static::updating(function ($model) {
+            if ($model->isDirty('payment_status')) {
+                Log::warning('Cliente payment_status alterado', [
+                    'cliente_id' => $model->id,
+                    'from' => $model->getOriginal('payment_status'),
+                    'to' => $model->payment_status,
+                    'mp_payment_id' => $model->mp_paymente_id ?? null,
+                    'trace' => collect(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 8))
+                        ->map(fn($t) => ($t['class'] ?? '').($t['type'] ?? '').($t['function'] ?? ''))
+                        ->values()
+                        ->all(),
+                ]);
+            }
+        });
+    }
+
     public function teste(Cliente $id)
     {
         // $dados = Cliente::all();
