@@ -53,6 +53,9 @@ use MercadoPago\Client\Common\RequestOptions;
     "external_reference"  => (string) $id,
     "metadata" => [
         "cliente_id" => (string) $id,
+        "email" => (string) $email,
+        "last_name" => (string) $surname,
+
     ],
 
     "items" => [[
