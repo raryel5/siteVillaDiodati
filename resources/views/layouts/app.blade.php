@@ -571,7 +571,7 @@
 
         .campanha-cabecalho {
             flex: 1 1 100%;
-            /* margin: 3em; */
+            margin: 0em;
         }
 
         .card-campanha-inicio {
