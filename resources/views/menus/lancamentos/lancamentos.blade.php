@@ -52,14 +52,14 @@
 <section class="section-corpo">
 
     <div class="campanha-cabecalho">
-        <img src="{{ Storage::url('lancamentos/Card.png') }}" style="max-width: 100%; display: block">
+        <img src="{{ Storage::url('lancamentos/cover.jpg') }}" style="max-width: 100%; display: block">
         <br>
         <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Um lançamento de Anderson José</h2>
     </div>
 
     <div class="flex-campanha">
         <div class="card-campanha-inicio">
-            <img src="{{ Storage::url('lancamentos/card01.png') }}" style="max-width: 100%; display: block">
+            <img src="{{ Storage::url('lancamentos/card01.jpg') }}" style="max-width: 100%; display: block">
         </div>
 
         <div class="card-campanha-inicio">
