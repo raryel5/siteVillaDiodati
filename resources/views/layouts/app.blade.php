@@ -570,7 +570,7 @@
         }
 
         .campanha-cabecalho {
-            flex: 1 1 200px;
+            flex: 1 1 100%;
             /* margin: 3em; */
         }
 
