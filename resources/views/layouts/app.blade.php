@@ -574,7 +574,7 @@
 
         .campanha-cabecalho img {
             max-width: 100%;
-            display: block;            
+            /* display: block;             */
         }
 
         .flex-campanha {
