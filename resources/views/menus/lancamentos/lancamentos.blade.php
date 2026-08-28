@@ -53,7 +53,7 @@
 <section class="section-corpo">
 
     <div class="campanha-cabecalho">
-        <img src="{{ Storage::url('lancamentos/cover.jpg') }}">
+        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/cover.jpg') }}">
         <br>
         <br>
         <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Um lançamento de Anderson José</h2>
@@ -64,7 +64,7 @@
     <!-- <div class="flex-campanha" style="align-items: center">
 
         <div class="card-campanha-inicio">
-            <img src="{{ Storage::url('lancamentos/card02.jpg') }}" style="max-width: 100%; display: block">
+            <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 100%; display: block">
         </div>
 
         <div class="card-campanha-inicio">
@@ -74,7 +74,7 @@
                 <br>
                 <p style="text-align: center">Valor: R$ {{ $valor03 }} c/ frete incluso</p>
             </div>
-            <img src="{{ Storage::url('lancamentos/recompensas/recompensa03.jpg') }}" style="max-width: 100%; display: block">                
+            <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa03.jpg') }}" style="max-width: 100%; display: block">                
             <br>
             <a href="{{ route('clientes-create', $valor03) }}">
                 <button>Adquira aqui</button>
@@ -88,29 +88,29 @@
 
         <div class="descricao-group" style="border: 2px solid #7e6345; border-radius: 24px">
             <!-- <h1 class="">O Projeto</h1> -->
-            <img src="{{ Storage::url('lancamentos/projeto.jpg') }}" style="max-width: 100%; display: block">
+            <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/projeto.jpg') }}" style="max-width: 100%; display: block">
             <br>
             <p>Nuno Nepomuceno, o mais respeitado investigador de Portugal, vê sua vida ruir quando um caso antigo volta à tona, reabrindo feridas que o tempo tentou sepultar.</p>
             <p>À medida que corpos surgem em cenários sagrados e símbolos religiosos se transformam em assinaturas de horror, Nuno percebe que o mal pode estar mais próximo do que imagina — talvez dentro da própria casa, ou do coração daqueles em quem mais confia.</p>
             <p>Entre a justiça e a vingança, o amor e a perdição, ele será obrigado a encarar não apenas um assassino, mas a própria face do inferno.</p>
             <p>Porque, às vezes, o diabo não mente. Apenas conta as verdades que ninguém quer ouvir.</p>
 
-            <img src="{{ Storage::url('lancamentos/previa.jpg') }}" style="max-width: 100%; display: block">
+            <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 100%; display: block">
 
-            <!-- <img src="{{ Storage::url('lancamentos/sinopse.jpg') }}" style="max-width: 100%; display: block">             -->
+            <!-- <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/sinopse.jpg') }}" style="max-width: 100%; display: block">             -->
             <br>
             <h1>Sobre o Autor</h1>
             <p>Anderson José dos Anjos é escritor brasileiro e terapeuta. Durante muitos tempos atuou como servidor público, experiência que lhe permitiu observar de perto diferentes realidades humanas e sociais.</p>
             <p>Hoje dedica-se à terapia e à escrita, explorando em suas obras gêneros como terror, horror, romance policial, mistério e fantasia. Suas histórias costumam mergulhar nos conflitos da mente humana, no medo, no suspense e nos limites entre realidade e imaginação.</p>
             <p>Vivendo entre o Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p>
 
-            <!-- <img src="{{ Storage::url('lancamentos/bio.jpg') }}" style="max-width: 100%; display: block"> -->
+            <!-- <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/bio.jpg') }}" style="max-width: 100%; display: block"> -->
             <br>
             <h1>Detalhes do Livro</h1>
-            <img src="{{ Storage::url('lancamentos/previa.jpg') }}" style="max-width: 100%; display: block">
+            <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/previa.jpg') }}" style="max-width: 100%; display: block">
             <br>
 
-            <img src="{{ Storage::url('lancamentos/cronograma.jpg') }}" style="max-width: 100%; display: block">
+            <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/cronograma.jpg') }}" style="max-width: 100%; display: block">
 
         </div>
 
@@ -133,7 +133,7 @@
             <h1><b>Recompensas</b></h1>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa01.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa01.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor01) }}">
                     <button> {{ $botao }} </button>
@@ -141,7 +141,7 @@
             </div>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa02.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa02.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor02) }}">
                     <button>{{ $botao }}</button>
@@ -149,7 +149,7 @@
             </div>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa03.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa03.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor03) }}">
                     <button>{{ $botao }}</button>
@@ -157,7 +157,7 @@
             </div>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa04.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa04.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor04) }}">
                     <button>{{ $botao }}</button>
@@ -165,7 +165,7 @@
             </div>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa05.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa05.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor05) }}">
                     <button>{{ $botao }}</button>
@@ -173,7 +173,7 @@
             </div>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa06.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa06.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor06) }}">
                     <button>{{ $botao }}</button>
@@ -181,7 +181,7 @@
             </div>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa07.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa07.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor07) }}">
                     <button>{{ $botao }}</button>
@@ -189,7 +189,7 @@
             </div>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa08.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa08.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor08) }}">
                     <button>{{ $botao }}</button>
@@ -197,7 +197,7 @@
             </div>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa09.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa09.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor09) }}">
                     <button>{{ $botao }}</button>
@@ -205,7 +205,7 @@
             </div>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa10.jpg') }}">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa10.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor10) }}">
                     <button>{{ $botao }}</button>
