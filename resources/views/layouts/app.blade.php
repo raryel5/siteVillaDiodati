@@ -657,6 +657,8 @@
             margin: 0.5em;
             /* border: 2px solid #7e6345;
             border-radius: 24px; */
+            justify-content: center;
+            max-width: 450px;
         }
 
         .recompensa {
@@ -666,6 +668,13 @@
             border: 2px solid #7e6345;
             border-radius: 24px;
             margin-bottom: 15px;
+        }
+
+        .recompensa img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
         }
 
         footer {

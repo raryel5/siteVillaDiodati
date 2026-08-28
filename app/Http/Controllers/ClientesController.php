@@ -36,13 +36,23 @@ class ClientesController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create($valor)
+    public function create($request)
     {
-        $value = $valor;
+        $value = $request;
+        // $value = $request->query('valor_doado');
+
         $timestamp = now()->valueOf();
         // dd($value);
         // return view('clientes.create');
         return view('clientes.create', compact('timestamp', 'value'));
+    }
+
+    public function doacao(Request $request)
+    {
+        $valueInput = $request->input('valor_doado');
+        // dd($request->all());
+        $timestamp = now()->valueOf();
+        return view('clientes.create', ['value' => $valueInput], compact('timestamp'));
     }
 
     /**
