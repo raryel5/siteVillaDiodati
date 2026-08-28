@@ -55,18 +55,21 @@
         <img src="{{ Storage::url('lancamentos/cover.jpg') }}" style="max-width: 100%; display: block">
         <br>
         <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Um lançamento de Anderson José</h2>
+        <br>
     </div>
 
-    <div class="flex-campanha">
+    <div class="flex-campanha" style="align-items: center">
+
         <div class="card-campanha-inicio">
-            <img src="{{ Storage::url('lancamentos/card01.jpg') }}" style="max-width: 100%; display: block">
+            <img src="{{ Storage::url('lancamentos/card02.jpg') }}" style="max-width: 100%; display: block">
         </div>
 
         <div class="card-campanha-inicio">
-            <div class="text-left">
-                <h1>{{ $prazo }}</h1>
+
+            <div class="">
+                <h3><b>{{ $prazo }}</b></h3>
                 <br>
-                <h2>Valor: R$ {{ $valor03 }} c/ frete incluso</h2>
+                <p style="text-align: center">Valor: R$ {{ $valor03 }} c/ frete incluso</p>
             </div>
             <!-- <img src="{{ Storage::url('lancamentos/recompensas/recompensa03.jpg') }}" style="max-width: 100%; display: block">                 -->
             <br>
@@ -76,27 +79,112 @@
         </div>
 
     </div>
+    <br>
 
     <div class="flex-campanha">
+
         <div class="descricao-group">
-            <h1 class="">O Projeto</h1>
-            <img src="{{ Storage::url('lancamentos/sinopse.jpg') }}" style="max-width: 100%; display: block">                
+            <!-- <h1 class="">O Projeto</h1> -->
+            <img src="{{ Storage::url('lancamentos/projeto.jpg') }}" style="max-width: 100%; display: block">
+            <br>
+
+            <img src="{{ Storage::url('lancamentos/sinopse.jpg') }}" style="max-width: 100%; display: block">            
+            <br>
+
+            <img src="{{ Storage::url('lancamentos/bio.jpg') }}" style="max-width: 100%; display: block">
+            <br>
+
+            <img src="{{ Storage::url('lancamentos/previa.jpg') }}" style="max-width: 100%; display: block">
+            <br>
+
+            <img src="{{ Storage::url('lancamentos/cronograma.jpg') }}" style="max-width: 100%; display: block">
 
         </div>
 
+
         <div class="recompensas-group">
-            <h1 class="">Recompensas</h1>
+            <h1>Recompensas</h1>
 
             <div class="recompensa">
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa01.jpg') }}" style="max-width: 100%; display: block">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa01.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
 
+                <a href="{{ route('clientes-create', $valor01) }}">
+                    <button>Adquira aqui</button>
+                </a>
             </div>
-            <br>
+
             <div class="recompensa">
-                <!-- <?php echo fake()->paragraphs(2, true); ?> -->
-                <img src="{{ Storage::url('lancamentos/recompensas/recompensa02.jpg') }}" style="max-width: 100%; display: block">
-                
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa02.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
+
+                <a href="{{ route('clientes-create', $valor02) }}">
+                    <button>Adquira aqui</button>
+                </a>                
             </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa03.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
+
+                <a href="{{ route('clientes-create', $valor03) }}">
+                    <button>Adquira aqui</button>
+                </a>                
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa04.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
+
+                <a href="{{ route('clientes-create', $valor04) }}">
+                    <button>Adquira aqui</button>
+                </a>                
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa05.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
+
+                <a href="{{ route('clientes-create', $valor05) }}">
+                    <button>Adquira aqui</button>
+                </a>                
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa06.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
+
+                <a href="{{ route('clientes-create', $valor06) }}">
+                    <button>Adquira aqui</button>
+                </a>                
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa07.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
+
+                <a href="{{ route('clientes-create', $valor07) }}">
+                    <button>Adquira aqui</button>
+                </a>                
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa08.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
+
+                <a href="{{ route('clientes-create', $valor08) }}">
+                    <button>Adquira aqui</button>
+                </a>                
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa09.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
+
+                <a href="{{ route('clientes-create', $valor09) }}">
+                    <button>Adquira aqui</button>
+                </a>                
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa10.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">
+
+                <a href="{{ route('clientes-create', $valor10) }}">
+                    <button>Adquira aqui</button>
+                </a>                
+            </div>
+
         </div>
 
     </div>

@@ -562,16 +562,63 @@
             cursor: pointer;
         }
 
-        .flex-campanha {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 800px;
-            text-align: center;
-        }
+        /* CAMPANHA DE FINANCIAMENTO */
 
         .campanha-cabecalho {
             flex: 1 1 100%;
             margin: 0em;
+        }
+
+        .flex-campanha {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            text-align: center;
+            justify-content: center;
+            /* align-items: center; */
+            border: 2px solid #7e6345;
+            border-radius: 24px;
+        }
+
+        .flex-campanha h1 {
+            font-family:'Aesthetic';
+            font-size: clamp(1rem, 1.5vw + 1rem, 6rem);
+            /* text-align: center; */
+        }
+
+        .flex-campanha h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(1rem, 1.5vw + 1rem, 6rem);
+            font-weight: lighter;
+            letter-spacing: 9.3px; 
+            /* text-align: center; */
+        }
+
+        .flex-campanha h3 {
+            font-size: clamp(1rem, 1.5vw + 1rem, 6rem);
+            /* text-align: center; */
+        }
+
+        .flex-campanha p {
+            font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
+            text-align: justify;
+        }
+
+        .flex-campanha button {
+            background-color: #424247;
+            height: 2em;
+            border: none;
+            /* padding: 2%; */
+            width: 12em;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        .flex-campanha button:hover {
+            background-color: #ED6b86;
+            cursor: pointer;
         }
 
         .card-campanha-inicio {
@@ -581,12 +628,12 @@
 
         .card-campanha-inicio button {
             background-color: #424247;
-            height: 2em;
+            height: 3em;
             border: none;
             /* padding: 2%; */
-            width: 75%;
+            width: 12em;
             color: #fff;
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: bold;
             border-radius: 12px;
         }
@@ -598,12 +645,23 @@
 
         .descricao-group {
             flex: 1 1 200px;
-            margin: 3em;
+            margin: 0.5em;
         }
 
         .recompensas-group {
             flex: 1 1 200px;
-            margin: 3em;
+            margin: 0.5em;
+            /* border: 2px solid #7e6345;
+            border-radius: 24px; */
+        }
+
+        .recompensa {
+            flex: 1 1 200px;
+            padding: 2%;
+            margin: 0.2em;
+            border: 2px solid #7e6345;
+            border-radius: 24px;
+            margin-bottom: 15px;
         }
 
         footer {
