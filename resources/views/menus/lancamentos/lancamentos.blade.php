@@ -19,9 +19,10 @@
 
     // Se a data já passou, exibe zero ou uma mensagem personalizada
     if ($agora->greaterThan($dataFinal)) {
-        $prazo = "Prazo encerrado";
+        $prazo = "Pré-venda encessada";
     } else {
-        $prazo = "Restam {$restante->days} dias e {$restante->h} horas";
+        // $prazo = "Restam {$restante->days} dias e {$restante->h} horas";
+        $prazo = "Restam {$restante->days} dias";
     }
 ?>
 
