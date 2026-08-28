@@ -11,7 +11,7 @@
     use Carbon\Carbon;
 
     // Data limite ou de vencimento
-    $dataFinal = Carbon::parse('2026-10-10 23:59:59');
+    $dataFinal = Carbon::parse('2026-10-26 23:59:59');
     $agora = Carbon::now()->startOfDay();
 
     // Retorna os dias e horas restantes como um objeto de intervalo
