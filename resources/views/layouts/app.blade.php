@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta property="og:image" content="{{ $metaImage ?? asset('images/logo-03.png') }}">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRN3CK6VMY"></script>
     <script>
