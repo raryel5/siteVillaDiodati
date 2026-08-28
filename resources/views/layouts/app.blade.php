@@ -569,6 +569,11 @@
             text-align: center;
         }
 
+        .campanha-cabecalho {
+            flex: 1 1 200px;
+            /* margin: 3em; */
+        }
+
         .card-campanha-inicio {
             flex: 1 1 200px;
             margin: 3em;
