@@ -567,7 +567,7 @@
         /* CAMPANHA DE FINANCIAMENTO */
 
         .campanha-cabecalho {
-            flex: 1 1 100%;
+            flex: 1 1 200px;
             height: auto;
             /* margin: 0em 0em; */
         }
