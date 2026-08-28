@@ -22,7 +22,7 @@
         $prazo = "Pré-venda encessada";
     } else {
         // $prazo = "Restam {$restante->days} dias e {$restante->h} horas";
-        $prazo = "Restam {$restante->days} dias";
+        $prazo = "{$restante->days} dias para o fim da campanha";
     }
 ?>
 
