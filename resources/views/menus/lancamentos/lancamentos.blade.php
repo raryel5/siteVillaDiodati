@@ -55,6 +55,7 @@
     <div class="campanha-cabecalho">
         <img src="{{ Storage::url('lancamentos/cover.jpg') }}">
         <br>
+        <br>
         <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Um lançamento de Anderson José</h2>
         <br>
         <h3><b>{{ $prazo }}</b></h3>
