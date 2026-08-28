@@ -10,19 +10,19 @@
 <?php
     use Carbon\Carbon;
 
-    // Data limite ou de vencimento
-    $dataFinal = Carbon::parse('2026-10-26 23:59:59');
-    $agora = Carbon::now()->startOfDay();
+    // Data e hora de vencimento com fuso
+    $dataFinal = Carbon::create(2026, 10, 26, 23, 59, 59, -3);
+    // Data e hora atual com fuso
+    $agora = Carbon::now(-3);
 
     // Retorna os dias e horas restantes como um objeto de intervalo
     $restante = $agora->diff($dataFinal);
 
-    // Se a data já passou, exibe zero ou uma mensagem personalizada
+    // Se a data já passou, exibe uma mensagem personalizada
     if ($agora->greaterThan($dataFinal)) {
-        $prazo = "Pré-venda encessada";
+        $prazo = "Pré-venda encerrada";
     } else {
-        // $prazo = "Restam {$restante->days} dias e {$restante->h} horas";
-        $prazo = "{$restante->days} dias para o fim da campanha";
+        $prazo = "{$restante->days} dias e {$restante->hours} horas para o fim da campanha";
     }
 ?>
 
@@ -86,8 +86,8 @@
 
     <div class="flex-campanha" style="border: none">
 
+        <!-- DESCRIÇÃO DO PROJETO E OUTROS DETALHES -->
         <div class="descricao-group" style="border: 2px solid #7e6345; border-radius: 24px">
-            <!-- <h1 class="">O Projeto</h1> -->
             <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/projeto.jpg') }}" style="max-width: 100%; display: block">
             <br>
             <p>Nuno Nepomuceno, o mais respeitado investigador de Portugal, vê sua vida ruir quando um caso antigo volta à tona, reabrindo feridas que o tempo tentou sepultar.</p>
@@ -97,24 +97,54 @@
 
             <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 100%; display: block">
 
-            <!-- <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/sinopse.jpg') }}" style="max-width: 100%; display: block">             -->
             <br>
             <h1>Sobre o Autor</h1>
             <p>Anderson José dos Anjos é escritor brasileiro e terapeuta. Durante muitos tempos atuou como servidor público, experiência que lhe permitiu observar de perto diferentes realidades humanas e sociais.</p>
             <p>Hoje dedica-se à terapia e à escrita, explorando em suas obras gêneros como terror, horror, romance policial, mistério e fantasia. Suas histórias costumam mergulhar nos conflitos da mente humana, no medo, no suspense e nos limites entre realidade e imaginação.</p>
             <p>Vivendo entre o Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p>
 
-            <!-- <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/bio.jpg') }}" style="max-width: 100%; display: block"> -->
             <br>
             <h1>Detalhes do Livro</h1>
             <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/previa.jpg') }}" style="max-width: 100%; display: block">
             <br>
 
+            <!-- CRONOGRAMA -->
             <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/cronograma.jpg') }}" style="max-width: 100%; display: block">
+            <br>
+
+            <div style="text-align: left; max-width: 600px; margin: 0 auto">
+
+                <h2>Setembro:</h2>
+                <ul style="font-size: clamp(1rem, 1vw + 0.5rem, 6rem); display: inline-block; text-align: left">
+                    <li>Organização</li>
+                    <li>Arrecadação</li>
+                    <li>Edição</li>
+                    <li>Diagramação</li>
+                </ul>
+            </div>
+
+            <div style="text-align: left; max-width: 600px; margin: 0 auto">
+                <h2>Outubro:</h2>
+                <ul style="font-size: clamp(1rem, 1vw + 0.5rem, 6rem); display: inline-block; text-align: left">                    
+                    <li>Contato com gráficas</li>
+                    <li>Impressão</li>
+                    <li>Recebimento e distribuição de livros</li>
+                </ul>
+            </div>
+
+            
+            
+            
+            
+            
+            
+            
+
+
 
         </div>
 
-
+        <!-- RECOMPENSAS -->
         <div class="recompensas-group">
             <?php $botao = "Adquira aqui" ?>
 
