@@ -53,7 +53,7 @@
 <section class="section-corpo">
 
     <div class="campanha-cabecalho">
-        <img src="{{ Storage::url('lancamentos/cover.jpg') }}" style="max-width: 100%; display: block">
+        <img src="{{ Storage::url('lancamentos/cover.jpg') }}">
         <br>
         <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Um lançamento de Anderson José</h2>
         <br>
