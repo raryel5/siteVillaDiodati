@@ -114,6 +114,7 @@
 
 
         <div class="recompensas-group">
+            <?php $botao = "Adquira aqui" ?>
 
             <div class="recompensa">
                 <form action="{{ route('clientes-doacao') }}" method="POST">
@@ -133,7 +134,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa01.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor01) }}">
-                    <button>Adquira aqui</button>
+                    <button> {{ $botao }} </button>
                 </a>
             </div>
 
@@ -141,7 +142,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa02.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor02) }}">
-                    <button>Adquira aqui</button>
+                    <button>{{ $botao }}</button>
                 </a>                
             </div>
 
@@ -149,7 +150,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa03.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor03) }}">
-                    <button>Adquira aqui</button>
+                    <button>{{ $botao }}</button>
                 </a>                
             </div>
 
@@ -157,7 +158,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa04.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor04) }}">
-                    <button>Adquira aqui</button>
+                    <button>{{ $botao }}</button>
                 </a>                
             </div>
 
@@ -165,7 +166,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa05.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor05) }}">
-                    <button>Adquira aqui</button>
+                    <button>{{ $botao }}</button>
                 </a>                
             </div>
 
@@ -173,7 +174,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa06.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor06) }}">
-                    <button>Adquira aqui</button>
+                    <button>{{ $botao }}</button>
                 </a>                
             </div>
 
@@ -181,7 +182,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa07.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor07) }}">
-                    <button>Adquira aqui</button>
+                    <button>{{ $botao }}</button>
                 </a>                
             </div>
 
@@ -189,7 +190,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa08.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor08) }}">
-                    <button>Adquira aqui</button>
+                    <button>{{ $botao }}</button>
                 </a>                
             </div>
 
@@ -197,7 +198,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa09.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor09) }}">
-                    <button>Adquira aqui</button>
+                    <button>{{ $botao }}</button>
                 </a>                
             </div>
 
@@ -205,7 +206,7 @@
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa10.jpg') }}">
 
                 <a href="{{ route('clientes-create', $valor10) }}">
-                    <button>Adquira aqui</button>
+                    <button>{{ $botao }}</button>
                 </a>                
             </div>
 

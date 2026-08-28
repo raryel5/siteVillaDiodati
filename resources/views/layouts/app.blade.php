@@ -568,7 +568,7 @@
 
         .campanha-cabecalho {
             flex: 1 1 100%;
-            margin: 0em;
+            margin: 0em 0em;
         }
 
         .flex-campanha {
