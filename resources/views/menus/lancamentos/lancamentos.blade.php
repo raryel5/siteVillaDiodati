@@ -5,19 +5,41 @@
 
 <!-- corpo da página -->
 @section('main')
+
+<!-- CONTAGEM REGRESSIVA DA CAMPANHA -->
+<?php
+    use Carbon\Carbon;
+
+    // Data limite ou de vencimento
+    $dataFinal = Carbon::parse('2026-10-10 23:59:59');
+    $agora = Carbon::now()->startOfDay();
+
+    // Retorna os dias e horas restantes como um objeto de intervalo
+    $restante = $agora->diff($dataFinal);
+
+    // Se a data já passou, exibe zero ou uma mensagem personalizada
+    if ($agora->greaterThan($dataFinal)) {
+        $prazo = "Prazo encerrado";
+    } else {
+        $prazo = "Restam {$restante->days} dias e {$restante->h} horas";
+    }
+?>
+
+<!-- VALORES DAS RECOMPENSAS -->
+<?php
+    $valor01 = "15.00";
+    $valor02 = "30.00";
+    $valor03 = "56.80";
+    $valor04 = "66.80";
+    $valor05 = "77.80";
+    $valor06 = "96.80";
+    $valor07 = "96.80";
+    $valor08 = "126.80";
+    $valor09 = "150.00";
+    $valor10 = "225.00";        
+?>
+
 <!-- tudo aqui será renderizado com base no template -->
-
-
-<!-- <section style="margin-left: 5%">
-    <div class="recuo">
-        <br>
-        <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Pré-lançamento:</h2>
-
-        <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">TÍTULO DO LIVRO</h1>
-        <br>
-        <h2>do autor Anderson José</h2>
-    </div>
-</section> -->
 
 <div class="text-centralizado">
     <br>
@@ -29,80 +51,56 @@
 
 <section class="section-corpo">
 
-    <div class='recuo' style="width: 75%; line-height: 35px; align-items: center">
+    <div class="campanha-cabecalho">
+        <img src="{{ Storage::url('lancamentos/Card.png') }}" style="max-width: 100%; display: block">
         <br>
-        <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Pré-lançamento:</h2>
-
-        <h1 style="font-size: clamp(1rem, 2.5vw + 1rem, 6rem); font-weight: lighter; letter-spacing: 9.3px">O Diabo são as Verdades que não te Contam</h1>
-        <br>
-        <h2>do autor Anderson José</h2>
+        <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Um lançamento de Anderson José</h2>
     </div>
 
-    <div class="flex-servicos">
-
-        <div class="card-servico">
-            <div class="corpo-servico">
-                <div class="servico-foto">
-                    <img src="{{ Storage::url('lancamentos/card01.jpeg') }}" style="max-width: 100%; display: block">
-                </div>
-            </div>
-
+    <div class="flex-campanha">
+        <div class="card-campanha-inicio">
+            <img src="{{ Storage::url('lancamentos/card01.png') }}" style="max-width: 100%; display: block">
         </div>
 
-        <?php
-            $valor = "5.00";
-        ?>
-
-        <div class="card-servico">
-            <div class="title-servico">
-                <h1>Dias restantes</h1>
-                <h2>XX dias</h2>
-                <h3>R$ {{ $valor }}</h3>             
+        <div class="card-campanha-inicio">
+            <div class="text-left">
+                <h1>{{ $prazo }}</h1>
+                <br>
+                <h2>Valor: R$ {{ $valor03 }} c/ frete incluso</h2>
             </div>
+            <!-- <img src="{{ Storage::url('lancamentos/recompensas/recompensa03.jpg') }}" style="max-width: 100%; display: block">                 -->
             <br>
-
-            <a href="{{ route('clientes-create') }}">
+            <a href="{{ route('clientes-create', $valor03) }}">
                 <button>Adquira aqui</button>
             </a>
-            
-
-            {{-- <a href="#">
-                <button>Compre aqui 2</button>
-            </a> --}}
-
-        </div>    
-    </div>
-
-    <div class="flex-servicos">
-        {{-- <div class="servico-desc"> --}}
-        <div class="text-justificado">
-            <h1>SINOPSE</h1>
-            <br>
-            <p>Nuno Nepomuceno, o mais respeitado investigador de Portugal, vê sua vida ruir quando um caso antigo volta à tona, reabrindo feridas que o tempo tentou sepultar.</p>
-            <p>À medida que corpos surgem em cenários sagrados e símbolos religiosos se transformam em assinaturas de horror, Nuno percebe que o mal pode estar mais próximo do que imagina — talvez dentro da própria casa, ou do coração daqueles em quem mais confia.</p>
-            <p>Entre a justiça e a vingança, o amor e a perdição, ele será obrigado a encarar não apenas um assassino, mas a própria face do inferno.</p>
-            <p>Porque, às vezes, o diabo não mente. Apenas conta as verdades que ninguém quer ouvir.</p>
-            <br>
-
-            <h1>SOBRE O AUTOR</h1>
-            <br>
-            <p>Anderson José dos Anjos é escritor brasileiro e terapeuta. Durante muitos tempos atuou como servidor público, experiência que lhe permitiu observar de perto diferentes realidades humanas e sociais.</p>
-            <p>Hoje dedica-se à terapia e à escrita, explorando em suas obras gêneros como terror, horror, romance policial, mistério e fantasia. Suas histórias costumam mergulhar nos conflitos da mente humana, no medo, no suspense e nos limites entre realidade e imaginação.</p>
-            <p>Vivendo entre o Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p>
-            <br>
-
-            <h1>CRONOGRAMA</h1>
-            <br>
-            <p><?php echo fake()->paragraphs(2, true); ?></p>
-            <br>
-            <h2>Detalhes da edição:</h2>
-            <br>
-            <p>Tamanho: 16X23</p>
-            <p>Número de páginas: 304</p>
-            <p>ISBN (físico): 9786501973784</p>
         </div>
 
-    </div>    
+    </div>
+
+    <div class="flex-campanha">
+        <div class="descricao-group">
+            <h1 class="">O Projeto</h1>
+            <img src="{{ Storage::url('lancamentos/sinopse.jpg') }}" style="max-width: 100%; display: block">                
+
+        </div>
+
+        <div class="recompensas-group">
+            <h1 class="">Recompensas</h1>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa01.jpg') }}" style="max-width: 100%; display: block">
+
+            </div>
+            <br>
+            <div class="recompensa">
+                <!-- <?php echo fake()->paragraphs(2, true); ?> -->
+                <img src="{{ Storage::url('lancamentos/recompensas/recompensa02.jpg') }}" style="max-width: 100%; display: block">
+                
+            </div>
+        </div>
+
+    </div>
+
 
 </section>
 

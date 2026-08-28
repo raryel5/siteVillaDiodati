@@ -66,15 +66,15 @@
             </a>
             
 
-            {{-- <a href="#">
+            <!-- {{-- <a href="#">
                 <button>Compre aqui 2</button>
-            </a> --}}
+            </a> --}} -->
 
         </div>    
     </div>
 
     <div class="flex-servicos">
-        {{-- <div class="servico-desc"> --}}
+        <!-- {{-- <div class="servico-desc"> --}} -->
         <div class="text-justificado">
             <h1>SINOPSE</h1>
             <br>

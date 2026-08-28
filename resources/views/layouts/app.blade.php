@@ -265,6 +265,10 @@
             cursor: pointer;
         }
 
+        .text-left{
+            text-align: left;
+        }
+
         .container-caixa {
             display: flex;
             justify-content: left;
@@ -556,6 +560,45 @@
         .card-servico button:hover {
             background-color: #ED6b86;
             cursor: pointer;
+        }
+
+        .flex-campanha {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .card-campanha-inicio {
+            flex: 1 1 200px;
+            margin: 3em;
+        }
+
+        .card-campanha-inicio button {
+            background-color: #424247;
+            height: 2em;
+            border: none;
+            /* padding: 2%; */
+            width: 75%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        .card-campanha-inicio button:hover {
+            background-color: #ED6b86;
+            cursor: pointer;
+        }
+
+        .descricao-group {
+            flex: 1 1 200px;
+            margin: 3em;
+        }
+
+        .recompensas-group {
+            flex: 1 1 200px;
+            margin: 3em;
         }
 
         footer {
