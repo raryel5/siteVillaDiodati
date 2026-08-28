@@ -568,8 +568,8 @@
 
         .campanha-cabecalho {
             flex: 1 1 50px;
-            height: auto;
-            /* margin: 0em 0em; */
+            /* height: auto; */
+            margin: 0em 0em;
         }
 
         .campanha-cabecalho img {
