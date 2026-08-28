@@ -81,9 +81,9 @@
     </div>
     <br>
 
-    <div class="flex-campanha">
+    <div class="flex-campanha" style="border: none">
 
-        <div class="descricao-group">
+        <div class="descricao-group" style="border: 2px solid #7e6345; border-radius: 24px">
             <!-- <h1 class="">O Projeto</h1> -->
             <img src="{{ Storage::url('lancamentos/projeto.jpg') }}" style="max-width: 100%; display: block">
             <br>
@@ -103,7 +103,7 @@
 
 
         <div class="recompensas-group">
-            <h1>Recompensas</h1>
+            <h1><b>Outras Recompensas</b></h1>
 
             <div class="recompensa">
                 <img src="{{ Storage::url('lancamentos/recompensas/recompensa01.jpg') }}" style="max-width: 100%; display: block; margin-bottom: 10px">

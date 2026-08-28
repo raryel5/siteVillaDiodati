@@ -646,6 +646,8 @@
         .descricao-group {
             flex: 1 1 200px;
             margin: 0.5em;
+            padding: 2%;
+            
         }
 
         .recompensas-group {
