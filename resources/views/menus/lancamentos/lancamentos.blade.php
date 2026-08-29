@@ -94,24 +94,28 @@
             <p>À medida que corpos surgem em cenários sagrados e símbolos religiosos se transformam em assinaturas de horror, Nuno percebe que o mal pode estar mais próximo do que imagina — talvez dentro da própria casa, ou do coração daqueles em quem mais confia.</p>
             <p>Entre a justiça e a vingança, o amor e a perdição, ele será obrigado a encarar não apenas um assassino, mas a própria face do inferno.</p>
             <p>Porque, às vezes, o diabo não mente. Apenas conta as verdades que ninguém quer ouvir.</p>
-
+            <br>
             <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 100%; display: block">
 
-            <br>
-            <h1>Sobre o Autor</h1>
+            <br><br><br>
+            <!-- <h1>Sobre o Autor</h1> -->
 
             <div class="foto-text">
-                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/foto.jpeg') }}" alt="Foto do autor" width="300">
+                <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/bio.jpg') }}" style="max-width: 100%; display: block">
+                <!-- <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/foto.jpeg') }}" alt="Foto do autor" width="300">
                 <br>
                 <p>Anderson José dos Anjos é escritor brasileiro e terapeuta. Durante muitos tempos atuou como servidor público, experiência que lhe permitiu observar de perto diferentes realidades humanas e sociais.</p>
                 <p>Hoje dedica-se à terapia e à escrita, explorando em suas obras gêneros como terror, horror, romance policial, mistério e fantasia. Suas histórias costumam mergulhar nos conflitos da mente humana, no medo, no suspense e nos limites entre realidade e imaginação.</p>
-                <p>Vivendo entre o Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p>
+                <p>Vivendo entre o Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p> -->
             </div>
         
 
             <br>
+            <br>
             <h1>Detalhes do Livro</h1>
+            <br>
             <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/previa.jpg') }}" style="max-width: 100%; display: block">
+            <br>
             <br>
 
             <!-- CRONOGRAMA -->
