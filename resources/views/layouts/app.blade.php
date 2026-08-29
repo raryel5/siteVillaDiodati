@@ -660,6 +660,12 @@
             
         }
 
+        .foto-text {
+            /* display: flex; Coloca os itens lado a lado */
+            align-items: center; /* Alinha o texto verticalmente ao centro da imagem */
+            gap: 15px; /* Cria um espaço entre a imagem e o texto */
+        }
+
         .recompensas-group {
             flex: 1 1 200px;
             margin: 0.5em;
