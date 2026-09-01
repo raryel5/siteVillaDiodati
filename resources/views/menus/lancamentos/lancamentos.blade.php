@@ -42,13 +42,13 @@
 
 <!-- tudo aqui será renderizado com base no template -->
 
-<div class="text-centralizado">
+<!-- <div class="text-centralizado">
     <br>
     <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
         <b>Atenção: Página em construção.</b>
     </p>
     <br>
-</div>
+</div> -->
 
 <section class="section-corpo">
 
