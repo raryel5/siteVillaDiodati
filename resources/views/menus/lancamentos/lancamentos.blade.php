@@ -11,7 +11,7 @@
     use Carbon\Carbon;
 
     // Data e hora de vencimento com fuso
-    $dataFinal = Carbon::create(2026, 10, 26, 23, 59, 59, -3);
+    $dataFinal = Carbon::create(2026, 10, 31, 23, 59, 59, -3);
     // Data e hora atual com fuso
     $agora = Carbon::now(-3);
 
