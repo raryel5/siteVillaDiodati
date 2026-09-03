@@ -10,7 +10,7 @@
 
 <div class="text-centralizado">
 
-<h1 class="">Listagem de Clientes</h1>
+<h1 class="">Apoiadores</h1>
 
 <table class="table">
   <thead>
