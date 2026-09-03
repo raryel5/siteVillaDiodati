@@ -10,7 +10,7 @@
 
 <div class="text-centralizado">
 
-<h1 class="">Apoiadores</h1>
+<h2 class="">Apoiadores</h2>
 
 <table class="table">
   <thead>
