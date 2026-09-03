@@ -16,6 +16,8 @@
 
     <p>Valor total: R$ {{ $cliente->valor }}</p>
 
+    <p>Após a confirmação do pagamento enviaremos um e-mail em até 48h.</p>
+
 <?php
 
 $id = $cliente->id;
