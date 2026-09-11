@@ -21,7 +21,7 @@
       <th scope="col">Valor R$</th>
       <th scope="col">E-mail</th>
       <th scope="col">Status de pagamento</th>
-      {{-- <th scope="col">Recebedor</th> --}}
+      <th scope="col">Data</th>
     </tr>
   </thead>
 
@@ -34,7 +34,7 @@
       <td>{{ $cliente->valor }}</td>
       <td>{{ $cliente->email }}</td>
       <td>{{ $cliente->payment_status }}</td>
-      {{-- <td>{{ $cliente->nameReceiver }}</td> --}}
+      <td>{{ $cliente->created_at }}</td>
     </tr>
 
     @endforeach
