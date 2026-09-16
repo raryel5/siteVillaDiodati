@@ -13,6 +13,7 @@ use App\Http\Controllers\LivrosController;
 use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\LancamentosController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\EntrevistasController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -99,8 +100,12 @@ Route::prefix('/clientes')->group(function(){
     Route::post('/notificacoes', [ClientesController::class, 'handle'])->name('clientes-webhooks');
     Route::get('/pagamento/{id?}', [ClientesController::class, 'pagamento'])->name('clientes-pagamento');
     Route::get('/teste/{id?}', [ClientesController::class, 'teste'])->name('clientes-teste');
+});
 
+# ROTAS PARA ENTREVISTAS
 
+Route::prefix('/entrevistas')->group(function(){
+    Route::get('/', [EntrevistasController::class, 'index'])->name('entrevista');
 });
 
 Route::fallback(function(){

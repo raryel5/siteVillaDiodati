@@ -271,6 +271,58 @@
             text-align: left;
         }
 
+        /* DEFINIÇÕES PARA PÁGINA DE ENTREVISTAS */
+
+        .section-entrevista-corpo {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .entrevista-text-left{
+            text-align: left;
+        }
+
+        .entrevista-text-left h1 {
+            font-family:'Aesthetic';
+            font-size: clamp(1rem, 5.5vw + 1rem, 6rem);
+        }
+
+        .entrevista-text-left h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(1rem, 2.5vw + 1rem, 6rem);
+            font-weight: lighter;
+            /* letter-spacing: 9.3px;  */
+        }
+
+        .entrevista-text-left p {
+            font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
+        }
+
+        .entrevista-text-justificado {
+            text-align: justify;
+            padding: 10px 15%;
+            line-height: 35px;
+        }
+
+        .entrevista-text-justificado p {
+            font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
+        }
+
+        .entrevista-frase-destaque p {
+            font-size: clamp(1rem, 1vw + 1rem, 4rem);
+            border: 2px solid #ce7070; /* Adiciona uma borda */
+            border-radius: 20px; /* Bordas arredondadas */
+            box-shadow: 0 8px 16px rgba(0,0,0.5,0.9); /* Sombra */
+            padding: 1%;
+            margin-left: 5%;
+            margin-right: 5%;
+
+        }
+
+
+
+        /* CONTAINERS */
+
         .container-caixa {
             display: flex;
             justify-content: left;
