@@ -21,15 +21,15 @@
 
     <div class="entrevista-text-justificado ">
 
-        <p class=""><?php echo fake()->paragraphs(1, true) ?></p>
+        <p>Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor. Aqui vai uma bio do autor.</p>
 
-        <h1 class="">Pergunta 1</h1>
+        <h1>Pergunta 1</h1>
 
-        <p class=""><?php echo fake()->paragraphs(2, true) ?></p>
+        <p><?php echo fake()->paragraphs(2, true) ?></p>
 
-        <h1 class="">Pergunta 2</h1>
+        <h1>Pergunta 2</h1>
 
-        <p class=""><?php echo fake()->paragraphs(2, true) ?></p>
+        <p><?php echo fake()->paragraphs(2, true) ?></p>
     </div>
 
     <div class="entrevista-frase-destaque">
