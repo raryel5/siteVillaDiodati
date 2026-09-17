@@ -278,6 +278,10 @@
             margin-right: 5%;
         }
 
+        .entrevista-text-center{
+            text-align: center;
+        }
+
         .entrevista-text-left{
             text-align: left;
         }

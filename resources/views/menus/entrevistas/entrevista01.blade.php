@@ -9,9 +9,9 @@
 
 <section class="section-entrevista-corpo">
 
-    <div class="entrevista-text-left">
+    <div class="entrevista-text-center">
         <br>
-        <h1>Entrevista com Anderson José</h1>
+        <h1 style="font-family:'Aesthetic'; font-size: clamp(1rem, 5.5vw + 1rem, 6rem)">Entrevista com Anderson José</h1>
         <br>
 
         <!-- <h2 class="">Autor de XXXXX<</h2> -->
