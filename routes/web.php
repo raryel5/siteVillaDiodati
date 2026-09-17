@@ -54,9 +54,9 @@ Route::prefix('/diagramacao')->group(function(){
     Route::get('/', [DiagramacaoController::class, 'index'])->name('diagramacao');
 });
 
-// Route::prefix('/servicos')->group(function(){
-//     Route::get('/', [ServicosController::class, 'index'])->name('servicos');
-// });
+Route::prefix('/servicos')->group(function(){
+    Route::get('/', [ServicosController::class, 'index'])->name('servicos');
+});
 
 # ROTAS PARA PÁGINA DE LANÇAMENTOS
 
