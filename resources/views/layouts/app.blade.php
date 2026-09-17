@@ -310,12 +310,16 @@
 
         .entrevista-frase-destaque p {
             font-size: clamp(1rem, 1vw + 1rem, 4rem);
-            border: 2px solid #ce7070; /* Adiciona uma borda */
-            border-radius: 20px; /* Bordas arredondadas */
-            box-shadow: 0 8px 16px rgba(0,0,0.5,0.9); /* Sombra */
+            /* Adiciona uma borda */
+            /* border: 2px solid #ce7070; */
+            /* Bordas arredondadas */
+            border-radius: 20px;
+            /* Sombra */
+            /* box-shadow: 0 8px 16px rgba(0,0,0.5,0.9); */
+            box-shadow: 0 8px 16px #ce7070;
             padding: 1%;
-            margin-left: 5%;
-            margin-right: 5%;
+            margin-left: 20%;
+            margin-right: 15%;
 
         }
 
