@@ -106,6 +106,7 @@ Route::prefix('/clientes')->group(function(){
 
 Route::prefix('/entrevistas')->group(function(){
     Route::get('/', [EntrevistasController::class, 'index'])->name('entrevista');
+    Route::get('/{id}', [EntrevistasController::class, 'show'])->name('autor');
 });
 
 Route::fallback(function(){

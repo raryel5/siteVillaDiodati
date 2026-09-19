@@ -11,7 +11,7 @@ class EntrevistasController extends Controller
      */
     public function index()
     {
-        return view('menus.entrevistas.entrevista01');
+        return view('menus.entrevistas.index');
     }
 
     /**
@@ -35,7 +35,9 @@ class EntrevistasController extends Controller
      */
     public function show(string $id)
     {
-        //
+        if ($id == 1) {
+            return view('menus.entrevistas.entrevista01');
+        }
     }
 
     /**

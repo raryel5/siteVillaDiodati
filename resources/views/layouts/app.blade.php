@@ -324,7 +324,67 @@
             padding: 1%;
             margin-left: 20%;
             margin-right: 15%;
+        }
 
+        /* PÁGINA INDEX DE CARDS DE ENTREVISTAS */
+
+        .flex-cards {
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: repeat(auto-fit, minmax(260px, 465px));
+            grid-gap: 3%;
+            justify-content: center;
+        }
+
+        .flex-cards a {
+            text-decoration: none;            
+        }
+
+        .card {
+            flex: 1 1 200px;
+            margin: 3em;
+            padding: 1%;
+            border: none;
+            border-radius: 16px;
+            /* COR DA FONTE */
+            /* color: #962a2a; */
+            /* COR DE FUNDO */
+            /* background-color: #c6c6eb; */
+            box-shadow: 0 8px 20px #ce7070;
+        }
+
+        .card-title {
+            text-align: center;
+        }
+
+        .card-corpo {
+            display: grid;
+        }
+
+        .card img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .card a {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .card button {
+            background-color: #424247;
+            height: 2em;
+            border: none;
+            width: 75%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+
+        .card button:hover {
+            background-color: #ED6b86;
+            cursor: pointer;
         }
 
 
@@ -429,7 +489,6 @@
             background-color: #e6dede;
             padding: 10px 10px 10px 10px;
             display: flex;
-            /* justify-content: center; */
             align-items: center;
             flex-direction: column;
             position: relative;
@@ -492,11 +551,14 @@
         /* CONTAINER PARA PAGINA DOS LIVROS */
 
         .livro-container{
-            display: flex; /* disposicao flexível de divs */
+            /* disposicao flexível de divs */
+            display: flex;
             /* flex-direction: column; */
             flex-wrap: wrap;
-            gap: 25px; /* espaço entre divs */
-            /* padding: 10px; distancia da borda da pagina */
+            /* espaço entre divs */
+            gap: 25px;
+            /* distancia da borda da pagina */
+            /* padding: 10px; */
             flex-direction: row;
             width: 100%;
             max-width: 1000px;
@@ -506,16 +568,21 @@
 
         .elemento-container-capa{
             flex: 1 1 10%;
-            width: 50%; /* Largura */
+            /* Largura */
+            width: 50%;
             max-width: 350px;
-            height: 100%; /* Altura */
+            /* Altura */
+            height: 100%;
             margin-top: 25px;
             /* margin-right: 5%; */
             display: flex;
-            flex-direction: column; /* alinhar divs em linha*/
+            /* alinhar divs em linha*/
+            flex-direction: column;
             justify-content: center;
-            background-color: white; /* Cor de fundo */
-            border: 1px solid white; /* cor da borda */
+            /* Cor de fundo */
+            background-color: white;
+            /* cor da borda */
+            border: 1px solid white;
             border-radius: 12px;
             
         }
@@ -527,15 +594,14 @@
 
         .elemento-capa-desc {
             text-align: center;
-            /* justify-content: center; */
             align-items: center;
             border-radius: 5px;
-            /* padding: 5px; */
             margin-top: 5px; 
         }
 
         .elemento-capa img{
-            width: 100%; /* Largura */
+            /* Largura */
+            width: 100%;
             box-shadow: 4px 4px 16px #aaaa;
         }
 
@@ -555,7 +621,6 @@
             margin-top: 10px;
             height: 2.5em;
             border: none;
-            /* padding: 2%; */
             width: 10em;
             color: #fff;
             font-size: 1.2rem;
@@ -571,24 +636,22 @@
         .elemento-container-descricao{
             flex: 1 1 300px;
             width: 50%;
-            /* max-width: 350px; */
-            height: 50%; /* Altura */
-            /* word-wrap: break-word; */
-            /* margin-top: 5px; */
-            /* margin-right: 5%; */
-            background-color: white; /* Cor de fundo */
-            border: 1px solid white; /* cor da borda */
+            /* Altura */
+            height: 50%;
+            /* Cor de fundo */
+            background-color: white;
+            /* cor da borda */
+            border: 1px solid white;
             border-radius: 12px;
             text-align: justify;
         }
+
+        /* PÁGINA INDEX DE SERVIÇOS PRESTADOS */
 
         .flex-servicos {
             display: flex;
             flex-wrap: wrap;
             max-width: 800px;
-            /* margin: 0 auto; */
-            /* align-items: center; */
-            /* justify-content: center; */
             text-align: center;
         
         }
@@ -611,7 +674,6 @@
             background-color: #424247;
             height: 2em;
             border: none;
-            /* padding: 2%; */
             width: 75%;
             color: #fff;
             font-size: 1rem;
@@ -627,16 +689,11 @@
         /* CAMPANHA DE FINANCIAMENTO */
 
         .campanha-cabecalho {
-            /* flex: 1 1 50px; */
             width: 100%;
-            /* height: auto; */
-            /* margin: 0em 0em; */
         }
 
         .campanha-cabecalho img {
-            /* max-width: 100%; */
             width: 100%;
-            /* display: block;             */
         }
 
         .flex-campanha {
@@ -645,7 +702,6 @@
             max-width: 100%;
             text-align: center;
             justify-content: center;
-            /* align-items: center; */
             border: 2px solid #7e6345;
             border-radius: 24px;
         }
@@ -653,7 +709,6 @@
         .flex-campanha h1 {
             font-family:'Aesthetic';
             font-size: clamp(1rem, 1.5vw + 1rem, 6rem);
-            /* text-align: center; */
         }
 
         .flex-campanha h2 {
@@ -661,12 +716,10 @@
             font-size: clamp(1rem, 1.5vw + 1rem, 6rem);
             font-weight: lighter;
             letter-spacing: 9.3px; 
-            /* text-align: center; */
         }
 
         .flex-campanha h3 {
             font-size: clamp(1rem, 1.5vw + 1rem, 6rem);
-            /* text-align: center; */
         }
 
         .flex-campanha p {
@@ -678,7 +731,6 @@
             background-color: #424247;
             height: 2em;
             border: none;
-            /* padding: 2%; */
             width: 12em;
             color: #fff;
             font-size: 1.2rem;
@@ -700,7 +752,6 @@
             background-color: #424247;
             height: 3em;
             border: none;
-            /* padding: 2%; */
             width: 12em;
             color: #fff;
             font-size: 1.2rem;
@@ -721,16 +772,17 @@
         }
 
         .foto-text {
-            /* display: flex; Coloca os itens lado a lado */
-            align-items: center; /* Alinha o texto verticalmente ao centro da imagem */
-            gap: 15px; /* Cria um espaço entre a imagem e o texto */
+            /* Coloca os itens lado a lado */
+            /* display: flex; */
+            /* Alinha o texto verticalmente ao centro da imagem */
+            align-items: center;
+            /* Cria um espaço entre a imagem e o texto */
+            gap: 15px;
         }
 
         .recompensas-group {
             flex: 1 1 200px;
             margin: 0.5em;
-            /* border: 2px solid #7e6345;
-            border-radius: 24px; */
             justify-content: center;
             max-width: 450px;
         }
@@ -755,8 +807,6 @@
             text-align: center;
             font-size: small;
             width: 100%;
-            /* line-height: 16px; */
-            /* background-color: #333; */
             color: #333;
         }
 
