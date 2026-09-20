@@ -3,8 +3,15 @@
 <head>
     
     <!-- METADOS -->
-    <title>@yield('title')</title>
+    <!-- Metatags Padrão -->
+    <title>@yield('title', 'Villa Diodati')</title>
+
     <meta name="description" content="@yield('description', 'Villa Diodati - Coletivo de Autores.')">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="@yield('title', 'Título Padrão')">
+    <meta property="og:image" content="@yield('image', asset('images/default-share.jpg'))">
 
 
     <!-- Google tag (gtag.js) -->
