@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta property="og:image" content="{{ $metaImage ?? asset('images/logo-03.png') }}">
+    <!-- Metatags Básicas -->
+    <title>{{ $pageTitle ?? 'Meu Site' }}</title>
+    
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $pageTitle ?? 'Título Padrão' }}">
+    <meta property="og:description" content="{{ $pageDescription ?? 'Descrição padrão do site.' }}">
+    <meta property="og:image" content="{{ $pageImage ?? asset('images/logo.png') }}">
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRN3CK6VMY"></script>
