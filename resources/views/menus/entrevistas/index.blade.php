@@ -3,7 +3,7 @@
 
 @section('title', 'Villa Entrevista')
 @section('description', 'Confira entrevistas com diversos autores.')
-@section('image', asset('storage/entrevistas/andersonJose/foto.jpeg'))
+<!-- @section('image', asset('storage/entrevistas/andersonJose/foto.jpeg')) -->
 
 <!-- corpo da página -->
 @section('main')

@@ -10,8 +10,8 @@
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="@yield('title', 'Título Padrão')">
-    <meta property="og:image" content="@yield('image', asset('storage/images/construcao.png'))">
+    <meta property="og:title" content="@yield('title', 'Villa Diodati')">
+    <meta property="og:image" content="@yield('image', asset('storage/images/logo.png'))">
 
 
     <!-- Google tag (gtag.js) -->
