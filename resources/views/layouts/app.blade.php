@@ -7,7 +7,7 @@
     <!-- Open Graph / WhatsApp / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="{{ $pageTitle ?? 'Villa Diodati' }}">
+    <meta property="og:title" content="{{ $title ?? 'Villa Diodati' }}">
     <meta property="og:description" content="{{ $pageDescription ?? 'Descrição padrão do site.' }}">
     <meta property="og:image" content="{{ $pageImage ?? asset('images/logo.png') }}">
 
