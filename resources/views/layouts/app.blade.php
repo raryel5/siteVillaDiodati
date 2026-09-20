@@ -11,7 +11,7 @@
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="@yield('title', 'Título Padrão')">
-    <meta property="og:image" content="@yield('image', asset('images/default-share.jpg'))">
+    <meta property="og:image" content="@yield('image', asset('images/logo.png'))">
 
 
     <!-- Google tag (gtag.js) -->
