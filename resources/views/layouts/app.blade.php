@@ -3,7 +3,7 @@
 <head>
     
     <!-- METADOS -->
-    <title>@yield('title', 'Villa Diodati')</title>
+    <title>@yield('title')</title>
     <!-- <meta name="description" content="@yield('description', 'Descrição padrão do site.')"> -->
 
 
