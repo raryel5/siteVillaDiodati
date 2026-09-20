@@ -4,7 +4,7 @@
     
     <!-- METADOS -->
     <title>@yield('title')</title>
-    <!-- <meta name="description" content="@yield('description', 'Descrição padrão do site.')"> -->
+    <meta name="description" content="@yield('description', 'Villa Diodati - Coletivo de Autores.')">
 
 
     <!-- Google tag (gtag.js) -->

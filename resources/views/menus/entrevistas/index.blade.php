@@ -1,7 +1,9 @@
 <!-- as configurações de página estão layouts/app -->
 @extends('layouts.app')
 
-@section('title', 'entrevistas')
+@section('title', 'Villa Entrevista')
+@section('description', 'Confira entrevistas com diversos autores.')
+
 
 <!-- corpo da página -->
 @section('main')
