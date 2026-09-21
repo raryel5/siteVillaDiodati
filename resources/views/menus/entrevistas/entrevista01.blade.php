@@ -13,17 +13,35 @@
 
     <div class="entrevista-text-center">
         <br>
-        <h1 style="font-family:'Aesthetic'; font-size: clamp(1rem, 5.5vw + 1rem, 6rem)">Entrevista com Anderson José</h1>
+        <h1 style="font-family:'Aesthetic'; font-size: clamp(1rem, 5.5vw + 1rem, 6rem)">Villa Entrevista</h1>
+        <h1 style="font-family:'Aesthetic'; font-size: clamp(1rem, 5.5vw + 1rem, 6rem)">Anderson José</h1>
         <br>
-
         <!-- <h2 class="">Autor de XXXXX<</h2> -->
-
         <!-- <p class="">< ? php echo fake()->paragraphs(1, true) ?></p> -->
-
     </div>
 
     <div class="entrevista-text-justificado ">
-        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/bio.jpg') }}" style="max-width: 100%; display: block">
+
+        <p><?php echo fake()->paragraphs(2, true) ?></p>
+
+         <div class="entrevista-frase-destaque">
+            <p> <em>Uma frase em destaque e itálico. Uma frase em destaque e itálico. Uma frase em destaque e itálico.</em></p>
+            <br>
+        </div>
+
+        <div class="flex-cards-entrevista">
+            <div class="card-entrevista">
+                <img src="{{ Storage::url('entrevistas/andersonJose/foto.jpeg') }}">
+                <legend>acervo pessoal do autor</legend>
+            </div>
+
+            <div class="card-entrevista">
+                <p><?php echo fake()->paragraphs(3, true) ?></p>
+            </div>
+
+        </div>
+
+        <!-- <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/bio.jpg') }}" style="max-width: 100%; display: block"> -->
         <br>
 
         <h2>O que te levou a tornar-se um escritor, e o que te faz continuar escrevendo?</h2>
@@ -51,9 +69,8 @@
         <p><?php echo fake()->paragraphs(2, true) ?></p>
     </div>
 
-    <div class="entrevista-frase-destaque">
-        <p> <em>Uma frase em destaque e itálico. Uma frase em destaque e itálico. Uma frase em destaque e itálico.</em></p>
-        <br>
+    <div class="entrevista-text-center">
+        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/cover.jpg') }}" style="max-width: 70%">
     </div>
 
      <div class="entrevista-text-justificado ">
@@ -99,6 +116,14 @@
         <p><?php echo fake()->paragraphs(2, true) ?></p>
     </div>
 
+    <div class="entrevista-text-center">
+        <h2>Contato:</h2>
+        <p><b>IG: <a href="https://www.instagram.com/anderson.fjose/">anderson.fjose</a></b>
+        </p>
+        <p><b>e-mail: andersonanjos80@outlook.com.br</b>            
+        </p>
+        <img src="{{ Storage::url('images/logo.png') }}" style="max-width: 100%">        
+    </div>
 
 </section>
 

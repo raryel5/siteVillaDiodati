@@ -289,6 +289,39 @@
             margin-right: 5%;
         }
 
+        .flex-cards-entrevista {
+            margin-top: 20px;
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: repeat(auto-fit, minmax(260px, 565px));
+            /* grid-gap: 1%; */
+            justify-content: center;
+        }
+
+        .card-entrevista {
+            flex: 1 1 360px;
+            /* margin: 3em; */
+            /* padding: 1%; */
+            border: none;
+            /* border-radius: 16px; */
+            /* COR DA FONTE */
+            /* color: #962a2a; */
+            /* COR DE FUNDO */
+            /* background-color: #c6c6eb; */
+            /* box-shadow: 0 8px 20px #ce7070; */
+            justify-content: center;
+            /* text-align: center; */
+        }
+
+        .card-entrevista img {
+            max-width: 360px;
+            display: block;
+        }
+
+        .card-entrevista legend {
+            font-size: clamp(1rem, 0.1vw + 1rem, 4rem);
+        }
+
         .entrevista-text-center{
             text-align: center;
         }
@@ -319,6 +352,11 @@
             line-height: 35px;
         }
 
+        .entrevista-text-justificado h2 {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
         .entrevista-text-justificado p {
             font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
         }
@@ -333,6 +371,7 @@
             /* box-shadow: 0 8px 16px rgba(0,0,0.5,0.9); */
             box-shadow: 0 8px 16px #ce7070;
             padding: 1%;
+            margin-top: 20px;
             margin-left: 20%;
             margin-right: 15%;
         }
@@ -849,8 +888,7 @@
         <br>
         <br>
         <br>
-        <p>v-1.1</p>
-        <p>&copy; 2026 Villa Diodati - Coletivo de Autores. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Villa Diodati - Coletivo de Autores. Todos os direitos reservados. v-1.1</p>
 
         <p>Contato: villadiodaticoletivo@gmail.com</p>
 
