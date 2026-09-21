@@ -44,32 +44,50 @@
 
             @if ( $livro['titulo'] == "Os Segredos da Mata")
                 <img src="{{ Storage::url('capas/capaOSM.jpeg') }}" >
-                <?php $contato = "https://wa.me/5567996638417?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Os%20Segredos%20da%20Mata.%20Vim%20pelo%20site%20de%20vocês." ?> 
+                <?php $contato = "https://wa.me/5567996638417?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Os%20Segredos%20da%20Mata.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('title', $livro['titulo'])
+                @section('description', 'A trama narra as aventuras de Juliana, uma menina de 12 anos, que precisa encarar muitos desafios, desde aprender a andar a cavalo até lidar com seres fantásticos, numa estória recheada de cultura sul-mato-grossense e inspirada em lendas brasileiras.')
+                @section('image', asset('storage/capas/capaOSM.jpeg'))
             @endif
 
             @if ( $livro['titulo'] == "Cajado")
                 <img src="{{ Storage::url('capas/capaCajado.jpeg') }}" >
-                <?php $contato = "https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Cajado.%20Vim%20pelo%20site%20de%20vocês." ?> 
+                <?php $contato = "https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Cajado.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('title', $livro['titulo'])
+                @section('description', 'Em um pequeno vilarejo, no íntimo da floresta, fé e rancor se contrapõem às vésperas da mais importante e esperada celebração do local. Quando Sett, um participativo e respeitado integrante da comunidade, vê seus objetivos em risco, ele é obrigado a decidir entre sangue e destino.')
+                @section('image', asset('storage/capas/capaCajado.jpeg'))
             @endif
 
             @if ( $livro['titulo'] == "Dedo em Riste, Verso em Prosa")
                 <img src="{{ Storage::url('capas/capaDRVP.jpeg') }}" >
-                <?php $contato = "https://wa.me/558699203283?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Dedo%20em%20Riste,%20Verso%20em%20Prosa.%20Vim%20pelo%20site%20de%20vocês." ?> 
+                <?php $contato = "https://wa.me/558699203283?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Dedo%20em%20Riste,%20Verso%20em%20Prosa.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('title', $livro['titulo'])
+                @section('description', 'Coletânea de 15 contos que exploram, com sensibilidade e crítica, as nuances do comportamento humano. A obra transita entre o cotidiano e o simbólico, trazendo narrativas curtas, intensas e provocativas, que convidam o leitor à reflexão sobre conflitos, ironias e experiências humanas universais.')
+                @section('image', asset('storage/capas/capaDRVP.jpeg'))
             @endif
 
             @if ( $livro['titulo'] == "Eles Pensam Que Somos Gatos")
                 <img src="{{ Storage::url('capas/capaEPQSG.jpeg') }}" >
-                <?php $contato = "https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Eles%20Pensam%20que%20Somos%20Gatos.%20Vim%20pelo%20site%20de%20vocês." ?> 
+                <?php $contato = "https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Eles%20Pensam%20que%20Somos%20Gatos.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('title', $livro['titulo'])
+                <!-- @section('description', 'Adcionar descriçaõ aqui.') -->
+                @section('image', asset('storage/capas/capaEPQSG.jpeg))
             @endif
 
             @if ( $livro['titulo'] == "Noturnos")
                 <img src="{{ Storage::url('capas/capaNoturnos.jpeg') }}" >
-                <?php $contato = "https://wa.me/5511996787049?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Noturnos.%20Vim%20pelo%20site%20de%20vocês." ?> 
+                <?php $contato = "https://wa.me/5511996787049?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Noturnos.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('title', $livro['titulo'])
+                @section('description', 'Na obscuridade das noites que recaem sobre a cidade de Monte Hill, uma força maligna se oculta, prenunciando a chegada iminente do horror. Entre os habitantes da cidade, encontra-se Allan Jones, um jovem professor assombrado por criaturas que emergem dos abismos mais tenebrosos de seus pesadelos.')
+                @section('image', asset('storage/capas/capaNoturnos.jpegg'))
             @endif
 
             @if ( $livro['titulo'] == "SS Misery")
                 <img src="{{ Storage::url('capas/capaSSM.jpeg') }}" >
-                <?php $contato = "https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20SS%20Misery.%20Vim%20pelo%20site%20de%20vocês." ?> 
+                <?php $contato = "https://wa.me/556291603185?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20SS%20Misery.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('title', $livro['titulo'])
+                @section('description', 'Sal, sol, dois homens e um bote. Quando Severo e Maximiano se encontram perdidos em alto-mar, os dois precisam unir forças para que suas vidas sejam restauradas. Em meio às dificuldades, ambos precisarão entender um ao outro para garantir a sobrevivência e, quem sabe, a sanidade.')
+                @section('image', asset('storage/capas/capaSSM.jpeg'))
             @endif
         </div>    
 
