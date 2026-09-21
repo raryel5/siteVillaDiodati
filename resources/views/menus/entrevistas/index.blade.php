@@ -23,7 +23,7 @@
 
     <div class="flex-cards">
 
-        <a href="{{ route('autor', $id=1) }}">
+        <a href="{{ route('autor', $id='andersonjose') }}">
             <div class="card">
                 <div class="card-title">
                     <h1>Entrevista com Anderson José</h1>

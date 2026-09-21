@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'Quem somos')
+@section('description', 'História do Coletivo.')
+<!-- @section('image', asset('storage/entrevistas/andersonJose/foto.jpeg')) -->
 
 <!-- corpo da página -->
 @section('main')

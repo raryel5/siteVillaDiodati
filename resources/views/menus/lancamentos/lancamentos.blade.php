@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'lançamentos')
+@section('description', 'Confira nossos lançamentos.')
+@section('image', asset('storage/lancamentos/preVendaAnderson2026/cover.jpg'))
 
 <!-- corpo da página -->
 @section('main')

@@ -35,7 +35,7 @@ class EntrevistasController extends Controller
      */
     public function show(string $id)
     {
-        if ($id == 1) {
+        if ($id == "andersonjose") {
             return view('menus.entrevistas.entrevista01');
         }
     }

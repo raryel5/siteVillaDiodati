@@ -7,7 +7,7 @@
 
 <!-- corpo da página -->
 @section('main')
-    <!-- tudo aqui será renderizado com base no template -->
+<!-- tudo aqui será renderizado com base no template -->
 
 <section class="section-entrevista-corpo">
 

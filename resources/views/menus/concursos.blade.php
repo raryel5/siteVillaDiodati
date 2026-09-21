@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'Concursos')
+@section('description', 'Confira os concursos abertos e edições passadas.')
+<!-- @section('image', asset('storage/entrevistas/andersonJose/foto.jpeg')) -->
 
 <!-- corpo da página -->
 @section('main')
