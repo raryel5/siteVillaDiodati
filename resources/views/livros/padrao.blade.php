@@ -71,7 +71,7 @@
                 <?php $contato = "https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Eles%20Pensam%20que%20Somos%20Gatos.%20Vim%20pelo%20site%20de%20vocês." ?>
                 @section('title', $livro['titulo'])
                 <!-- @section('description', 'Adcionar descriçaõ aqui.') -->
-                @section('image', asset('storage/capas/capaEPQSG.jpeg))
+                @section('image', asset('storage/capas/capaEPQSG.jpeg'))
             @endif
 
             @if ( $livro['titulo'] == "Noturnos")
@@ -79,7 +79,7 @@
                 <?php $contato = "https://wa.me/5511996787049?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Noturnos.%20Vim%20pelo%20site%20de%20vocês." ?>
                 @section('title', $livro['titulo'])
                 @section('description', 'Na obscuridade das noites que recaem sobre a cidade de Monte Hill, uma força maligna se oculta, prenunciando a chegada iminente do horror. Entre os habitantes da cidade, encontra-se Allan Jones, um jovem professor assombrado por criaturas que emergem dos abismos mais tenebrosos de seus pesadelos.')
-                @section('image', asset('storage/capas/capaNoturnos.jpegg'))
+                @section('image', asset('storage/capas/capaNoturnos.jpeg'))
             @endif
 
             @if ( $livro['titulo'] == "SS Misery")
