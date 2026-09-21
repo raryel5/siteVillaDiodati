@@ -3,7 +3,7 @@
 
 @section('title', 'lançamentos')
 @section('description', 'Confira nossos lançamentos.')
-@section('image', asset('storage/lancamentos/preVendaAnderson2026/cover.jpg'))
+@section('image', asset('storage/lancamentos/preVendaAnderson2026/card02.jpg'))
 
 <!-- corpo da página -->
 @section('main')
