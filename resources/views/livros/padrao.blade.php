@@ -46,7 +46,7 @@
                 <img src="{{ Storage::url('capas/capaOSM.jpeg') }}" >
                 <?php $contato = "https://wa.me/5567996638417?text=Olá,%20gostaria%20de%20adquirir%20seu%20livro:%20Os%20Segredos%20da%20Mata.%20Vim%20pelo%20site%20de%20vocês." ?>
                 @section('title', $livro['titulo'])
-                @section('description', 'A trama narra as aventuras de Juliana, uma menina de 12 anos, que precisa encarar muitos desafios, desde aprender a andar a cavalo até lidar com seres fantásticos, numa estória recheada de cultura sul-mato-grossense e inspirada em lendas brasileiras.')
+                @section('description', 'A trama narra as aventuras de Juliana, uma menina de 12 anos, que precisa encarar muitos desafios.')
                 @section('image', asset('storage/capas/capaOSM.jpeg'))
             @endif
 

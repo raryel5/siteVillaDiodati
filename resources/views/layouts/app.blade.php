@@ -849,6 +849,7 @@
         <br>
         <br>
         <br>
+        <p>v-1.1</p>
         <p>&copy; 2026 Villa Diodati - Coletivo de Autores. Todos os direitos reservados.</p>
 
         <p>Contato: villadiodaticoletivo@gmail.com</p>
