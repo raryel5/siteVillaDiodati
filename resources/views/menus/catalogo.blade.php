@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'Catálogo')
+@section('description', 'Confira os livros de nossos autores.')
+@section('image', asset('storage/capas/capaNSA.jpeg'))
 
 <!-- corpo da página -->
 @section('main')

@@ -22,7 +22,9 @@
 
             @if ( $livro['titulo'] == "Noites Sem Alma")
                 <img src="{{ Storage::url('capas/capaNSA.jpeg') }}" >
-                <?php $contato = "https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20a%20coletânea%20Noites%20Sem%20Alma.%20Vim%20pelo%20site%20de%20vocês." ?>       
+                <?php $contato = "https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20a%20coletânea%20Noites%20Sem%20Alma.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('description', 'Uma coletânea de estórias de terror.')
+                @section('image', asset('storage/capas/capaNSA.jpeg'))
             @endif
 
             @if ( $livro['titulo'] == "O Que Ficou no Escuro")
