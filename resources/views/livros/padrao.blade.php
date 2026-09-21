@@ -1,8 +1,6 @@
 <!-- as configurações de página estão layouts/app -->
 @extends('layouts.app')
 
-@section('title', 'livro')
-
 <!-- corpo da página -->
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
@@ -23,6 +21,7 @@
             @if ( $livro['titulo'] == "Noites Sem Alma")
                 <img src="{{ Storage::url('capas/capaNSA.jpeg') }}" >
                 <?php $contato = "https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20a%20coletânea%20Noites%20Sem%20Alma.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('title', $livro['titulo'])
                 @section('description', 'Uma coletânea de estórias de terror.')
                 @section('image', asset('storage/capas/capaNSA.jpeg'))
             @endif
@@ -30,11 +29,17 @@
             @if ( $livro['titulo'] == "O Que Ficou no Escuro")
                 <img src="{{ Storage::url('capas/capaOQFE.jpeg') }}" >
                 <?php $contato = "https://wa.me/5511952000213?text=Olá,%20gostaria%20de%20adquirir%20a%20coletânea%20O%20que%20Ficou%20no%20Escuro.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('title', $livro['titulo'])
+                @section('description', 'Uma coletânea de estórias de mistério.')
+                @section('image', asset('storage/capas/capaOQFE.jpeg'))
             @endif
 
             @if ( $livro['titulo'] == "O Diário da Coletora")
                 <img src="{{ Storage::url('capas/capaODDC.jpeg') }}" >
-                <?php $contato = "https://wa.me/5511996787049?text=Olá,%20gostaria%20de%20adquirir%20O%20Diário%20da%20Coletora.%20Vim%20pelo%20site%20de%20vocês." ?> 
+                <?php $contato = "https://wa.me/5511996787049?text=Olá,%20gostaria%20de%20adquirir%20O%20Diário%20da%20Coletora.%20Vim%20pelo%20site%20de%20vocês." ?>
+                @section('title', $livro['titulo'])
+                @section('description', 'Nestas páginas desdobram-se relatos profundos e emocionantes que capturam a essência da vida e da morte.')
+                @section('image', asset('storage/capas/capaODDC.jpeg'))
             @endif
 
             @if ( $livro['titulo'] == "Os Segredos da Mata")
