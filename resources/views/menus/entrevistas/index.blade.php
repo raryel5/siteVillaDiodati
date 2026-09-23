@@ -31,55 +31,7 @@
 
                 <div class="card-corpo">
                     <div>
-                        <img src="{{ Storage::url('entrevistas/andersonJose/foto.jpeg') }}" style="max-width: 100%; display: block">
-                        <!-- <legend style="text-align: center">Dwight Schrute</legend> -->
-                    </div>
-                    <br>
-                </div>
-            </div>
-        </a>
-
-        <a href="{{ route('autor', $id=1) }}">
-            <div class="card">
-                <div class="card-title">
-                    <h1>Entrevista com Anderson José</h1>
-                </div>
-
-                <div class="card-corpo">
-                    <div>
-                        <img src="{{ Storage::url('entrevistas/andersonJose/foto.jpeg') }}" style="max-width: 100%; display: block">
-                        <!-- <legend style="text-align: center">Dwight Schrute</legend> -->
-                    </div>
-                    <br>
-                </div>
-            </div>
-        </a>
-
-        <a href="{{ route('autor', $id=1) }}">
-            <div class="card">
-                <div class="card-title">
-                    <h1>Entrevista com Anderson José</h1>
-                </div>
-
-                <div class="card-corpo">
-                    <div>
-                        <img src="{{ Storage::url('entrevistas/andersonJose/foto.jpeg') }}" style="max-width: 100%; display: block">
-                        <!-- <legend style="text-align: center">Dwight Schrute</legend> -->
-                    </div>
-                    <br>
-                </div>
-            </div>
-        </a>
-
-        <a href="{{ route('autor', $id=1) }}">
-            <div class="card">
-                <div class="card-title">
-                    <h1>Entrevista com Anderson José</h1>
-                </div>
-
-                <div class="card-corpo">
-                    <div>
-                        <img src="{{ Storage::url('entrevistas/andersonJose/foto.jpeg') }}" style="max-width: 100%; display: block">
+                        <img src="{{ Storage::url('entrevistas/andersonJose/foto.jpeg') }}">
                         <!-- <legend style="text-align: center">Dwight Schrute</legend> -->
                     </div>
                     <br>
