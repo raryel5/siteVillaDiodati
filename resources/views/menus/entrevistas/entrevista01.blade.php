@@ -100,8 +100,9 @@
         <p>O Diabo São as Verdades que Não Te Contam é, por vezes, pesado, sombrio e profundamente triste. Não triste no sentido superficial da palavra, mas no sentido de sentir que algo está sendo esmagado e deixado para trás. O protagonista perde pessoas que ama, perde amigos e passa por situações que ele próprio não consegue compreender completamente. Ele tinha confiança, tinha fé, tinha certezas e, aos poucos, tudo isso começa a se desfazer.</p>
         <p>Aquilo que ele mais ama é simplesmente atropelado — e não estou usando essa palavra apenas no sentido figurado. Ao longo da história, tudo se transforma, e as minhas próprias emoções durante aquele período sombrio da minha vida acabaram refletidas no personagem. Não necessariamente naquilo que ele faz com os outros, mas principalmente naquilo que ele é capaz de fazer consigo mesmo.</p>
 
-        <div class="flex-cards-entrevista">
+    <div class="flex-cards-entrevista-meio">
         <div class="card-entrevista">
+            <!-- <br> -->
             <img src="{{ Storage::url('entrevistas/andersonJose/foto01.jpeg') }}">
             <legend>acervo pessoal do autor</legend>
         </div>
@@ -110,10 +111,11 @@
             
             <p>Por isso, posso dizer que O Diabo São as Verdades que Não Te Contam é, de certa forma, um retrato de uma fase muito difícil da vida de um escritor que atravessava um período obscuro, frágil, cheio de medo e, algumas vezes, de raiva.</p>
             <p>Mas acredito que a história também deixa uma mensagem muito clara: não confie cegamente, não se entregue a ponto de se esquecer de si mesmo e não seja ingênuo diante das pessoas que estão ao seu redor. Aprenda a observar os pequenos detalhes, mesmo aqueles que parecem insignificantes, e, acima de tudo, não se esqueça de amar a si mesmo antes que seja tarde demais.</p>
-            <p>Talvez essa seja uma das maiores verdades que o livro tenta transmitir: algumas coisas não se quebram de uma hora para outra. Às vezes, os sinais estavam ali o tempo todo, nós é que não quisemos ou não conseguimos enxergá-los. E, quando finalmente percebemos, pode ser tarde demais para voltar atrás.</p>
         </div>
 
     </div>
+
+        <p>Talvez essa seja uma das maiores verdades que o livro tenta transmitir: algumas coisas não se quebram de uma hora para outra. Às vezes, os sinais estavam ali o tempo todo, nós é que não quisemos ou não conseguimos enxergá-los. E, quando finalmente percebemos, pode ser tarde demais para voltar atrás.</p>
 
         <p>São cerca de 300 páginas nas quais coloquei tudo o que eu conseguia dar de mim naquele momento. É um livro forte, sombrio e muito pessoal. Talvez seja, acima de tudo, uma parte de mim que transformei em história.</p>
 
@@ -122,11 +124,18 @@
 
         <h2>Um romance costuma nascer de uma pergunta central. Qual foi a pergunta que deu origem a este livro?</h2>
 
-        <p>Sem dúvida, todo o romance nasceu desta pergunta: <b>O diabo realmente acende o pavio, ou somos nós que o acendemos e, para nos livrarmos da culpa, colocamos a responsabilidade sobre o diabo?</b></p>
+        <p>Sem dúvida, todo o romance nasceu desta pergunta: <b>O diabo realmente acende o pavio, ou somos nós que o acendemos e, para nos livrarmos da culpa, colocamos a responsabilidade sobre o diabo?</b></p>       
+
     </div>
 
+    <div class="entrevista-text-center">
+        <img src="{{ Storage::url('entrevistas/andersonJose/foto02.jpeg') }}" style="max-width: 360px">
+        <legend style="font-size: clamp(1rem, 0.1vw + 1rem, 4rem)">acervo pessoal do autor</legend>
+    </div>
+    <br><br>
+
     <div class="entrevista-frase-destaque">
-        <p> <em>Uma frase em destaque e itálico. Uma frase em destaque e itálico. Uma frase em destaque e itálico.</em></p>
+        <p> <em>Quando colocamos algo de nós mesmos no personagem, ele deixa de ser apenas uma criação e passa a carregar uma parte da nossa humanidade.</em></p>
         <br>
     </div>
 
@@ -141,15 +150,28 @@
         <h2>Quais reações você espera que os leitores tenham ao ler seu livro?</h2>
 
         <p>Acredito que muitos leitores vão sentir raiva. Eu, por exemplo, todas as vezes que penso no antagonista, sinto uma espécie de repulsa. Então, acredito que boa parte dos leitores possa sentir algo parecido, ao longo da leitura.</p>
-        <p>Mas, acima de tudo, espero que o leitor termine o livro de forma contemplativa. Quero que a história continue na cabeça dele mesmo depois de fechar o livro e o faça questionar algumas coisas.</p>
-        <p>Espero que ele se pergunte: devo simplesmente confiar e seguir em frente, ou devo parar, questionar e tentar compreender melhor aquilo que está acontecendo? Talvez o livro faça o leitor olhar para algumas dúvidas que já existiam dentro dele e enxergá-las de uma maneira diferente.</p>
-        <p>Se, depois de terminar a última página, o leitor continuar pensando na história e fazendo perguntas a si mesmo, então acredito que o livro cumpriu o seu papel.</p>
     </div>
 
-    <div class="entrevista-frase-destaque">
+    <div class="flex-cards-entrevista-meio">
+        <div class="card-entrevista">
+            <br>
+            <img src="{{ Storage::url('entrevistas/andersonJose/foto03.jpeg') }}">
+            <legend>acervo pessoal do autor</legend>
+        </div>
+
+        <div class="card-entrevista">
+            
+            <p>Mas, acima de tudo, espero que o leitor termine o livro de forma contemplativa. Quero que a história continue na cabeça dele mesmo depois de fechar o livro e o faça questionar algumas coisas.</p>
+            <p>Espero que ele se pergunte: devo simplesmente confiar e seguir em frente, ou devo parar, questionar e tentar compreender melhor aquilo que está acontecendo? Talvez o livro faça o leitor olhar para algumas dúvidas que já existiam dentro dele e enxergá-las de uma maneira diferente.</p>
+            <p>Se, depois de terminar a última página, o leitor continuar pensando na história e fazendo perguntas a si mesmo, então acredito que o livro cumpriu o seu papel.</p>
+        </div>
+
+    </div>
+
+    <!-- <div class="entrevista-frase-destaque">
         <p> <em>Uma frase em destaque e itálico. Uma frase em destaque e itálico. Uma frase em destaque e itálico.</em></p>
         <br>
-    </div>
+    </div> -->
 
      <div class="entrevista-text-justificado ">
 
@@ -166,10 +188,24 @@
         <h2>Qual conselho você daria a um autor que mostra vontade, mas ainda está inseguro para escrever ficção?</h2>
 
         <p>Primeiro, procure se encontrar na escrita. Não tente se encontrar na escrita de um escritor famoso. Não imite ninguém; procure desenvolver o seu próprio estilo. É claro que todos nós temos influências, e isso é saudável. O que não é bom é transformar o seu escritor favorito em um modelo para copiar.</p>
-        <p>Leia muito, mas procure também variar as suas leituras. Se você estiver escrevendo um livro de fantasia, por exemplo, talvez seja interessante não passar todo o processo lendo apenas fantasia. Leia outros gêneros, descubra outros autores e permita que diferentes formas de escrever influenciem a sua formação.</p>
-        <p>E, acima de tudo, escreva. Não deixe de treinar. Escreva todos os dias, nem que sejam algumas linhas. Leia Machado de Assis e outros grandes nomes da literatura brasileira. Conheça a nossa literatura e procure construir uma voz que seja verdadeiramente sua.</p>
 
     </div>
+
+    <div class="flex-cards-entrevista-meio">
+        <div class="card-entrevista">
+            <!-- <br> -->
+            <img src="{{ Storage::url('entrevistas/andersonJose/foto04.jpeg') }}" style="max-width: 65%">
+            <legend>acervo pessoal do autor</legend>
+        </div>
+
+        <div class="card-entrevista">            
+
+            <p>Leia muito, mas procure também variar as suas leituras. Se você estiver escrevendo um livro de fantasia, por exemplo, talvez seja interessante não passar todo o processo lendo apenas fantasia. Leia outros gêneros, descubra outros autores e permita que diferentes formas de escrever influenciem a sua formação.</p>
+            <p>E, acima de tudo, escreva. Não deixe de treinar. Escreva todos os dias, nem que sejam algumas linhas. Leia Machado de Assis e outros grandes nomes da literatura brasileira. Conheça a nossa literatura e procure construir uma voz que seja verdadeiramente sua.</p>
+        </div>
+    </div>
+    <br>
+    <br>
 
     <div class="entrevista-text-center">
         <h2>Contato:</h2>

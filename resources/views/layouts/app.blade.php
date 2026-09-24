@@ -307,6 +307,16 @@
             text-align: center;
         }
 
+        .flex-cards-entrevista-meio {
+            margin-top: 20px;
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 600px));
+            /* grid-gap: 1%; */
+            justify-content: center;
+            text-align: center;            
+        }
+
         .card-entrevista {
             flex: 1 1 360px;
             /* margin: 3em; */
@@ -326,7 +336,7 @@
         }
 
         .card-entrevista img {
-            max-width: 360px;
+            max-width: 80%;
         }
 
         .card-entrevista legend {
