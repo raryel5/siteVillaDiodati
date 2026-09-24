@@ -1,7 +1,7 @@
 <!-- as configurações de página estão layouts/app -->
 @extends('layouts.app')
 
-@section('title', 'Anderson José')
+@section('title', 'Autor Anderson José')
 @section('description', 'Confira a entrevista com o autor Anderson José')
 @section('image', asset('storage/entrevistas/andersonJose/foto.jpeg'))
 
