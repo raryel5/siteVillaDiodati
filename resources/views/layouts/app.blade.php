@@ -333,9 +333,13 @@
             font-size: clamp(1rem, 0.1vw + 1rem, 4rem);
         }
 
-        .entrevista-text-center{
+        .entrevista-text-center {
             text-align: center;
             line-height: 35px;
+        }
+
+        .entrevista-text-center h1 {
+            font-family:'Aesthetic'; font-size: clamp(1rem, 5.5vw + 1rem, 6rem);
         }
 
         .entrevista-text-left{
@@ -375,7 +379,7 @@
         }
 
         .entrevista-frase-destaque p {
-            font-size: clamp(1rem, 1vw + 1rem, 4rem);
+            font-size: clamp(1rem, 0.8vw + 1rem, 4rem);
             /* Adiciona uma borda */
             /* border: 2px solid #ce7070; */
             /* Bordas arredondadas */

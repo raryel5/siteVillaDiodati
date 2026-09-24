@@ -13,8 +13,8 @@
 
     <div class="entrevista-text-center">
         <br>
-        <h1 style="font-family:'Aesthetic'; font-size: clamp(1rem, 5.5vw + 1rem, 6rem)">Villa Entrevista</h1>
-        <h1 style="font-family:'Aesthetic'; font-size: clamp(1rem, 5.5vw + 1rem, 6rem)">Anderson José</h1>
+        <h1>Villa Entrevista</h1>
+        <h1>Anderson José</h1>
         <br>
     </div>
 
@@ -27,7 +27,7 @@
 
     <div class="flex-cards-entrevista">
         <div class="card-entrevista">
-            <img src="{{ Storage::url('entrevistas/andersonJose/foto.jpeg') }}">
+            <img src="{{ Storage::url('entrevistas/andersonJose/foto00.jpeg') }}">
             <legend>acervo pessoal do autor</legend>
         </div>
 
@@ -39,11 +39,12 @@
 
     </div>
 
-    <div class="entrevista-text-justificado ">
-
-        <!-- <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/bio.jpg') }}" style="max-width: 100%; display: block"> -->
+    <div class="entrevista-frase-destaque">
+        <p> <em>Ao ler aquele livro entendi que a literatura poderia me permitir fugir da realidade, viajar para outros mundos e, de certa forma, levar outras pessoas comigo.</em></p>
         <br>
+    </div>
 
+    <div class="entrevista-text-justificado ">
         <h2>O que te levou a tornar-se um escritor, e o que te faz continuar escrevendo?</h2>
 
         <p>Tudo começou em uma sala de aula, em uma segunda-feira comum. Confesso que estava entediado naquele dia, quando a professora de Português passou um trabalho de casa: ler um clássico nacional: O Cortiço, de Aluísio Azevedo.</p>
@@ -61,7 +62,7 @@
     </div>
 
     <div class="entrevista-frase-destaque">
-        <p> <em>Uma frase em destaque e itálico. Uma frase em destaque e itálico. Uma frase em destaque e itálico.</em></p>
+        <p> <em>Eu estou sempre pensando na história: como vou escrever determinada cena, como vou desenvolver um personagem ou como vou finalizar determinado arco.</em></p>
         <br>
     </div>
 
@@ -98,9 +99,22 @@
         <p>Como disse um dos meus leitores beta: “Anderson, não basta viver o caos; você tem que piorá-lo, entregá-lo e compartilhá-lo.” É engraçado, mas existe muita verdade nisso.</p>
         <p>O Diabo São as Verdades que Não Te Contam é, por vezes, pesado, sombrio e profundamente triste. Não triste no sentido superficial da palavra, mas no sentido de sentir que algo está sendo esmagado e deixado para trás. O protagonista perde pessoas que ama, perde amigos e passa por situações que ele próprio não consegue compreender completamente. Ele tinha confiança, tinha fé, tinha certezas e, aos poucos, tudo isso começa a se desfazer.</p>
         <p>Aquilo que ele mais ama é simplesmente atropelado — e não estou usando essa palavra apenas no sentido figurado. Ao longo da história, tudo se transforma, e as minhas próprias emoções durante aquele período sombrio da minha vida acabaram refletidas no personagem. Não necessariamente naquilo que ele faz com os outros, mas principalmente naquilo que ele é capaz de fazer consigo mesmo.</p>
-        <p>Por isso, posso dizer que O Diabo São as Verdades que Não Te Contam é, de certa forma, um retrato de uma fase muito difícil da vida de um escritor que atravessava um período obscuro, frágil, cheio de medo e, algumas vezes, de raiva.</p>
-        <p>Mas acredito que a história também deixa uma mensagem muito clara: não confie cegamente, não se entregue a ponto de se esquecer de si mesmo e não seja ingênuo diante das pessoas que estão ao seu redor. Aprenda a observar os pequenos detalhes, mesmo aqueles que parecem insignificantes, e, acima de tudo, não se esqueça de amar a si mesmo antes que seja tarde demais.</p>
-        <p>Talvez essa seja uma das maiores verdades que o livro tenta transmitir: algumas coisas não se quebram de uma hora para outra. Às vezes, os sinais estavam ali o tempo todo, nós é que não quisemos ou não conseguimos enxergá-los. E, quando finalmente percebemos, pode ser tarde demais para voltar atrás.</p>
+
+        <div class="flex-cards-entrevista">
+        <div class="card-entrevista">
+            <img src="{{ Storage::url('entrevistas/andersonJose/foto01.jpeg') }}">
+            <legend>acervo pessoal do autor</legend>
+        </div>
+
+        <div class="card-entrevista">
+            
+            <p>Por isso, posso dizer que O Diabo São as Verdades que Não Te Contam é, de certa forma, um retrato de uma fase muito difícil da vida de um escritor que atravessava um período obscuro, frágil, cheio de medo e, algumas vezes, de raiva.</p>
+            <p>Mas acredito que a história também deixa uma mensagem muito clara: não confie cegamente, não se entregue a ponto de se esquecer de si mesmo e não seja ingênuo diante das pessoas que estão ao seu redor. Aprenda a observar os pequenos detalhes, mesmo aqueles que parecem insignificantes, e, acima de tudo, não se esqueça de amar a si mesmo antes que seja tarde demais.</p>
+            <p>Talvez essa seja uma das maiores verdades que o livro tenta transmitir: algumas coisas não se quebram de uma hora para outra. Às vezes, os sinais estavam ali o tempo todo, nós é que não quisemos ou não conseguimos enxergá-los. E, quando finalmente percebemos, pode ser tarde demais para voltar atrás.</p>
+        </div>
+
+    </div>
+
         <p>São cerca de 300 páginas nas quais coloquei tudo o que eu conseguia dar de mim naquele momento. É um livro forte, sombrio e muito pessoal. Talvez seja, acima de tudo, uma parte de mim que transformei em história.</p>
 
         <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 100%; display: block">
