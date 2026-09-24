@@ -3,7 +3,7 @@
 
 @section('title', 'Autor Anderson José')
 @section('description', 'Confira a entrevista com o autor Anderson José')
-@section('image', asset('storage/entrevistas/andersonJose/foto.jpeg'))
+@section('image', asset('storage/entrevistas/andersonJose/foto04.jpeg'))
 
 <!-- corpo da página -->
 @section('main')

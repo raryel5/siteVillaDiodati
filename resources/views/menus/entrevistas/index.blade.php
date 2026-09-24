@@ -31,7 +31,7 @@
 
                 <div class="card-corpo">
                     <div>
-                        <img src="{{ Storage::url('entrevistas/andersonJose/foto.jpeg') }}">
+                        <img src="{{ Storage::url('entrevistas/andersonJose/foto04.jpeg') }}">
                         <!-- <legend style="text-align: center">Dwight Schrute</legend> -->
                     </div>
                     <br>
