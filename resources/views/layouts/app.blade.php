@@ -293,9 +293,18 @@
             margin-top: 20px;
             display: grid;
             /* grid-template-columns: repeat(3, 1fr); */
-            grid-template-columns: repeat(auto-fit, minmax(260px, 565px));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 520px));
             /* grid-gap: 1%; */
             justify-content: center;
+            text-align: center;            
+        }
+
+        .text-acima-flex-cards {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1510px));
+            justify-content: center;
+            text-align: center;
         }
 
         .card-entrevista {
@@ -309,13 +318,15 @@
             /* COR DE FUNDO */
             /* background-color: #c6c6eb; */
             /* box-shadow: 0 8px 20px #ce7070; */
-            justify-content: center;
-            /* text-align: center; */
+        }
+
+        .card-entrevista p {
+            font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
+            text-align: justify;
         }
 
         .card-entrevista img {
             max-width: 360px;
-            display: block;
         }
 
         .card-entrevista legend {
@@ -324,10 +335,12 @@
 
         .entrevista-text-center{
             text-align: center;
+            line-height: 35px;
         }
 
         .entrevista-text-left{
             text-align: left;
+            line-height: 35px;
         }
 
         .entrevista-text-left h1 {
