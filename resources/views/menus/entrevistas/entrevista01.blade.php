@@ -9,7 +9,7 @@
 @section('main')
 <!-- tudo aqui será renderizado com base no template -->
 
-<section class="section-entrevista-corpo">
+<section class="entrevista-introducao">
 
     <div class="entrevista-text-center">
         <br>
@@ -26,6 +26,7 @@
     </div>
 
     <div class="flex-cards-entrevista">
+
         <div class="card-entrevista">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto00.jpeg') }}">
             <legend>acervo pessoal do autor</legend>
@@ -36,8 +37,11 @@
             <p>Hoje dedica-se à terapia e à escrita, explorando em suas obras gêneros como terror, horror, romance policial, mistério e fantasia. Suas histórias costumam mergulhar nos conflitos da mente humana, no medo, no suspense e nos limites entre realidade e imaginação.</p>
             <p>Vivendo entre Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p>
         </div>
-
     </div>
+
+</section>
+
+<section class="section-entrevista-corpo">
 
     <div class="entrevista-frase-destaque">
         <p> <em>Ao ler aquele livro entendi que a literatura poderia me permitir fugir da realidade, viajar para outros mundos e, de certa forma, levar outras pessoas comigo.</em></p>
@@ -88,7 +92,7 @@
     </div>
 
     <div class="entrevista-text-center">
-        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/cover.jpg') }}" style="max-width: 70%">
+        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/cover.jpg') }}" style="max-width: 100%">
     </div>
 
      <div class="entrevista-text-justificado ">
@@ -103,7 +107,7 @@
     <div class="flex-cards-entrevista-meio">
         <div class="card-entrevista">
             <!-- <br> -->
-            <img src="{{ Storage::url('entrevistas/andersonJose/foto01.jpeg') }}">
+            <img src="{{ Storage::url('entrevistas/andersonJose/foto01.jpeg') }}" style="max-width: 420px;">
             <legend>acervo pessoal do autor</legend>
         </div>
 

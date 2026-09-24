@@ -62,7 +62,7 @@
         }
 
         header{
-            width: 90%;
+            width: 95%;
             background-color: #424147;
             /* background-color: #fff; */
             /* position: relative; */
@@ -284,17 +284,29 @@
 
         /* DEFINIÇÕES PARA PÁGINA DE ENTREVISTAS */
 
+        .entrevista-introducao {
+            margin-left: 2.5%;
+            margin-right: 2.5%;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* max-width: 60%; */
+        }
+
         .section-entrevista-corpo {
-            margin-left: 5%;
-            margin-right: 5%;
+            margin-left: 2.5%;
+            margin-right: 2.5%;
+            justify-content: center;
+            /* max-width: 1200px; */
         }
 
         .flex-cards-entrevista {
             margin-top: 20px;
             display: grid;
-            /* grid-template-columns: repeat(3, 1fr); */
-            grid-template-columns: repeat(auto-fit, minmax(260px, 520px));
-            /* grid-gap: 1%; */
+            /* grid-template-columns: repeat(2, 1fr); */
+            /* grid-template-columns: repeat(2, minmax(260px, 95%)); */
+            grid-template-columns: repeat(auto-fit, minmax(160px, 600px));
+            /* grid-gap: 10%; */
+            /* padding: 1%; */
             justify-content: center;
             text-align: center;            
         }
@@ -302,7 +314,8 @@
         .text-acima-flex-cards {
             margin-top: 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1510px));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1200px));
+            /* grid-template-columns: repeat(1, 1fr); */
             justify-content: center;
             text-align: center;
         }
@@ -311,7 +324,7 @@
             margin-top: 20px;
             display: grid;
             /* grid-template-columns: repeat(3, 1fr); */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 600px));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 600px));
             /* grid-gap: 1%; */
             justify-content: center;
             text-align: center;            
@@ -336,7 +349,7 @@
         }
 
         .card-entrevista img {
-            max-width: 80%;
+            max-width: 340px;
         }
 
         .card-entrevista legend {
@@ -346,6 +359,9 @@
         .entrevista-text-center {
             text-align: center;
             line-height: 35px;
+            /* margin-left: 5%; */
+            /* margin-right: 5%; */
+            /* max-width: 50%; */
         }
 
         .entrevista-text-center h1 {
@@ -375,8 +391,8 @@
 
         .entrevista-text-justificado {
             text-align: justify;
-            padding: 10px 15%;
-            line-height: 35px;
+            /* padding: 10px 15%; */
+            /* line-height: 35px; */
         }
 
         .entrevista-text-justificado h2 {
@@ -399,8 +415,8 @@
             box-shadow: 0 8px 16px #ce7070;
             padding: 1%;
             margin-top: 20px;
-            margin-left: 20%;
-            margin-right: 15%;
+            margin-left: 15%;
+            margin-right: 10%;
         }
 
         /* PÁGINA INDEX DE CARDS DE ENTREVISTAS */
