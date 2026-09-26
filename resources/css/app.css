@@ -1,17 +1,15 @@
 @import 'tailwindcss';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+/* 1. Declare o @font-face FORA do bloco @theme */
+@font-face {
+  font-family: 'Aesthetic';
+  src: url('../fonts/Aesthetic-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* Opcional: melhora o carregamento */
+}
 
+/* 2. No @theme, apenas aponte a variável para o nome da fonte */
 @theme {
-    @font-face {
-        font-family: 'Aesthetic';
-        src: url('../fonts/Aesthetic-Regular.woff2') format('woff2');
-        /* use the matching font-weight here ( 100, 200, 300, 400, etc). */
-        font-weight: 400;
-        /*  use the matching font-style here */
-        font-style: normal;
-    }
+  --font-aesthetic: 'Aesthetic', sans-serif;
 }
