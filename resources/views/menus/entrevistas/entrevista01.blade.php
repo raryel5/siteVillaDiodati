@@ -26,7 +26,7 @@
 
     <div class="flex-cards-entrevistas">
 
-        <div class="card-entrevista" style="max-width: 50%">
+        <div class="card-entrevista" style="max-width: 70%">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto00.jpeg') }}">
             <br>
             <legend">acervo pessoal do autor</legend>
@@ -112,7 +112,7 @@
     </div>
 
     <div class="flex-cards-corpo">
-        <div class="card-entrevista" style="max-width: 60%">
+        <div class="card-entrevista" style="max-width: 70%">
             <!-- <br> -->
             <img src="{{ Storage::url('entrevistas/andersonJose/foto01.jpeg') }}">
             <legend>acervo pessoal do autor</legend>
@@ -149,7 +149,7 @@
     </div>
 
     <div class="flex-cards-entrevista-meio">
-        <div class="card-entrevista" style="max-width: 360px">
+        <div class="card-entrevista" style="max-width: 340px">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto02.jpeg') }}">
             <legend style="font-size: clamp(1rem, 0.1vw + 1rem, 4rem); text-align: justify">acervo pessoal do autor</legend>
         </div> 
@@ -214,7 +214,7 @@
      
 
     <div class="flex-cards-corpo">
-        <div class="card-entrevista"  style="max-width: 50%">
+        <div class="card-entrevista"  style="max-width: 70%">
             <!-- <br> -->
             <img src="{{ Storage::url('entrevistas/andersonJose/foto04.jpeg') }}">
             <legend>acervo pessoal do autor</legend>
