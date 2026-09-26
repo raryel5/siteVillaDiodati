@@ -5,86 +5,78 @@
     /* justify-content: center; */
     /* align-items: center; */
     /* max-width: 60%; */
+    /* COR DE FUNDO */
+    /* background-color: #f79a9a; */
 }
 
 .section-entrevista-corpo {
     margin-left: 2.5%;
     margin-right: 2.5%;
-    justify-content: center;
+    /* background-color: #f79a9a; */
+    /* justify-content: center; */
     /* max-width: 1200px; */
 }
 
-.flex-cards-introducao {
+.entrevista-corpo {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     margin-top: 20px;
-    display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
-    /* grid-template-columns: repeat(2, minmax(260px, 95%)); */
-    grid-template-columns: repeat(2, 0.9fr);
-    /* grid-template-columns: repeat(auto-fit, minmax(160px, 300px)); */
-    grid-gap: 2%;
-    padding: 0% 3% 0% 3%;
-    justify-content: center;
-    text-align: center;            
+    margin-left: 5%;
+    margin-right: 5%;
+    /* COR DE FUNDO */
+    /* background-color: #c6c6eb; */
 }
 
-.flex-cards-entrevista {
+.flex-cards-entrevistas {
     margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
-    /* grid-template-columns: repeat(2, minmax(260px, 95%)); */
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1200px));
-    /* grid-gap: 10%; */
-    /* padding: 1%; */
-    justify-content: center;
-    text-align: center;            
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 5%;
+    /* background-color: #708b62; */
+}
+
+.flex-cards-corpo {
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 5%;
+    /* background-color: #708b62;             */
 }
 
 .flex-cards-entrevista-meio {
     margin-top: 20px;
-    /* display: grid; */
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(160px, 600px));
-    /* grid-gap: 1%; */
-    /* justify-content: center; */
-    /* text-align: center;             */
-}
-
-.text-acima-flex-cards {
-    margin-top: 20px;
-    max-width: 1400px;
+    margin-left: 5%;
+    margin-right: 5%;
     display: grid;
-    padding: 0% 3% 0% 3%;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1200px)); */
-    /* grid-template-columns: repeat(1, 1500px); */
-    justify-content: center;
-    /* text-align: center; */
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    /* grid-gap: 5%; */
+    /* background-color: #708b62; */
 }
-
 
 .card-entrevista {
-    /* flex: 1 1 460px; */
-    /* margin: 3em; */
-    /* padding: 1%; */
-    border: none;
-    /* border-radius: 16px; */
-    /* COR DA FONTE */
-    /* color: #962a2a; */
-    /* COR DE FUNDO */
     /* background-color: #c6c6eb; */
-    /* box-shadow: 0 8px 20px #ce7070; */
+    padding: 0%;
+}
+
+.card-entrevista img {
+    max-width: 100%;
+}
+
+.card-entrevista legend {
+    font-size: clamp(1rem, 0.1vw + 1rem, 4rem);
 }
 
 .card-entrevista p {
     font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
     text-align: justify;
-}
-
-.card-entrevista img {
-    max-width: 340px;
-}
-
-.card-entrevista legend {
-    font-size: clamp(1rem, 0.1vw + 1rem, 4rem);
 }
 
 .entrevista-text-center {
@@ -148,4 +140,6 @@
     margin-top: 20px;
     margin-left: 15%;
     margin-right: 10%;
+    /* COR DE FUNDO */
+    /* background-color: #656591; */
 }
