@@ -45,7 +45,7 @@
 <section class="section-entrevista-corpo">
 
     <div class="entrevista-frase-destaque">
-        <p> <em>Ao ler aquele livro entendi que a literatura poderia me permitir fugir da realidade, viajar para outros mundos e, de certa forma, levar outras pessoas comigo.</em></p>
+        <p> <em><span style="font-size: 64px">"</span>Ao ler aquele livro entendi que a literatura poderia me permitir fugir da realidade, viajar para outros mundos e, de certa forma, levar outras pessoas comigo."</em></p>
         <br>
     </div>
 
@@ -144,7 +144,7 @@
             <h2>Um romance costuma nascer de uma pergunta central. Qual foi a pergunta que deu origem a este livro?</h2>
 
             <p>Sem dúvida, todo o romance nasceu desta pergunta: <b>O diabo realmente acende o pavio, ou somos nós que o acendemos e, para nos livrarmos da culpa, colocamos a responsabilidade sobre o diabo?</b></p>
-        </div>       
+        </div>
 
     </div>
 
@@ -152,7 +152,7 @@
         <div class="card-entrevista" style="max-width: 340px">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto02.jpeg') }}">
             <legend style="font-size: clamp(1rem, 0.1vw + 1rem, 4rem); text-align: justify">acervo pessoal do autor</legend>
-        </div> 
+        </div>
     </div>
 
     <div class="entrevista-frase-destaque">
