@@ -19,23 +19,24 @@
     </div>
 
     <div class="text-acima-flex-cards">
-
         <div class="entrevista-text-justificado">
             <p>Anderson José dos Anjos é escritor brasileiro e terapeuta. Durante muitos tempos atuou como servidor público, experiência que lhe permitiu observar de perto diferentes realidades humanas e sociais.</p>
         </div>
     </div>
 
-    <div class="flex-cards-entrevista">
+    <div class="flex-cards-introducao">
 
         <div class="card-entrevista">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto00.jpeg') }}">
-            <legend>acervo pessoal do autor</legend>
+            <br>
+            <legend">acervo pessoal do autor</legend>           
         </div>
 
         <div class="card-entrevista">
             
             <p>Hoje dedica-se à terapia e à escrita, explorando em suas obras gêneros como terror, horror, romance policial, mistério e fantasia. Suas histórias costumam mergulhar nos conflitos da mente humana, no medo, no suspense e nos limites entre realidade e imaginação.</p>
             <p>Vivendo entre Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p>
+            <br>
         </div>
     </div>
 

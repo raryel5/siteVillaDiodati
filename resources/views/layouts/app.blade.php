@@ -35,6 +35,9 @@
     
     <!-- icone de PDF -->
     <!-- <link rel="stylesheet" href="https://cloudflare.com"> -->
+    
+    <!-- Arquivos css específicos para algumas páginas -->
+    @vite(['resources/css/entrevistas.css'])
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
@@ -282,142 +285,6 @@
             text-align: left;
         }
 
-        /* DEFINIÇÕES PARA PÁGINA DE ENTREVISTAS */
-
-        .entrevista-introducao {
-            margin-left: 2.5%;
-            margin-right: 2.5%;
-            /* justify-content: center; */
-            /* align-items: center; */
-            /* max-width: 60%; */
-        }
-
-        .section-entrevista-corpo {
-            margin-left: 2.5%;
-            margin-right: 2.5%;
-            justify-content: center;
-            /* max-width: 1200px; */
-        }
-
-        .flex-cards-entrevista {
-            margin-top: 20px;
-            display: grid;
-            /* grid-template-columns: repeat(2, 1fr); */
-            /* grid-template-columns: repeat(2, minmax(260px, 95%)); */
-            grid-template-columns: repeat(auto-fit, minmax(160px, 600px));
-            /* grid-gap: 10%; */
-            /* padding: 1%; */
-            justify-content: center;
-            text-align: center;            
-        }
-
-        .text-acima-flex-cards {
-            margin-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1200px));
-            /* grid-template-columns: repeat(1, 1fr); */
-            justify-content: center;
-            text-align: center;
-        }
-
-        .flex-cards-entrevista-meio {
-            margin-top: 20px;
-            display: grid;
-            /* grid-template-columns: repeat(3, 1fr); */
-            grid-template-columns: repeat(auto-fit, minmax(160px, 600px));
-            /* grid-gap: 1%; */
-            justify-content: center;
-            text-align: center;            
-        }
-
-        .card-entrevista {
-            flex: 1 1 360px;
-            /* margin: 3em; */
-            /* padding: 1%; */
-            border: none;
-            /* border-radius: 16px; */
-            /* COR DA FONTE */
-            /* color: #962a2a; */
-            /* COR DE FUNDO */
-            /* background-color: #c6c6eb; */
-            /* box-shadow: 0 8px 20px #ce7070; */
-        }
-
-        .card-entrevista p {
-            font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
-            text-align: justify;
-        }
-
-        .card-entrevista img {
-            max-width: 340px;
-        }
-
-        .card-entrevista legend {
-            font-size: clamp(1rem, 0.1vw + 1rem, 4rem);
-        }
-
-        .entrevista-text-center {
-            text-align: center;
-            line-height: 35px;
-            /* margin-left: 5%; */
-            /* margin-right: 5%; */
-            /* max-width: 50%; */
-        }
-
-        .entrevista-text-center h1 {
-            font-family:'Aesthetic'; font-size: clamp(1rem, 5.5vw + 1rem, 6rem);
-        }
-
-        .entrevista-text-left{
-            text-align: left;
-            line-height: 35px;
-        }
-
-        .entrevista-text-left h1 {
-            font-family:'Aesthetic';
-            font-size: clamp(1rem, 5.5vw + 1rem, 6rem);
-        }
-
-        .entrevista-text-left h2 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: clamp(1rem, 2.5vw + 1rem, 6rem);
-            font-weight: lighter;
-            /* letter-spacing: 9.3px;  */
-        }
-
-        .entrevista-text-left p {
-            font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
-        }
-
-        .entrevista-text-justificado {
-            text-align: justify;
-            /* padding: 10px 15%; */
-            /* line-height: 35px; */
-        }
-
-        .entrevista-text-justificado h2 {
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-
-        .entrevista-text-justificado p {
-            font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
-        }
-
-        .entrevista-frase-destaque p {
-            font-size: clamp(1rem, 0.8vw + 1rem, 4rem);
-            /* Adiciona uma borda */
-            /* border: 2px solid #ce7070; */
-            /* Bordas arredondadas */
-            border-radius: 20px;
-            /* Sombra */
-            /* box-shadow: 0 8px 16px rgba(0,0,0.5,0.9); */
-            box-shadow: 0 8px 16px #ce7070;
-            padding: 1%;
-            margin-top: 20px;
-            margin-left: 15%;
-            margin-right: 10%;
-        }
 
         /* PÁGINA INDEX DE CARDS DE ENTREVISTAS */
 
