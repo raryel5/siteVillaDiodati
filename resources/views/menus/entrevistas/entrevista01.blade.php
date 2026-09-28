@@ -26,13 +26,13 @@
 
     <div class="flex-cards-entrevistas">
 
-        <div class="card-entrevista" style="max-width: 70%">
+        <div class="card-entrevista">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto00.jpeg') }}">
-            <br>
-            <legend">acervo pessoal do autor</legend>
+            <!-- <br> -->
+            <legend>acervo pessoal do autor</legend>
         </div>
 
-        <div class="card-entrevista" style="max-width: 100%">
+        <div class="card-entrevista">
             
             <p>Hoje dedica-se à terapia e à escrita, explorando em suas obras gêneros como terror, horror, romance policial, mistério e fantasia. Suas histórias costumam mergulhar nos conflitos da mente humana, no medo, no suspense e nos limites entre realidade e imaginação.</p>
             <p>Vivendo entre Brasil e Portugal, Anderson encontra inspiração nas experiências da vida real, transformando sentimentos, inquietações e reflexões sobre a natureza humana em narrativas intensas e envolventes.</p>
@@ -112,13 +112,12 @@
     </div>
 
     <div class="flex-cards-corpo">
-        <div class="card-entrevista" style="max-width: 70%">
-            <!-- <br> -->
+        <div class="card-entrevista">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto01.jpeg') }}">
             <legend>acervo pessoal do autor</legend>
         </div>
 
-        <div class="card-entrevista" style="max-width: 100%">
+        <div class="card-entrevista">
             
             <p>Por isso, posso dizer que O Diabo São as Verdades que Não Te Contam é, de certa forma, um retrato de uma fase muito difícil da vida de um escritor que atravessava um período obscuro, frágil, cheio de medo e, algumas vezes, de raiva.</p>
             <p>Mas acredito que a história também deixa uma mensagem muito clara: não confie cegamente, não se entregue a ponto de se esquecer de si mesmo e não seja ingênuo diante das pessoas que estão ao seu redor. Aprenda a observar os pequenos detalhes, mesmo aqueles que parecem insignificantes, e, acima de tudo, não se esqueça de amar a si mesmo antes que seja tarde demais.</p>
@@ -176,13 +175,13 @@
     </div>    
 
     <div class="flex-cards-corpo">
-        <div class="card-entrevista"  style="max-width: 70%">
-            {{-- <br> --}}
+        <div class="card-entrevista">
+
             <img src="{{ Storage::url('entrevistas/andersonJose/foto03.jpeg') }}" >
             <legend>acervo pessoal do autor</legend>
         </div>
 
-        <div class="card-entrevista"  style="max-width: 100%">
+        <div class="card-entrevista">
             
             <p>Mas, acima de tudo, espero que o leitor termine o livro de forma contemplativa. Quero que a história continue na cabeça dele mesmo depois de fechar o livro e o faça questionar algumas coisas.</p>
             <p>Espero que ele se pergunte: devo simplesmente confiar e seguir em frente, ou devo parar, questionar e tentar compreender melhor aquilo que está acontecendo? Talvez o livro faça o leitor olhar para algumas dúvidas que já existiam dentro dele e enxergá-las de uma maneira diferente.</p>
@@ -214,13 +213,12 @@
      
 
     <div class="flex-cards-corpo">
-        <div class="card-entrevista"  style="max-width: 70%">
-            <!-- <br> -->
+        <div class="card-entrevista">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto04.jpeg') }}">
             <legend>acervo pessoal do autor</legend>
         </div>
 
-        <div class="card-entrevista" style="max-width: 100%">            
+        <div class="card-entrevista">            
 
             <p>Leia muito, mas procure também variar as suas leituras. Se você estiver escrevendo um livro de fantasia, por exemplo, talvez seja interessante não passar todo o processo lendo apenas fantasia. Leia outros gêneros, descubra outros autores e permita que diferentes formas de escrever influenciem a sua formação.</p>
             <p>E, acima de tudo, escreva. Não deixe de treinar. Escreva todos os dias, nem que sejam algumas linhas. Leia Machado de Assis e outros grandes nomes da literatura brasileira. Conheça a nossa literatura e procure construir uma voz que seja verdadeiramente sua.</p>
