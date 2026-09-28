@@ -45,9 +45,10 @@
     margin-right: 5%;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    grid-gap: 3%;
+    /* grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); */
+    /* grid-gap: 3%; */
     /* background-color: #708b62; */
+    /* max-width: 100%; */
 }
 
 .flex-cards-entrevistas {

@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div class="flex-cards-entrevistas">
+    <div class="flex-cards-corpo">
 
         <div class="card-entrevista">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto00.jpeg') }}">
@@ -133,9 +133,11 @@
         </div>
     </div>
 
-    <div class="entrevista-text-center">
-        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 90%">
-    </div>
+    <div class="flex-cards-entrevista-meio">
+    <!-- <div class="entrevista-text-center"> -->
+        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 100%">
+    <!-- </div> -->
+</div>
 
     <div class="entrevista-corpo">
 
