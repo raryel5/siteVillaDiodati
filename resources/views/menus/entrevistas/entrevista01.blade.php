@@ -19,6 +19,7 @@
     </div>
 
     <div class="entrevista-corpo">
+
         <div class="entrevista-text-justificado">
             <p>Anderson José dos Anjos é escritor brasileiro e terapeuta. Durante muitos tempos atuou como servidor público, experiência que lhe permitiu observar de perto diferentes realidades humanas e sociais.</p>
         </div>
@@ -28,7 +29,6 @@
 
         <div class="card-entrevista">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto00.jpeg') }}">
-            <!-- <br> -->
             <legend>acervo pessoal do autor</legend>
         </div>
 
@@ -44,9 +44,17 @@
 
 <section class="section-entrevista-corpo">
 
-    <div class="entrevista-frase-destaque">
-        <p> <em><span style="font-size: 64px">"</span>Ao ler aquele livro entendi que a literatura poderia me permitir fugir da realidade, viajar para outros mundos e, de certa forma, levar outras pessoas comigo."</em></p>
-        <br>
+    <div class="flex-cards-frase-destaque">
+        <div class="card-entrevista">
+            <p> <em><span style="font-size: clamp(5rem, 0.9vw + 1rem, 4rem);">"</span></em></p>
+        </div>
+
+        <div class="card-entrevista">
+            <br>            
+            <div class="entrevista-frase-destaque">
+                <p> <em>Ao ler aquele livro entendi que a literatura poderia me permitir fugir da realidade, viajar para outros mundos e, de certa forma, levar outras pessoas comigo."</em></p>
+            </div>
+        </div>
     </div>
 
     <div class="entrevista-corpo">
@@ -68,9 +76,17 @@
         </div>
     </div>
 
-    <div class="entrevista-frase-destaque">
-        <p> <em>Eu estou sempre pensando na história: como vou escrever determinada cena, como vou desenvolver um personagem ou como vou finalizar determinado arco.</em></p>
-        <br>
+    <div class="flex-cards-frase-destaque">
+        <div class="card-entrevista">
+            <p> <em><span style="font-size: 74px">"</span></em></p>
+        </div>
+
+        <div class="card-entrevista">
+            <br>            
+            <div class="entrevista-frase-destaque">
+                <p> <em>Eu estou sempre pensando na história: como vou escrever determinada cena, como vou desenvolver um personagem ou como vou finalizar determinado arco."</em></p>
+            </div>
+        </div>
     </div>
 
     <div class="entrevista-corpo">
@@ -96,7 +112,7 @@
     </div>    
 
     <div class="entrevista-text-center">
-        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/cover.jpg') }}" style="max-width: 90%">
+        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/cover.jpg') }}" style="max-width: 100%">
     </div>
 
     <div class="entrevista-corpo">
@@ -133,11 +149,22 @@
         </div>
     </div>
 
-    <div class="flex-cards-entrevista-meio">
-    <!-- <div class="entrevista-text-center"> -->
-        <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 100%">
-    <!-- </div> -->
-</div>
+    <div class="arte-frase">
+
+        <div class="card-entrevista">
+            <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 100%">
+        </div>
+
+        <div class="card-entrevista">
+            <div class="frase-livro-destaque">
+                <p> <em>"... o diabo não assustaria nenhum de vocês, ele daria conforto e coragem, abrigá-los-ia sob suas asas quebradas."</em></p>
+                <br>
+            </div>            
+        </div>
+
+    </div>
+
+
 
     <div class="entrevista-corpo">
 
@@ -149,16 +176,25 @@
 
     </div>
 
-    <div class="flex-cards-entrevista-meio">
-        <div class="card-entrevista" style="max-width: 340px">
+    <div class="flex-cards-arte">
+        <div class="card-entrevista">
             <img src="{{ Storage::url('entrevistas/andersonJose/foto02.jpeg') }}">
-            <legend style="font-size: clamp(1rem, 0.1vw + 1rem, 4rem); text-align: justify">acervo pessoal do autor</legend>
-        </div>
+            <legend>acervo pessoal do autor</legend>
+        </div>        
+        <br>
     </div>
 
-    <div class="entrevista-frase-destaque">
-        <p> <em>Quando colocamos algo de nós mesmos no personagem, ele deixa de ser apenas uma criação e passa a carregar uma parte da nossa humanidade.</em></p>
-        <br>
+    <div class="flex-cards-frase-destaque">
+        <div class="card-entrevista">
+            <p> <em><span style="font-size: 74px">"</span></em></p>
+        </div>
+
+        <div class="card-entrevista">
+            <br>            
+            <div class="entrevista-frase-destaque">
+                <p> <em>Quando colocamos algo de nós mesmos no personagem, ele deixa de ser apenas uma criação e passa a carregar uma parte da nossa humanidade."</em></p>
+            </div>
+        </div>
     </div>
 
     <div class="entrevista-corpo">
@@ -227,7 +263,7 @@
         </div>
     </div>
     <br>
-    <br>
+    <br><br><br>
 
     <div class="entrevista-text-center">
         <h2>Contato:</h2>

@@ -47,7 +47,7 @@
     place-items: center;
     /* grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); */
     /* grid-gap: 3%; */
-    /* background-color: #708b62; */
+    background-color: #708b62;
     /* max-width: 100%; */
 }
 
@@ -80,7 +80,7 @@
 }
 
 .card-entrevista legend {
-    font-size: clamp(1.4rem, 0.1vw + 1rem, 4rem);
+    font-size: clamp(1.1rem, 0.1vw + 1rem, 2rem);
 }
 
 .card-entrevista p {
@@ -88,12 +88,35 @@
     text-align: justify;
 }
 
+.flex-cards-arte {
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, minmax(330px, 1fr));
+    /* grid-gap: 3%; */
+    /* background-color: #708b62; */
+}
+
+.arte-frase {
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-gap: 3%;
+    /* background-color: #708b62; */
+}
+
+
 .entrevista-text-center {
     text-align: center;
     line-height: 35px;
-    /* margin-left: 5%; */
-    /* margin-right: 5%; */
-    /* max-width: 50%; */
+    margin-left: 5%;
+    margin-right: 5%;
+    /* background-color: #9f9fca; */
 }
 
 .entrevista-text-center h1 {
@@ -136,15 +159,49 @@
     font-size: clamp(1rem, 0.5vw + 1rem, 4rem);
 }
 
+.flex-cards-frase-destaque {
+    margin-top: 25px;
+    margin-bottom: 45px;
+    margin-left: 15%;
+    margin-right: 10%;
+    padding: 1%;
+    grid-gap: 9px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 8px 8px 26px #ce7070;
+    border-radius: 20px;
+    font-size: clamp(1rem, 0.9vw + 1rem, 4rem);
+    /* background-color: #9f9fca; */
+    
+}
+
 .entrevista-frase-destaque p {
-    font-size: clamp(1rem, 0.8vw + 1rem, 4rem);
+    font-size: clamp(1rem, 0.9vw + 1rem, 4rem);
+    /* Adiciona uma borda */
+    /* border: 2px solid #ce7070; */
+    /* Bordas arredondadas */
+    /* border-radius: 20px; */
+    /* Sombra */
+    /* box-shadow: 0 8px 16px rgba(0,0,0.5,0.9); */
+    /* box-shadow: 8px 8px 26px #ce7070; */
+    /* padding: 1%; */
+    /* margin-top: 20px; */
+    /* margin-left: 15%; */
+    /* margin-right: 10%; */
+    /* COR DE FUNDO */
+    /* background-color: #656591; */
+}
+
+.frase-livro-destaque p {
+    font-size: clamp(1rem, 0.9vw + 1rem, 3rem);
     /* Adiciona uma borda */
     /* border: 2px solid #ce7070; */
     /* Bordas arredondadas */
     border-radius: 20px;
     /* Sombra */
     /* box-shadow: 0 8px 16px rgba(0,0,0.5,0.9); */
-    box-shadow: 0 8px 16px #ce7070;
+    /* box-shadow: inset 0 8px 16px #ce7070; */
+    box-shadow: 8px 8px 26px #ce7070;
     padding: 1%;
     margin-top: 20px;
     margin-left: 15%;
