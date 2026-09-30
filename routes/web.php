@@ -73,8 +73,15 @@ Route::prefix('/lancamentos/failures')->group(function(){
 });
 
 Route::prefix('/lancamentos/pendings')->group(function(){
-    Route::get('/', [LancamentosController::class, 'pending'])->name('pending');
+    Route::get('/', [LancamentosController::class, 'pending'])->name('pending');    
 });
+
+# ROTAS PARA CAMPANHAS
+
+// Route::prefix('/campanhas')->group(function(){
+//     Route::get('/', [EntrevistasController::class, 'index'])->name('entrevista');
+//     Route::get('/{id}', [EntrevistasController::class, 'show'])->name('autor');
+// });
 
 # ROTAS PARA LIVROS
 
