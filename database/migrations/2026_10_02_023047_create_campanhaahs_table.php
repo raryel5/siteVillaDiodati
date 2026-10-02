@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('clientes', function (Blueprint $table) {
+        Schema::create('campanhaahs', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->timestamps(); // Os campos "created_at" e "updated_at" são criados automáticamente como timestamp NULL 
             $table->string('external_reference')->nullable();
             $table->string('mp_payment_id')->nullable();
             $table->string('firstname');
             $table->string('surname');
             $table->string('product')->default('vazio');
-            $table->string('quantity')->default('vazio');
+            $table->integer('quantity')->default(0);
             $table->decimal('valor', 10,2)->default(0.00);
             $table->enum('payment_status', ['pendente', 'pago', 'falha', 'cancelado'])->default('pendente');
             $table->string('email');
@@ -34,7 +34,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('cep');
-            $table->string('timestamp_envio');
+            $table->timestamp('timestamp_envio')->nullable();
         });
     }
 
@@ -43,6 +43,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('campanhaahs');
     }
 };

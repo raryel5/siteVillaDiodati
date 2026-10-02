@@ -14,6 +14,7 @@ use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\LancamentosController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\EntrevistasController;
+use App\Http\Controllers\CampanhasController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
