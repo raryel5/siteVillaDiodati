@@ -79,10 +79,10 @@ Route::prefix('/lancamentos/pendings')->group(function(){
 
 # ROTAS PARA CAMPANHAS
 
-// Route::prefix('/campanhas')->group(function(){
-//     Route::get('/', [EntrevistasController::class, 'index'])->name('entrevista');
-//     Route::get('/{id}', [EntrevistasController::class, 'show'])->name('autor');
-// });
+Route::prefix('/campanhas')->group(function(){
+    Route::get('/', [CampanhasController::class, 'index'])->name('campanhas');
+    Route::get('/{id}', [CampanhasController::class, 'show'])->name('campanha');
+});
 
 # ROTAS PARA LIVROS
 

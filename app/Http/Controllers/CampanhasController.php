@@ -17,7 +17,7 @@ class CampanhasController extends Controller
      */
     public function index()
     {
-        //
+        return view('menus.campanhas.index');
     }
 
     /**
@@ -41,7 +41,9 @@ class CampanhasController extends Controller
      */
     public function show(string $id)
     {
-        //
+        if ($id == "aindahumanos") {
+            return view('menus.campanhas.aindaHumanos');
+        }
     }
 
     /**

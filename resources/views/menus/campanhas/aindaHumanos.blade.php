@@ -1,0 +1,202 @@
+<!-- as configurações de página estão layouts/app -->
+@extends('layouts.app')
+
+@section('title', 'Ainda Humanos')
+@section('description', 'Confira nossos lançamentos.')
+@section('image', asset('storage/images/arte1x1.jpeg'))
+
+<!-- corpo da página -->
+@section('main')
+
+<!-- CONTAGEM REGRESSIVA DA CAMPANHA -->
+<?php
+    use Carbon\Carbon;
+
+    // Data e hora de vencimento com fuso
+    $dataFinal = Carbon::create(2026, 10, 31, 23, 59, 59, -3);
+    // Data e hora atual com fuso
+    $agora = Carbon::now(-3);
+
+    // Retorna os dias e horas restantes como um objeto de intervalo
+    $restante = $agora->diff($dataFinal);
+
+    // Se a data já passou, exibe uma mensagem personalizada
+    if ($agora->greaterThan($dataFinal)) {
+        $prazo = "Pré-venda encerrada";
+    } else {
+        $prazo = "{$restante->days} dias e {$restante->hours} horas para o fim da campanha";
+    }
+?>
+
+<!-- VALORES DAS RECOMPENSAS -->
+<?php
+    $valor01 = "15.00";
+    $valor02 = "30.00";
+    $valor03 = "56.80";
+    $valor04 = "66.80";
+    $valor05 = "77.80";
+    $valor06 = "96.80";
+    $valor07 = "96.80";
+    $valor08 = "126.80";
+    $valor09 = "150.00";
+    $valor10 = "225.00";        
+?>
+
+<!-- tudo aqui será renderizado com base no template -->
+
+<!-- <div class="text-centralizado">
+    <br>
+    <p style="font-size: clamp(1rem, 2vw + 1rem, 4rem); color: #b62945; border-color: red">
+        <b>Atenção: Página em construção.</b>
+    </p>
+    <br>
+</div> -->
+
+<section class="section-corpo">
+
+    <div class="campanha-cabecalho">
+        <img src="{{ Storage::url('images/coverTeste.jpeg') }}">
+        <br>
+        <br>
+        <h2 style="font-size: clamp(1rem, 1.3vw + 1rem, 6rem); letter-spacing: 4.0px">Nova Coletânea do Villa Diodati</h2>
+        <br>
+        <h3><b>{{ $prazo }}</b></h3>
+    </div>
+
+    <!-- <div class="flex-campanha" style="align-items: center">
+
+        <div class="card-campanha-inicio">
+            <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/card02.jpg') }}" style="max-width: 100%; display: block">
+        </div>
+
+        <div class="card-campanha-inicio">
+
+            <div class="">
+                <h3><b>{{ $prazo }}</b></h3>
+                <br>
+                <p style="text-align: center">Valor: R$ {{ $valor03 }} c/ frete incluso</p>
+            </div>
+            <img src="{{ Storage::url('lancamentos/preVendaAnderson2026/recompensas/recompensa03.jpg') }}" style="max-width: 100%; display: block">                
+            <br>
+            <a href="{{ route('clientes-create', $valor03) }}">
+                <button>Adquira aqui</button>
+            </a>
+        </div>
+
+    </div> -->
+    <br>
+
+    <div class="flex-campanha" style="border: none">
+
+        <!-- DESCRIÇÃO DO PROJETO E OUTROS DETALHES -->
+        <div class="descricao-group" style="border: 2px solid #7e6345; border-radius: 24px">
+            <img src="{{ Storage::url('images/arteComprida.jpeg') }}" style="max-width: 100%; display: block">
+            <br>
+            <p><?php echo fake()->paragraphs(2, true); ?></p>
+            <p><?php echo fake()->paragraphs(2, true); ?></p>
+            <br>
+            <img src="{{ Storage::url('images/cardTeste.jpeg') }}" style="max-width: 100%; display: block">
+
+            <br>
+            <p><?php echo fake()->paragraphs(2, true); ?></p>
+            <!-- <h1>Sobre o Autor</h1> -->
+
+            <div class="foto-text">
+                <img src="{{ Storage::url('images/cardTeste.jpeg') }}" style="max-width: 100%; display: block">
+            </div>
+            <br>
+            <p><?php echo fake()->paragraphs(2, true); ?></p>        
+
+            <br>
+            <br>
+            <h1>Detalhes do Livro</h1>
+            <br>
+            <img src="{{ Storage::url('images/cardTeste.jpeg') }}" style="max-width: 100%; display: block">
+            <br>
+            <br>
+
+            <!-- CRONOGRAMA -->
+            <img src="{{ Storage::url('images/arteComprida.jpeg') }}" style="max-width: 100%; display: block">
+            <br>
+
+            <div style="text-align: left; max-width: 600px; margin: 0 auto">
+
+                <h2>Outubro:</h2>
+                <ul style="font-size: clamp(1rem, 1vw + 0.5rem, 6rem); display: inline-block; text-align: left">
+                    <li>Organização</li>
+                    <li>Arrecadação</li>
+                    <li>Edição</li>
+                    <li>Diagramação</li>
+                </ul>
+            </div>
+
+            <div style="text-align: left; max-width: 600px; margin: 0 auto">
+                <h2>Novembro:</h2>
+                <ul style="font-size: clamp(1rem, 1vw + 0.5rem, 6rem); display: inline-block; text-align: left">                    
+                    <li>Contato com gráficas</li>
+                    <li>Impressão</li>
+                    <li>Recebimento e distribuição de livros</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <!-- RECOMPENSAS -->
+        <div class="recompensas-group">
+            <?php $botao = "Adquira aqui" ?>
+
+            <div class="recompensa">
+                <form action="{{ route('clientes-doacao') }}" method="POST">
+                    @csrf
+                    <h1><label for="valor">Doe qualquer valor:</label></h1>                    
+                    <br>
+                    <input type="text" id="valor" name="valor_doado" required>
+                    <br><br>
+                    <button type="submit">Doar</button>
+                </form>
+            </div>
+            <br>
+
+            <h1><b>Recompensas</b></h1>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('images/cardTeste.jpeg') }}">
+
+                <a href="{{ route('clientes-create', $valor01) }}">
+                    <button> {{ $botao }} </button>
+                </a>
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('images/cardTeste.jpeg') }}">
+
+                <a href="{{ route('clientes-create', $valor02) }}">
+                    <button>{{ $botao }}</button>
+                </a>                
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('images/cardTeste.jpeg') }}">
+
+                <a href="{{ route('clientes-create', $valor03) }}">
+                    <button>{{ $botao }}</button>
+                </a>                
+            </div>
+
+            <div class="recompensa">
+                <img src="{{ Storage::url('images/cardTeste.jpeg') }}">
+
+                <a href="{{ route('clientes-create', $valor04) }}">
+                    <button>{{ $botao }}</button>
+                </a>                
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+@endsection

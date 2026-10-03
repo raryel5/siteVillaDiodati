@@ -60,7 +60,7 @@
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="#">campanhas</a>
+                <a class="nav-link" href="{{ route('campanhas') }}">campanhas</a>
                 </li>
 
                 <!-- <li class="nav-item">
